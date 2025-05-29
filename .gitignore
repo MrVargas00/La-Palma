@@ -1,0 +1,32 @@
+# Archivos de configuración sensibles
+web.config
+appsettings.json
+appsettings.Development.json
+.env
+*.config
+
+# Visual Studio
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Base de datos local
+*.mdf
+*.ldf
+*.sdf
+
+# Logs
+logs/
+*.log
+
+# Dependencias de Node.js
+node_modules/
+npm-debug.log*
+
+# Archivos temporales
+*.tmp
+*.temp

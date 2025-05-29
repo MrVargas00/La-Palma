@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DBLaPalmaEntities-Web.config Connection String" description="DBLaPalmaEntities Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="metadata=res://*/Models.DBlapalma.csdl|res://*/Models.DBlapalma.ssdl|res://*/Models.DBlapalma.msl;&#xD;&#xA;       provider=System.Data.SqlClient;&#xD;&#xA;       provider connection string=&quot;data source=db20148.databaseasp.net;initial catalog=db20148;&#xD;&#xA;       user id=db20148;password=2f!Je_R45t-X;Encrypt=False;MultipleActiveResultSets=True&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Sebastian\\Desktop\\University\\Semestre\ 6\\pROYECTO\ FIANL\\LaPalma\\LaPalma\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DBLaPalmaEntities']/@connectionString" />
+  </parameter>
+</parameters>

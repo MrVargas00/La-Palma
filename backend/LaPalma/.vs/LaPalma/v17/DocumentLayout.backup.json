@@ -1,0 +1,40 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Sebastian\\Desktop\\University\\Semestre 6\\pROYECTO FIANL\\LaPalma\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|c:\\users\\sebastian\\desktop\\university\\semestre 6\\proyecto fianl\\lapalma\\lapalma\\models\\dblapalma.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|solutionrelative:lapalma\\models\\dblapalma.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DBlapalma.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\Sebastian\\Desktop\\University\\Semestre 6\\pROYECTO FIANL\\LaPalma\\LaPalma\\Models\\DBlapalma.edmx",
+              "RelativeDocumentMoniker": "LaPalma\\Models\\DBlapalma.edmx",
+              "ToolTip": "C:\\Users\\Sebastian\\Desktop\\University\\Semestre 6\\pROYECTO FIANL\\LaPalma\\LaPalma\\Models\\DBlapalma.edmx [Diagram1]*",
+              "RelativeToolTip": "LaPalma\\Models\\DBlapalma.edmx [Diagram1]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2025-05-25T21:39:42.289Z",
+              "EditorCaption": " [Diagram1]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

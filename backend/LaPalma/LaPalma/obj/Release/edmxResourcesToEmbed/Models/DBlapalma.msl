@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBLaPalmaModelStoreContainer" CdmEntityContainer="DBLaPalmaEntities">
+    <EntitySetMapping Name="CheckIns">
+      <EntityTypeMapping TypeName="DBLaPalmaModel.CheckIn">
+        <MappingFragment StoreEntitySet="CheckIn">
+          <ScalarProperty Name="id_checkin" ColumnName="id_checkin" />
+          <ScalarProperty Name="fecha_hora" ColumnName="fecha_hora" />
+          <ScalarProperty Name="id_reserva" ColumnName="id_reserva" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CheckOuts">
+      <EntityTypeMapping TypeName="DBLaPalmaModel.CheckOut">
+        <MappingFragment StoreEntitySet="CheckOut">
+          <ScalarProperty Name="id_checkout" ColumnName="id_checkout" />
+          <ScalarProperty Name="fecha_hora" ColumnName="fecha_hora" />
+          <ScalarProperty Name="id_reserva" ColumnName="id_reserva" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ciudads">
+      <EntityTypeMapping TypeName="DBLaPalmaModel.Ciudad">
+        <MappingFragment StoreEntitySet="Ciudad">
+          <ScalarProperty Name="id_ciudad" ColumnName="id_ciudad" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="codigo_postal" ColumnName="codigo_postal" />
+          <ScalarProperty Name="id_pais" ColumnName="id_pais" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clientes">
+      <EntityTypeMapping TypeName="DBLaPalmaModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="numero_documento" ColumnName="numero_documento" />
+          <ScalarProperty Name="fecha_nacimiento" ColumnName="fecha_nacimiento" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="id_nacionalidad" ColumnName="id_nacionalidad" />
+          <ScalarProperty Name="idioma_preferido" ColumnName="idioma_preferido" />
+          <ScalarProperty Name="id_genero" ColumnName="id_genero" />
+          <ScalarProperty Name="tipo_documento" ColumnName="tipo_documento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Generoes">
+      <EntityTypeMapping TypeName="DBLaPalmaModel.Genero">
+        <MappingFragment StoreEntitySet="Genero">
+          <ScalarProperty Name="id_genero" ColumnName="id_genero" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Habitacions">
+      <EntityTypeMapping TypeName="DBLaPalmaModel.Habitacion">
+        <MappingFragment StoreEntitySet="Habitacion">
+          <ScalarProperty Name="id_habitacion" ColumnName="id_habitacion" />
+          <ScalarProperty Name="numero_habitacion" ColumnName="numero_habitacion" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="vista" ColumnName="vista" />
+          <ScalarProperty Name="id_hotel" ColumnName="id_hotel" />
+          <ScalarProperty Name="id_tipo_habitacion" ColumnName="id_tipo_habitacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hotels">
+      <EntityTypeMapping TypeName="DBLaPalmaModel.Hotel">
+        <MappingFragment StoreEntitySet="Hotel">
+          <ScalarProperty Name="id_hotel" ColumnName="id_hotel" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="categoria" ColumnName="categoria" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="id_ciudad" ColumnName="id_ciudad" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Idiomas">
+      <EntityTypeMapping TypeName="DBLaPalmaModel.Idioma">
+        <MappingFragment StoreEntitySet="Idioma">
+          <ScalarProperty Name="id_idioma" ColumnName="id_idioma" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inventario_Hotel">
+      <EntityTypeMapping TypeName="DBLaPalmaModel.Inventario_Hotel">
+        <MappingFragment StoreEntitySet="Inventario_Hotel">
+          <ScalarProperty Name="id_inventario" ColumnName="id_inventario" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="id_hotel" ColumnName="id_hotel" />
+          <ScalarProperty Name="id_producto" ColumnName="id_producto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pais">
+      <EntityTypeMapping TypeName="DBLaPalmaModel.Pai">
+        <MappingFragment StoreEntitySet="Pais">
+          <ScalarProperty Name="id_pais" ColumnName="id_pais" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Paquetes">
+      <EntityTypeMapping TypeName="DBLaPalmaModel.Paquete">
+        <MappingFragment StoreEntitySet="Paquete">
+          <ScalarProperty Name="id_paquete" ColumnName="id_paquete" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="incluye_transporte_aereo" ColumnName="incluye_transporte_aereo" />
+          <ScalarProperty Name="incluye_transporte_terrestre" ColumnName="incluye_transporte_terrestre" />
+          <ScalarProperty Name="incluye_spa" ColumnName="incluye_spa" />
+          <ScalarProperty Name="incluye_comidas" ColumnName="incluye_comidas" />
+          <ScalarProperty Name="incluye_tour" ColumnName="incluye_tour" />
+          <ScalarProperty Name="id_hotel" ColumnName="id_hotel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Productoes">
+      <EntityTypeMapping TypeName="DBLaPalmaModel.Producto">
+        <MappingFragment StoreEntitySet="Producto">
+          <ScalarProperty Name="id_producto" ColumnName="id_producto" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proveedors">
+      <EntityTypeMapping TypeName="DBLaPalmaModel.Proveedor">
+        <MappingFragment StoreEntitySet="Proveedor">
+          <ScalarProperty Name="id_proveedor" ColumnName="id_proveedor" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="tipo_proveedor" ColumnName="tipo_proveedor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proveedor_Producto">
+      <EntityTypeMapping TypeName="DBLaPalmaModel.Proveedor_Producto">
+        <MappingFragment StoreEntitySet="Proveedor_Producto">
+          <ScalarProperty Name="id_proveedor" ColumnName="id_proveedor" />
+          <ScalarProperty Name="id_producto" ColumnName="id_producto" />
+          <ScalarProperty Name="precio_unitario" ColumnName="precio_unitario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reservas">
+      <EntityTypeMapping TypeName="DBLaPalmaModel.Reserva">
+        <MappingFragment StoreEntitySet="Reserva">
+          <ScalarProperty Name="id_reserva" ColumnName="id_reserva" />
+          <ScalarProperty Name="fecha_llegada" ColumnName="fecha_llegada" />
+          <ScalarProperty Name="fecha_salida" ColumnName="fecha_salida" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="id_habitacion" ColumnName="id_habitacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Servicios">
+      <EntityTypeMapping TypeName="DBLaPalmaModel.Servicio">
+        <MappingFragment StoreEntitySet="Servicio">
+          <ScalarProperty Name="id_servicio" ColumnName="id_servicio" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripción" ColumnName="descripción" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="id_hotel" ColumnName="id_hotel" />
+          <ScalarProperty Name="id_tipoServicio" ColumnName="id_tipoServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="DBLaPalmaModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_Documento">
+      <EntityTypeMapping TypeName="DBLaPalmaModel.Tipo_Documento">
+        <MappingFragment StoreEntitySet="Tipo_Documento">
+          <ScalarProperty Name="id_tipo_documento" ColumnName="id_tipo_documento" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_Habitacion">
+      <EntityTypeMapping TypeName="DBLaPalmaModel.Tipo_Habitacion">
+        <MappingFragment StoreEntitySet="Tipo_Habitacion">
+          <ScalarProperty Name="id_tipo_habitacion" ColumnName="id_tipo_habitacion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="capacidad_base" ColumnName="capacidad_base" />
+          <ScalarProperty Name="capacidad_maxima" ColumnName="capacidad_maxima" />
+          <ScalarProperty Name="descripción" ColumnName="descripción" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_Proveedor">
+      <EntityTypeMapping TypeName="DBLaPalmaModel.Tipo_Proveedor">
+        <MappingFragment StoreEntitySet="Tipo_Proveedor">
+          <ScalarProperty Name="id_tipo_proveedor" ColumnName="id_tipo_proveedor" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoServicios">
+      <EntityTypeMapping TypeName="DBLaPalmaModel.TipoServicio">
+        <MappingFragment StoreEntitySet="TipoServicio">
+          <ScalarProperty Name="id_tipoServicio" ColumnName="id_tipoServicio" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripción" ColumnName="descripción" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

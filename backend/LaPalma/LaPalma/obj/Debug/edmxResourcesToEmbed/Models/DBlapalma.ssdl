@@ -1,0 +1,763 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBLAPALMAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Cargo">
+    <Key>
+      <PropertyRef Name="id_cargo" />
+    </Key>
+    <Property Name="id_cargo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="salario" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="200" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CheckIn">
+    <Key>
+      <PropertyRef Name="id_checkin" />
+    </Key>
+    <Property Name="id_checkin" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecha_hora" Type="datetime" Nullable="false" />
+    <Property Name="documento_empleado" Type="varchar" MaxLength="50" />
+    <Property Name="id_reserva" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CheckOut">
+    <Key>
+      <PropertyRef Name="id_checkout" />
+    </Key>
+    <Property Name="id_checkout" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecha_hora" Type="datetime" Nullable="false" />
+    <Property Name="documento_empleado" Type="varchar" MaxLength="50" />
+    <Property Name="cargos_adicionales" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="id_reserva" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ciudad">
+    <Key>
+      <PropertyRef Name="id_ciudad" />
+    </Key>
+    <Property Name="id_ciudad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="id_pais" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="documento" />
+    </Key>
+    <Property Name="documento" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="apellido" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="fecha_nacimiento" Type="date" Nullable="false" />
+    <Property Name="direccion" Type="varchar" MaxLength="100" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="ciudad_origen" Type="int" Nullable="false" />
+    <Property Name="idioma_preferido" Type="int" Nullable="false" />
+    <Property Name="id_genero" Type="int" Nullable="false" />
+    <Property Name="tipo_documento" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Empleado">
+    <Key>
+      <PropertyRef Name="documento" />
+    </Key>
+    <Property Name="documento" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="apellidos" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+    <Property Name="direccion" Type="varchar" MaxLength="200" />
+    <Property Name="fecha_nacimiento" Type="date" />
+    <Property Name="fecha_contratacion" Type="date" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="id_cargo" Type="int" Nullable="false" />
+    <Property Name="id_genero" Type="int" Nullable="false" />
+    <Property Name="tipo_documento" Type="int" Nullable="false" />
+    <Property Name="id_hotel" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Genero">
+    <Key>
+      <PropertyRef Name="id_genero" />
+    </Key>
+    <Property Name="id_genero" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Habitacion">
+    <Key>
+      <PropertyRef Name="id_habitacion" />
+    </Key>
+    <Property Name="id_habitacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="numero_habitacion" Type="int" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="precio" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="tipo_vista" Type="int" Nullable="false" />
+    <Property Name="id_hotel" Type="int" Nullable="false" />
+    <Property Name="id_tipo_habitacion" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Hotel">
+    <Key>
+      <PropertyRef Name="id_hotel" />
+    </Key>
+    <Property Name="id_hotel" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="direccion" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="categoria" Type="int" Nullable="false" />
+    <Property Name="telefono" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="id_ciudad" Type="int" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="200" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Idioma">
+    <Key>
+      <PropertyRef Name="id_idioma" />
+    </Key>
+    <Property Name="id_idioma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Metodo_Pago">
+    <Key>
+      <PropertyRef Name="id_metodo_pago" />
+    </Key>
+    <Property Name="id_metodo_pago" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pago">
+    <Key>
+      <PropertyRef Name="id_pago" />
+    </Key>
+    <Property Name="id_pago" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecha_pago" Type="datetime" Nullable="false" />
+    <Property Name="monto_total" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="estado_pago" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="referencia" Type="varchar" MaxLength="50" />
+    <Property Name="id_metodo_pago" Type="int" Nullable="false" />
+    <Property Name="id_reserva" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pais">
+    <Key>
+      <PropertyRef Name="id_pais" />
+    </Key>
+    <Property Name="id_pais" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Paquete">
+    <Key>
+      <PropertyRef Name="id_paquete" />
+    </Key>
+    <Property Name="id_paquete" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="precio" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="duracion_dias" Type="int" />
+    <Property Name="incluye_transporte_aereo" Type="bit" Nullable="false" />
+    <Property Name="incluye_transporte_terrestre" Type="bit" Nullable="false" />
+    <Property Name="incluye_spa" Type="bit" Nullable="false" />
+    <Property Name="incluye_comidas" Type="bit" Nullable="false" />
+    <Property Name="incluye_tour" Type="bit" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Producto">
+    <Key>
+      <PropertyRef Name="id_producto" />
+    </Key>
+    <Property Name="id_producto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="200" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Proveedor">
+    <Key>
+      <PropertyRef Name="id_proveedor" />
+    </Key>
+    <Property Name="id_proveedor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="telefono" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="tipo_proveedor" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Proveedor_Producto">
+    <Key>
+      <PropertyRef Name="id_proveedor_producto" />
+    </Key>
+    <Property Name="id_proveedor_producto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_proveedor" Type="int" Nullable="false" />
+    <Property Name="id_producto" Type="int" Nullable="false" />
+    <Property Name="precio_unitario" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="cantidad_producto" Type="int" Nullable="false" />
+    <Property Name="id_hotel" Type="int" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Reserva">
+    <Key>
+      <PropertyRef Name="id_reserva" />
+    </Key>
+    <Property Name="id_reserva" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecha_reserva" Type="datetime" />
+    <Property Name="fecha_llegada" Type="date" Nullable="false" />
+    <Property Name="fecha_salida" Type="date" Nullable="false" />
+    <Property Name="numero_huespedes" Type="int" Nullable="false" />
+    <Property Name="observaciones" Type="varchar" MaxLength="500" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="documento_cliente" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="id_habitacion" Type="int" Nullable="false" />
+    <Property Name="id_paquete" Type="int" />
+  </EntityType>
+  <EntityType Name="Servicio">
+    <Key>
+      <PropertyRef Name="id_servicio" />
+    </Key>
+    <Property Name="id_servicio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="200" />
+    <Property Name="precio" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+    <Property Name="id_hotel" Type="int" Nullable="false" />
+    <Property Name="id_tipoServicio" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Telefono">
+    <Key>
+      <PropertyRef Name="id_telefono" />
+    </Key>
+    <Property Name="id_telefono" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="numero" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="id_tipo_telefono" Type="int" Nullable="false" />
+    <Property Name="tipo_duenio" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="id_duenio" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tipo_Documento">
+    <Key>
+      <PropertyRef Name="id_tipo_documento" />
+    </Key>
+    <Property Name="id_tipo_documento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tipo_Habitacion">
+    <Key>
+      <PropertyRef Name="id_tipo_habitacion" />
+    </Key>
+    <Property Name="id_tipo_habitacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="capacidad_base" Type="int" Nullable="false" />
+    <Property Name="capacidad_maxima" Type="int" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Tipo_Proveedor">
+    <Key>
+      <PropertyRef Name="id_tipo_proveedor" />
+    </Key>
+    <Property Name="id_tipo_proveedor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tipo_Telefono">
+    <Key>
+      <PropertyRef Name="id_tipo_telefono" />
+    </Key>
+    <Property Name="id_tipo_telefono" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tipo_Vista">
+    <Key>
+      <PropertyRef Name="id_tipo_vista" />
+    </Key>
+    <Property Name="id_tipo_vista" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoServicio">
+    <Key>
+      <PropertyRef Name="id_tipoServicio" />
+    </Key>
+    <Property Name="id_tipoServicio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__CheckIn__documen__2B0A656D">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
+    <End Role="CheckIn" Type="Self.CheckIn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="documento" />
+      </Principal>
+      <Dependent Role="CheckIn">
+        <PropertyRef Name="documento_empleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CheckIn__id_rese__2A164134">
+    <End Role="Reserva" Type="Self.Reserva" Multiplicity="1" />
+    <End Role="CheckIn" Type="Self.CheckIn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reserva">
+        <PropertyRef Name="id_reserva" />
+      </Principal>
+      <Dependent Role="CheckIn">
+        <PropertyRef Name="id_reserva" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CheckOut__docume__32AB8735">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
+    <End Role="CheckOut" Type="Self.CheckOut" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="documento" />
+      </Principal>
+      <Dependent Role="CheckOut">
+        <PropertyRef Name="documento_empleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CheckOut__id_res__31B762FC">
+    <End Role="Reserva" Type="Self.Reserva" Multiplicity="1" />
+    <End Role="CheckOut" Type="Self.CheckOut" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reserva">
+        <PropertyRef Name="id_reserva" />
+      </Principal>
+      <Dependent Role="CheckOut">
+        <PropertyRef Name="id_reserva" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Ciudad__id_pais__3B75D760">
+    <End Role="Pais" Type="Self.Pais" Multiplicity="1" />
+    <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pais">
+        <PropertyRef Name="id_pais" />
+      </Principal>
+      <Dependent Role="Ciudad">
+        <PropertyRef Name="id_pais" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cliente__ciudad___10566F31">
+    <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudad">
+        <PropertyRef Name="id_ciudad" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="ciudad_origen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cliente__id_gene__123EB7A3">
+    <End Role="Genero" Type="Self.Genero" Multiplicity="1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genero">
+        <PropertyRef Name="id_genero" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="id_genero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cliente__idioma___114A936A">
+    <End Role="Idioma" Type="Self.Idioma" Multiplicity="1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Idioma">
+        <PropertyRef Name="id_idioma" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="idioma_preferido" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cliente__tipo_do__1332DBDC">
+    <End Role="Tipo_Documento" Type="Self.Tipo_Documento" Multiplicity="1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Documento">
+        <PropertyRef Name="id_tipo_documento" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="tipo_documento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Empleado__id_car__02FC7413">
+    <End Role="Cargo" Type="Self.Cargo" Multiplicity="1" />
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cargo">
+        <PropertyRef Name="id_cargo" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="id_cargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Empleado__id_gen__03F0984C">
+    <End Role="Genero" Type="Self.Genero" Multiplicity="1" />
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genero">
+        <PropertyRef Name="id_genero" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="id_genero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Empleado__id_hot__05D8E0BE">
+    <End Role="Hotel" Type="Self.Hotel" Multiplicity="1" />
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hotel">
+        <PropertyRef Name="id_hotel" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="id_hotel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Empleado__tipo_d__04E4BC85">
+    <End Role="Tipo_Documento" Type="Self.Tipo_Documento" Multiplicity="1" />
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Documento">
+        <PropertyRef Name="id_tipo_documento" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="tipo_documento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Habitacio__id_ho__59FA5E80">
+    <End Role="Hotel" Type="Self.Hotel" Multiplicity="1" />
+    <End Role="Habitacion" Type="Self.Habitacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hotel">
+        <PropertyRef Name="id_hotel" />
+      </Principal>
+      <Dependent Role="Habitacion">
+        <PropertyRef Name="id_hotel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Habitacio__id_ti__5AEE82B9">
+    <End Role="Tipo_Habitacion" Type="Self.Tipo_Habitacion" Multiplicity="1" />
+    <End Role="Habitacion" Type="Self.Habitacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Habitacion">
+        <PropertyRef Name="id_tipo_habitacion" />
+      </Principal>
+      <Dependent Role="Habitacion">
+        <PropertyRef Name="id_tipo_habitacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Habitacio__tipo___59063A47">
+    <End Role="Tipo_Vista" Type="Self.Tipo_Vista" Multiplicity="1" />
+    <End Role="Habitacion" Type="Self.Habitacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Vista">
+        <PropertyRef Name="id_tipo_vista" />
+      </Principal>
+      <Dependent Role="Habitacion">
+        <PropertyRef Name="tipo_vista" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Hotel__id_ciudad__412EB0B6">
+    <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="1" />
+    <End Role="Hotel" Type="Self.Hotel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudad">
+        <PropertyRef Name="id_ciudad" />
+      </Principal>
+      <Dependent Role="Hotel">
+        <PropertyRef Name="id_ciudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Pago__id_metodo___3D2915A8">
+    <End Role="Metodo_Pago" Type="Self.Metodo_Pago" Multiplicity="1" />
+    <End Role="Pago" Type="Self.Pago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Metodo_Pago">
+        <PropertyRef Name="id_metodo_pago" />
+      </Principal>
+      <Dependent Role="Pago">
+        <PropertyRef Name="id_metodo_pago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Pago__id_reserva__3E1D39E1">
+    <End Role="Reserva" Type="Self.Reserva" Multiplicity="1" />
+    <End Role="Pago" Type="Self.Pago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reserva">
+        <PropertyRef Name="id_reserva" />
+      </Principal>
+      <Dependent Role="Pago">
+        <PropertyRef Name="id_reserva" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Proveedor__id_ho__6D0D32F4">
+    <End Role="Hotel" Type="Self.Hotel" Multiplicity="1" />
+    <End Role="Proveedor_Producto" Type="Self.Proveedor_Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hotel">
+        <PropertyRef Name="id_hotel" />
+      </Principal>
+      <Dependent Role="Proveedor_Producto">
+        <PropertyRef Name="id_hotel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Proveedor__id_pr__6B24EA82">
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="1" />
+    <End Role="Proveedor_Producto" Type="Self.Proveedor_Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedor">
+        <PropertyRef Name="id_proveedor" />
+      </Principal>
+      <Dependent Role="Proveedor_Producto">
+        <PropertyRef Name="id_proveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Proveedor__id_pr__6C190EBB">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="Proveedor_Producto" Type="Self.Proveedor_Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="id_producto" />
+      </Principal>
+      <Dependent Role="Proveedor_Producto">
+        <PropertyRef Name="id_producto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Proveedor__tipo___628FA481">
+    <End Role="Tipo_Proveedor" Type="Self.Tipo_Proveedor" Multiplicity="1" />
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Proveedor">
+        <PropertyRef Name="id_tipo_proveedor" />
+      </Principal>
+      <Dependent Role="Proveedor">
+        <PropertyRef Name="tipo_proveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Reserva__documen__22751F6C">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="Reserva" Type="Self.Reserva" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="documento" />
+      </Principal>
+      <Dependent Role="Reserva">
+        <PropertyRef Name="documento_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Reserva__id_habi__236943A5">
+    <End Role="Habitacion" Type="Self.Habitacion" Multiplicity="1" />
+    <End Role="Reserva" Type="Self.Reserva" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Habitacion">
+        <PropertyRef Name="id_habitacion" />
+      </Principal>
+      <Dependent Role="Reserva">
+        <PropertyRef Name="id_habitacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Reserva__id_paqu__245D67DE">
+    <End Role="Paquete" Type="Self.Paquete" Multiplicity="0..1" />
+    <End Role="Reserva" Type="Self.Reserva" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Paquete">
+        <PropertyRef Name="id_paquete" />
+      </Principal>
+      <Dependent Role="Reserva">
+        <PropertyRef Name="id_paquete" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Servicio__id_hot__48CFD27E">
+    <End Role="Hotel" Type="Self.Hotel" Multiplicity="1" />
+    <End Role="Servicio" Type="Self.Servicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hotel">
+        <PropertyRef Name="id_hotel" />
+      </Principal>
+      <Dependent Role="Servicio">
+        <PropertyRef Name="id_hotel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Servicio__id_tip__49C3F6B7">
+    <End Role="TipoServicio" Type="Self.TipoServicio" Multiplicity="1" />
+    <End Role="Servicio" Type="Self.Servicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoServicio">
+        <PropertyRef Name="id_tipoServicio" />
+      </Principal>
+      <Dependent Role="Servicio">
+        <PropertyRef Name="id_tipoServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Telefono__id_tip__0A9D95DB">
+    <End Role="Tipo_Telefono" Type="Self.Tipo_Telefono" Multiplicity="1" />
+    <End Role="Telefono" Type="Self.Telefono" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Telefono">
+        <PropertyRef Name="id_tipo_telefono" />
+      </Principal>
+      <Dependent Role="Telefono">
+        <PropertyRef Name="id_tipo_telefono" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBLAPALMAModelStoreContainer">
+    <EntitySet Name="Cargo" EntityType="Self.Cargo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CheckIn" EntityType="Self.CheckIn" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CheckOut" EntityType="Self.CheckOut" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ciudad" EntityType="Self.Ciudad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Empleado" EntityType="Self.Empleado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Genero" EntityType="Self.Genero" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Habitacion" EntityType="Self.Habitacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hotel" EntityType="Self.Hotel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Idioma" EntityType="Self.Idioma" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Metodo_Pago" EntityType="Self.Metodo_Pago" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pago" EntityType="Self.Pago" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pais" EntityType="Self.Pais" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Paquete" EntityType="Self.Paquete" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Producto" EntityType="Self.Producto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Proveedor" EntityType="Self.Proveedor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Proveedor_Producto" EntityType="Self.Proveedor_Producto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reserva" EntityType="Self.Reserva" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Servicio" EntityType="Self.Servicio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Telefono" EntityType="Self.Telefono" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tipo_Documento" EntityType="Self.Tipo_Documento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tipo_Habitacion" EntityType="Self.Tipo_Habitacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tipo_Proveedor" EntityType="Self.Tipo_Proveedor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tipo_Telefono" EntityType="Self.Tipo_Telefono" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tipo_Vista" EntityType="Self.Tipo_Vista" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoServicio" EntityType="Self.TipoServicio" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__CheckIn__documen__2B0A656D" Association="Self.FK__CheckIn__documen__2B0A656D">
+      <End Role="Empleado" EntitySet="Empleado" />
+      <End Role="CheckIn" EntitySet="CheckIn" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CheckIn__id_rese__2A164134" Association="Self.FK__CheckIn__id_rese__2A164134">
+      <End Role="Reserva" EntitySet="Reserva" />
+      <End Role="CheckIn" EntitySet="CheckIn" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CheckOut__docume__32AB8735" Association="Self.FK__CheckOut__docume__32AB8735">
+      <End Role="Empleado" EntitySet="Empleado" />
+      <End Role="CheckOut" EntitySet="CheckOut" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CheckOut__id_res__31B762FC" Association="Self.FK__CheckOut__id_res__31B762FC">
+      <End Role="Reserva" EntitySet="Reserva" />
+      <End Role="CheckOut" EntitySet="CheckOut" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Ciudad__id_pais__3B75D760" Association="Self.FK__Ciudad__id_pais__3B75D760">
+      <End Role="Pais" EntitySet="Pais" />
+      <End Role="Ciudad" EntitySet="Ciudad" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cliente__ciudad___10566F31" Association="Self.FK__Cliente__ciudad___10566F31">
+      <End Role="Ciudad" EntitySet="Ciudad" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cliente__id_gene__123EB7A3" Association="Self.FK__Cliente__id_gene__123EB7A3">
+      <End Role="Genero" EntitySet="Genero" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cliente__idioma___114A936A" Association="Self.FK__Cliente__idioma___114A936A">
+      <End Role="Idioma" EntitySet="Idioma" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cliente__tipo_do__1332DBDC" Association="Self.FK__Cliente__tipo_do__1332DBDC">
+      <End Role="Tipo_Documento" EntitySet="Tipo_Documento" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Empleado__id_car__02FC7413" Association="Self.FK__Empleado__id_car__02FC7413">
+      <End Role="Cargo" EntitySet="Cargo" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Empleado__id_gen__03F0984C" Association="Self.FK__Empleado__id_gen__03F0984C">
+      <End Role="Genero" EntitySet="Genero" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Empleado__id_hot__05D8E0BE" Association="Self.FK__Empleado__id_hot__05D8E0BE">
+      <End Role="Hotel" EntitySet="Hotel" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Empleado__tipo_d__04E4BC85" Association="Self.FK__Empleado__tipo_d__04E4BC85">
+      <End Role="Tipo_Documento" EntitySet="Tipo_Documento" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Habitacio__id_ho__59FA5E80" Association="Self.FK__Habitacio__id_ho__59FA5E80">
+      <End Role="Hotel" EntitySet="Hotel" />
+      <End Role="Habitacion" EntitySet="Habitacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Habitacio__id_ti__5AEE82B9" Association="Self.FK__Habitacio__id_ti__5AEE82B9">
+      <End Role="Tipo_Habitacion" EntitySet="Tipo_Habitacion" />
+      <End Role="Habitacion" EntitySet="Habitacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Habitacio__tipo___59063A47" Association="Self.FK__Habitacio__tipo___59063A47">
+      <End Role="Tipo_Vista" EntitySet="Tipo_Vista" />
+      <End Role="Habitacion" EntitySet="Habitacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Hotel__id_ciudad__412EB0B6" Association="Self.FK__Hotel__id_ciudad__412EB0B6">
+      <End Role="Ciudad" EntitySet="Ciudad" />
+      <End Role="Hotel" EntitySet="Hotel" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Pago__id_metodo___3D2915A8" Association="Self.FK__Pago__id_metodo___3D2915A8">
+      <End Role="Metodo_Pago" EntitySet="Metodo_Pago" />
+      <End Role="Pago" EntitySet="Pago" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Pago__id_reserva__3E1D39E1" Association="Self.FK__Pago__id_reserva__3E1D39E1">
+      <End Role="Reserva" EntitySet="Reserva" />
+      <End Role="Pago" EntitySet="Pago" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Proveedor__id_ho__6D0D32F4" Association="Self.FK__Proveedor__id_ho__6D0D32F4">
+      <End Role="Hotel" EntitySet="Hotel" />
+      <End Role="Proveedor_Producto" EntitySet="Proveedor_Producto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Proveedor__id_pr__6B24EA82" Association="Self.FK__Proveedor__id_pr__6B24EA82">
+      <End Role="Proveedor" EntitySet="Proveedor" />
+      <End Role="Proveedor_Producto" EntitySet="Proveedor_Producto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Proveedor__id_pr__6C190EBB" Association="Self.FK__Proveedor__id_pr__6C190EBB">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="Proveedor_Producto" EntitySet="Proveedor_Producto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Proveedor__tipo___628FA481" Association="Self.FK__Proveedor__tipo___628FA481">
+      <End Role="Tipo_Proveedor" EntitySet="Tipo_Proveedor" />
+      <End Role="Proveedor" EntitySet="Proveedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Reserva__documen__22751F6C" Association="Self.FK__Reserva__documen__22751F6C">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Reserva" EntitySet="Reserva" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Reserva__id_habi__236943A5" Association="Self.FK__Reserva__id_habi__236943A5">
+      <End Role="Habitacion" EntitySet="Habitacion" />
+      <End Role="Reserva" EntitySet="Reserva" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Reserva__id_paqu__245D67DE" Association="Self.FK__Reserva__id_paqu__245D67DE">
+      <End Role="Paquete" EntitySet="Paquete" />
+      <End Role="Reserva" EntitySet="Reserva" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Servicio__id_hot__48CFD27E" Association="Self.FK__Servicio__id_hot__48CFD27E">
+      <End Role="Hotel" EntitySet="Hotel" />
+      <End Role="Servicio" EntitySet="Servicio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Servicio__id_tip__49C3F6B7" Association="Self.FK__Servicio__id_tip__49C3F6B7">
+      <End Role="TipoServicio" EntitySet="TipoServicio" />
+      <End Role="Servicio" EntitySet="Servicio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Telefono__id_tip__0A9D95DB" Association="Self.FK__Telefono__id_tip__0A9D95DB">
+      <End Role="Tipo_Telefono" EntitySet="Tipo_Telefono" />
+      <End Role="Telefono" EntitySet="Telefono" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

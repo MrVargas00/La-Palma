@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Sebastian\\Desktop\\University\\Semestre 6\\pROYECTO FIANL\\LaPalma\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|c:\\users\\sebastian\\desktop\\university\\semestre 6\\proyecto fianl\\lapalma\\lapalma\\models\\pai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|solutionrelative:lapalma\\models\\pai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|c:\\users\\sebastian\\desktop\\university\\semestre 6\\proyecto fianl\\lapalma\\lapalma\\models\\ciudad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|solutionrelative:lapalma\\models\\ciudad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|c:\\users\\sebastian\\desktop\\university\\semestre 6\\proyecto fianl\\lapalma\\lapalma\\models\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|solutionrelative:lapalma\\models\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Pai.cs",
+              "DocumentMoniker": "C:\\Users\\Sebastian\\Desktop\\University\\Semestre 6\\pROYECTO FIANL\\LaPalma\\LaPalma\\Models\\Pai.cs",
+              "RelativeDocumentMoniker": "LaPalma\\Models\\Pai.cs",
+              "ToolTip": "C:\\Users\\Sebastian\\Desktop\\University\\Semestre 6\\pROYECTO FIANL\\LaPalma\\LaPalma\\Models\\Pai.cs",
+              "RelativeToolTip": "LaPalma\\Models\\Pai.cs",
+              "ViewState": "AgIAAA0AAAAAZ2ZmZmb0vxUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T21:47:09.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Ciudad.cs",
+              "DocumentMoniker": "C:\\Users\\Sebastian\\Desktop\\University\\Semestre 6\\pROYECTO FIANL\\LaPalma\\LaPalma\\Models\\Ciudad.cs",
+              "RelativeDocumentMoniker": "LaPalma\\Models\\Ciudad.cs",
+              "ToolTip": "C:\\Users\\Sebastian\\Desktop\\University\\Semestre 6\\pROYECTO FIANL\\LaPalma\\LaPalma\\Models\\Ciudad.cs",
+              "RelativeToolTip": "LaPalma\\Models\\Ciudad.cs",
+              "ViewState": "AgIAAA8AAAAQAAAAAIA5wBwAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T21:46:51.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Hotel.cs",
+              "DocumentMoniker": "C:\\Users\\Sebastian\\Desktop\\University\\Semestre 6\\pROYECTO FIANL\\LaPalma\\LaPalma\\Models\\Hotel.cs",
+              "RelativeDocumentMoniker": "LaPalma\\Models\\Hotel.cs",
+              "ToolTip": "C:\\Users\\Sebastian\\Desktop\\University\\Semestre 6\\pROYECTO FIANL\\LaPalma\\LaPalma\\Models\\Hotel.cs",
+              "RelativeToolTip": "LaPalma\\Models\\Hotel.cs",
+              "ViewState": "AgIAAB8AAAAAMTMzMzMUwCQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T21:45:48.551Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
