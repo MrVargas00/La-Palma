@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Sebastian\\Desktop\\University\\Semestre 6\\pROYECTO FIANL\\LaPalma\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|c:\\users\\sebastian\\desktop\\university\\semestre 6\\proyecto fianl\\lapalma\\lapalma\\models\\dblapalma.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
-      "RelativeMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|solutionrelative:lapalma\\models\\dblapalma.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+      "AbsoluteMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|c:\\users\\sebastian\\desktop\\university\\semestre 6\\proyecto fianl\\lapalma\\lapalma\\models\\pai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|solutionrelative:lapalma\\models\\pai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|c:\\users\\sebastian\\desktop\\university\\semestre 6\\proyecto fianl\\lapalma\\lapalma\\models\\ciudad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|solutionrelative:lapalma\\models\\ciudad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|c:\\users\\sebastian\\desktop\\university\\semestre 6\\proyecto fianl\\lapalma\\lapalma\\models\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|solutionrelative:lapalma\\models\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +31,41 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DBlapalma.edmx [Diagram1]",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Desktop\\University\\Semestre 6\\pROYECTO FIANL\\LaPalma\\LaPalma\\Models\\DBlapalma.edmx",
-              "RelativeDocumentMoniker": "LaPalma\\Models\\DBlapalma.edmx",
-              "ToolTip": "C:\\Users\\Sebastian\\Desktop\\University\\Semestre 6\\pROYECTO FIANL\\LaPalma\\LaPalma\\Models\\DBlapalma.edmx [Diagram1]*",
-              "RelativeToolTip": "LaPalma\\Models\\DBlapalma.edmx [Diagram1]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2025-05-25T21:39:42.289Z",
-              "EditorCaption": " [Diagram1]"
+              "Title": "Pai.cs",
+              "DocumentMoniker": "C:\\Users\\Sebastian\\Desktop\\University\\Semestre 6\\pROYECTO FIANL\\LaPalma\\LaPalma\\Models\\Pai.cs",
+              "RelativeDocumentMoniker": "LaPalma\\Models\\Pai.cs",
+              "ToolTip": "C:\\Users\\Sebastian\\Desktop\\University\\Semestre 6\\pROYECTO FIANL\\LaPalma\\LaPalma\\Models\\Pai.cs",
+              "RelativeToolTip": "LaPalma\\Models\\Pai.cs",
+              "ViewState": "AgIAAA0AAAAAZ2ZmZmb0vxUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T21:47:09.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Ciudad.cs",
+              "DocumentMoniker": "C:\\Users\\Sebastian\\Desktop\\University\\Semestre 6\\pROYECTO FIANL\\LaPalma\\LaPalma\\Models\\Ciudad.cs",
+              "RelativeDocumentMoniker": "LaPalma\\Models\\Ciudad.cs",
+              "ToolTip": "C:\\Users\\Sebastian\\Desktop\\University\\Semestre 6\\pROYECTO FIANL\\LaPalma\\LaPalma\\Models\\Ciudad.cs",
+              "RelativeToolTip": "LaPalma\\Models\\Ciudad.cs",
+              "ViewState": "AgIAAA8AAAAQAAAAAIA5wBwAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T21:46:51.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Hotel.cs",
+              "DocumentMoniker": "C:\\Users\\Sebastian\\Desktop\\University\\Semestre 6\\pROYECTO FIANL\\LaPalma\\LaPalma\\Models\\Hotel.cs",
+              "RelativeDocumentMoniker": "LaPalma\\Models\\Hotel.cs",
+              "ToolTip": "C:\\Users\\Sebastian\\Desktop\\University\\Semestre 6\\pROYECTO FIANL\\LaPalma\\LaPalma\\Models\\Hotel.cs",
+              "RelativeToolTip": "LaPalma\\Models\\Hotel.cs",
+              "ViewState": "AgIAAB8AAAAAMTMzMzMUwCQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T21:45:48.551Z",
+              "EditorCaption": ""
             }
           ]
         }
