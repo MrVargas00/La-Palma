@@ -9,6 +9,7 @@
 
 namespace LaPalma.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -19,6 +20,7 @@ namespace LaPalma.Models
         {
             this.CheckIns = new HashSet<CheckIn>();
             this.CheckOuts = new HashSet<CheckOut>();
+            this.Usuarios = new HashSet<Usuario>();
         }
     
         public string documento { get; set; }
@@ -33,14 +35,23 @@ namespace LaPalma.Models
         public int id_genero { get; set; }
         public int tipo_documento { get; set; }
         public int id_hotel { get; set; }
-    
+
+        [JsonIgnore]
         public virtual Cargo Cargo { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<CheckIn> CheckIns { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<CheckOut> CheckOuts { get; set; }
+        [JsonIgnore]
         public virtual Genero Genero { get; set; }
+        [JsonIgnore]
         public virtual Hotel Hotel { get; set; }
+        [JsonIgnore]
         public virtual Tipo_Documento Tipo_Documento1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
+        public virtual ICollection<Usuario> Usuarios { get; set; }
     }
 }

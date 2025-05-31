@@ -153,6 +153,14 @@
     <Property Name="incluye_tour" Type="bit" Nullable="false" />
     <Property Name="activo" Type="bit" Nullable="false" />
   </EntityType>
+  <EntityType Name="Perfil">
+    <Key>
+      <PropertyRef Name="id_perfil" />
+    </Key>
+    <Property Name="id_perfil" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="paginanavegar" Type="varchar" MaxLength="100" />
+  </EntityType>
   <EntityType Name="Producto">
     <Key>
       <PropertyRef Name="id_producto" />
@@ -267,6 +275,25 @@
     </Key>
     <Property Name="id_tipoServicio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nombre" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="id_usuario" />
+    </Key>
+    <Property Name="id_usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="clave" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="salt" Type="varchar" MaxLength="100" />
+    <Property Name="documento_empleado" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Usuario_Perfil">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_usuario" Type="int" Nullable="false" />
+    <Property Name="id_perfil" Type="int" Nullable="false" />
+    <Property Name="activo" Type="bit" Nullable="false" />
   </EntityType>
   <Association Name="FK__CheckIn__documen__2B0A656D">
     <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
@@ -616,6 +643,42 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__Usuario__documen__44CA3770">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="documento" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="documento_empleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario_P__id_pe__498EEC8D">
+    <End Role="Perfil" Type="Self.Perfil" Multiplicity="1" />
+    <End Role="Usuario_Perfil" Type="Self.Usuario_Perfil" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Perfil">
+        <PropertyRef Name="id_perfil" />
+      </Principal>
+      <Dependent Role="Usuario_Perfil">
+        <PropertyRef Name="id_perfil" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario_P__id_us__489AC854">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Usuario_Perfil" Type="Self.Usuario_Perfil" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="Usuario_Perfil">
+        <PropertyRef Name="id_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="DBLAPALMAModelStoreContainer">
     <EntitySet Name="Cargo" EntityType="Self.Cargo" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CheckIn" EntityType="Self.CheckIn" Schema="dbo" store:Type="Tables" />
@@ -631,6 +694,7 @@
     <EntitySet Name="Pago" EntityType="Self.Pago" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Pais" EntityType="Self.Pais" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Paquete" EntityType="Self.Paquete" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Perfil" EntityType="Self.Perfil" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Producto" EntityType="Self.Producto" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Proveedor" EntityType="Self.Proveedor" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Proveedor_Producto" EntityType="Self.Proveedor_Producto" Schema="dbo" store:Type="Tables" />
@@ -643,6 +707,8 @@
     <EntitySet Name="Tipo_Telefono" EntityType="Self.Tipo_Telefono" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Tipo_Vista" EntityType="Self.Tipo_Vista" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TipoServicio" EntityType="Self.TipoServicio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario_Perfil" EntityType="Self.Usuario_Perfil" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK__CheckIn__documen__2B0A656D" Association="Self.FK__CheckIn__documen__2B0A656D">
       <End Role="Empleado" EntitySet="Empleado" />
       <End Role="CheckIn" EntitySet="CheckIn" />
@@ -758,6 +824,18 @@
     <AssociationSet Name="FK__Telefono__id_tip__0A9D95DB" Association="Self.FK__Telefono__id_tip__0A9D95DB">
       <End Role="Tipo_Telefono" EntitySet="Tipo_Telefono" />
       <End Role="Telefono" EntitySet="Telefono" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario__documen__44CA3770" Association="Self.FK__Usuario__documen__44CA3770">
+      <End Role="Empleado" EntitySet="Empleado" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario_P__id_pe__498EEC8D" Association="Self.FK__Usuario_P__id_pe__498EEC8D">
+      <End Role="Perfil" EntitySet="Perfil" />
+      <End Role="Usuario_Perfil" EntitySet="Usuario_Perfil" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario_P__id_us__489AC854" Association="Self.FK__Usuario_P__id_us__489AC854">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Usuario_Perfil" EntitySet="Usuario_Perfil" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

@@ -39,6 +39,7 @@ namespace LaPalma.Models
         public virtual DbSet<Pago> Pagoes { get; set; }
         public virtual DbSet<Pai> Pais { get; set; }
         public virtual DbSet<Paquete> Paquetes { get; set; }
+        public virtual DbSet<Perfil> Perfils { get; set; }
         public virtual DbSet<Producto> Productoes { get; set; }
         public virtual DbSet<Proveedor> Proveedors { get; set; }
         public virtual DbSet<Proveedor_Producto> Proveedor_Producto { get; set; }
@@ -51,5 +52,7 @@ namespace LaPalma.Models
         public virtual DbSet<Tipo_Telefono> Tipo_Telefono { get; set; }
         public virtual DbSet<Tipo_Vista> Tipo_Vista { get; set; }
         public virtual DbSet<TipoServicio> TipoServicios { get; set; }
+        public virtual DbSet<Usuario> Usuarios { get; set; }
+        public virtual DbSet<Usuario_Perfil> Usuario_Perfil { get; set; }
     }
 }

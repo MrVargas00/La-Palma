@@ -9,21 +9,24 @@
 
 namespace LaPalma.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
-    public partial class Pai
+    public partial class Perfil
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Pai()
+        public Perfil()
         {
-            this.Ciudads = new HashSet<Ciudad>();
+            this.Usuario_Perfil = new HashSet<Usuario_Perfil>();
         }
     
-        public int id_pais { get; set; }
+        public int id_perfil { get; set; }
         public string nombre { get; set; }
+        public string paginanavegar { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Ciudad> Ciudads { get; set; }
+        [JsonIgnore]
+        public virtual ICollection<Usuario_Perfil> Usuario_Perfil { get; set; }
     }
 }

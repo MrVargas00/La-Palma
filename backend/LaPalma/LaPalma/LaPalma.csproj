@@ -218,13 +218,16 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Clases\clsCypher.cs" />
     <Compile Include="Clases\clsHotel.cs" />
     <Compile Include="Clases\clsServicios.cs" />
+    <Compile Include="Clases\clsUsuario.cs" />
     <Compile Include="Clases\TokenGenerator.cs" />
     <Compile Include="Clases\TokenValidationHandler.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HotelController.cs" />
     <Compile Include="Controllers\ServicioController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -286,6 +289,9 @@
     <Compile Include="Models\Paquete.cs">
       <DependentUpon>DBlapalma.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Perfil.cs">
+      <DependentUpon>DBlapalma.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Producto.cs">
       <DependentUpon>DBlapalma.tt</DependentUpon>
     </Compile>
@@ -320,6 +326,12 @@
       <DependentUpon>DBlapalma.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Tipo_Vista.cs">
+      <DependentUpon>DBlapalma.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Usuario.cs">
+      <DependentUpon>DBlapalma.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Usuario_Perfil.cs">
       <DependentUpon>DBlapalma.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -168,6 +168,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Perfils">
+      <EntityTypeMapping TypeName="DBLAPALMAModel.Perfil">
+        <MappingFragment StoreEntitySet="Perfil">
+          <ScalarProperty Name="id_perfil" ColumnName="id_perfil" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="paginanavegar" ColumnName="paginanavegar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Productoes">
       <EntityTypeMapping TypeName="DBLAPALMAModel.Producto">
         <MappingFragment StoreEntitySet="Producto">
@@ -292,6 +301,27 @@
         <MappingFragment StoreEntitySet="TipoServicio">
           <ScalarProperty Name="id_tipoServicio" ColumnName="id_tipoServicio" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="DBLAPALMAModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="clave" ColumnName="clave" />
+          <ScalarProperty Name="salt" ColumnName="salt" />
+          <ScalarProperty Name="documento_empleado" ColumnName="documento_empleado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario_Perfil">
+      <EntityTypeMapping TypeName="DBLAPALMAModel.Usuario_Perfil">
+        <MappingFragment StoreEntitySet="Usuario_Perfil">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="id_perfil" ColumnName="id_perfil" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
