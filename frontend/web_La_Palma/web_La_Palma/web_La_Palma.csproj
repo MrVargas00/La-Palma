@@ -166,6 +166,7 @@
     <Content Include="Paginas\Pagina1.html" />
     <Content Include="Paginas\Pagina2.html" />
     <Content Include="Paginas\PaginaBase.html" />
+    <Content Include="Paginas\Paquetes.html" />
     <Content Include="Paginas\Scripts\Comunes\Comunes.js" />
     <Content Include="Paginas\Scripts\Comunes\CRUD.js" />
     <Content Include="Paginas\Scripts\Login.js" />
@@ -173,6 +174,7 @@
     <Content Include="Paginas\Scripts\MenuLateral.js" />
     <Content Include="Paginas\Scripts\Pagina1.js" />
     <Content Include="Paginas\Scripts\Pagina2.js" />
+    <Content Include="Paginas\Servicios.html" />
     <Content Include="Paginas\Splash.html" />
     <Content Include="Scripts\adminlte.js" />
     <Content Include="Scripts\adminlte.min.js" />
