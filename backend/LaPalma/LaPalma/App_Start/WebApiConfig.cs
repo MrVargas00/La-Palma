@@ -10,6 +10,7 @@ namespace LaPalma
         public static void Register(HttpConfiguration config)
         {
             // Configuración y servicios de Web API
+            config.EnableCors();
 
             // Rutas de Web API
             config.MapHttpAttributeRoutes();

@@ -17,6 +17,7 @@
         $("#dvMensaje").html(error);
     }
 }
+
 async function EjecutarComandoServicioAuth(Metodo, URLServicio, Objeto) {
     //Se crea un objeto de la clase cliente con los datos de la interfaz
     try {
@@ -40,6 +41,7 @@ async function EjecutarComandoServicioAuth(Metodo, URLServicio, Objeto) {
         $("#dvMensaje").html(error);
     }
 }
+
 async function EjecutarComandoServicioRpta(Metodo, URLServicio, Objeto) {
     //Se crea un objeto de la clase cliente con los datos de la interfaz
     try {
@@ -59,6 +61,7 @@ async function EjecutarComandoServicioRpta(Metodo, URLServicio, Objeto) {
         $("#dvMensaje").html(error);
     }
 }
+
 async function EjecutarComandoServicioRptaAuth(Metodo, URLServicio, Objeto) {
     //Se crea un objeto de la clase cliente con los datos de la interfaz
     try {
@@ -82,6 +85,7 @@ async function EjecutarComandoServicioRptaAuth(Metodo, URLServicio, Objeto) {
         $("#dvMensaje").html(error);
     }
 }
+
 async function ConsultarServicio(URLServicio) {
     //Para invocar el servicio, vamos a utilizar el método fetch de javascript, el cual me permite invocar una función en un servidor
     try {
@@ -102,6 +106,7 @@ async function ConsultarServicio(URLServicio) {
         $("#dvMensaje").html(error);
     }
 }
+
 async function ConsultarServicioAuth(URLServicio) {
     //Para invocar el servicio, vamos a utilizar el método fetch de javascript, el cual me permite invocar una función en un servidor
     try {
@@ -152,6 +157,7 @@ async function LlenarComboXServicios(URLServicio, ComboLlenar) {
         $("#dvMensaje").html(error);
     }
 }
+
 async function LlenarComboXServiciosAuth(URLServicio, ComboLlenar) {
     //Debe ir a la base de datos y llenar la información del combo de tipo producto
     //Invocamos el servicio a través del fetch, usando el método fetch de javascript
@@ -179,6 +185,7 @@ async function LlenarComboXServiciosAuth(URLServicio, ComboLlenar) {
         $("#dvMensaje").html(error);
     }
 }
+
 async function LlenarTablaXServicios(URLServicio, TablaLlenar) {
     //Invocamos el servicio a través del fetch, usando el método fetch de javascript
     try {
@@ -213,6 +220,7 @@ async function LlenarTablaXServicios(URLServicio, TablaLlenar) {
         $("#dvMensaje").html(error);
     }
 }
+
 async function LlenarTablaXServiciosAuth(URLServicio, TablaLlenar) {
     //Invocamos el servicio a través del fetch, usando el método fetch de javascript
     try {
@@ -249,6 +257,7 @@ async function LlenarTablaXServiciosAuth(URLServicio, TablaLlenar) {
         $("#dvMensaje").html(error);
     }
 }
+
 function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);

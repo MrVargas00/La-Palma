@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
 <head>
+    <style>
+        body {
+            background-image: url('../imagenes/fondo - login .png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+            /* Para hacer la imagen más opaca */
+            body::before {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(255, 255, 255, 0.4); /* Capa blanca semitransparente */
+                z-index: -1;
+            }
+    </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Inicio App dllo WEB</title>
@@ -14,12 +34,12 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <h1>APLICACIÓN</h1>
+            <img src="../Imagenes/logo-hotel-sinfondo.png" alt="La Palma" style="max-width: 300px; height: auto;">
         </div>
         <!-- /.login-logo -->
         <div class="card">
             <div class="card-body login-card-body">
-                <p class="login-box-msg">Ingresa usuario clave para iniciar</p>
+                <p class="login-box-msg">Ingresa usuario y clave para iniciar</p>
 
                 <form>
                     <div class="input-group mb-3">
@@ -40,7 +60,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <button type="button" class="btn btn-primary btn-block" onclick="Ingresar()">INGRESAR</button>
+                            <button type="button" id="btnIngresar" class="btn btn-primary btn-block">INGRESAR</button>
                         </div>
                     </div>
                 </form>
@@ -51,10 +71,12 @@
             <!-- /.login-card-body -->
         </div>
     </div>
+
     <!-- /.login-box -->
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script src="../Scripts/bootstrap.bundle.min.js"></script>
     <script src="Scripts/Comunes/CRUD.js"></script>
     <script src="Scripts/Login.js"></script>
+
 </body>
 </html>

@@ -4,12 +4,13 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-
+using System.Web.Http.Cors;
 using LaPalma.Clases;
 using LaPalma.Models;
 
 namespace LaPalma.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/Servicio")]
     public class ServicioController : ApiController
     {

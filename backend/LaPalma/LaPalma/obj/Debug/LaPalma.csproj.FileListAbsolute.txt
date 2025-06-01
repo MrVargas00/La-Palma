@@ -232,3 +232,9 @@ C:\Users\Sebastian\Desktop\ProyectoLaPalma\backend\LaPalma\LaPalma\obj\Debug\LaP
 C:\Users\Sebastian\Desktop\ProyectoLaPalma\backend\LaPalma\LaPalma\obj\Debug\LaPalma.csproj.Up2Date
 C:\Users\Sebastian\Desktop\ProyectoLaPalma\backend\LaPalma\LaPalma\obj\Debug\LaPalma.dll
 C:\Users\Sebastian\Desktop\ProyectoLaPalma\backend\LaPalma\LaPalma\obj\Debug\LaPalma.pdb
+C:\Users\Sebastian\Desktop\ProyectoLaPalma\backend\LaPalma\LaPalma\bin\Newtonsoft.Json.Bson.dll
+C:\Users\Sebastian\Desktop\ProyectoLaPalma\backend\LaPalma\LaPalma\bin\System.Web.Cors.dll
+C:\Users\Sebastian\Desktop\ProyectoLaPalma\backend\LaPalma\LaPalma\bin\System.Web.Http.Cors.dll
+C:\Users\Sebastian\Desktop\ProyectoLaPalma\backend\LaPalma\LaPalma\bin\Newtonsoft.Json.Bson.pdb
+C:\Users\Sebastian\Desktop\ProyectoLaPalma\backend\LaPalma\LaPalma\bin\Newtonsoft.Json.Bson.xml
+C:\Users\Sebastian\Desktop\ProyectoLaPalma\backend\LaPalma\LaPalma\bin\System.Web.Http.Cors.xml

@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Splash</title>
+    <meta http-equiv="refresh" content="3;url=Login.html">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom right, #fef6e4, #f0e5d8); 
+            font-family: Verdana, sans-serif;
+        }
+
+        .splash-img {
+            width: 50%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 50px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .loading-text {
+            margin-top: 20px;
+            font-size: 26px;
+            color: #333;
+        }
+
+            /* Animación de puntos suspensivos */
+            .loading-text::after {
+                content: '';
+                display: inline-block;
+                animation: dots 1.5s steps(3, end) infinite;
+            }
+
+        @keyframes dots {
+            0% {
+                content: '';
+            }
+
+            33% {
+                content: '.';
+            }
+
+            66% {
+                content: '..';
+            }
+
+            100% {
+                content: '...';
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="../Imagenes/Splash - La Palma - definida.png" alt="Splash del Hotel" class="splash-img">
+    <div class="loading-text">Cargando</div>
+</body>
+</html>
