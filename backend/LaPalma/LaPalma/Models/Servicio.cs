@@ -9,6 +9,7 @@
 
 namespace LaPalma.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -21,8 +22,10 @@ namespace LaPalma.Models
         public bool activo { get; set; }
         public int id_hotel { get; set; }
         public int id_tipoServicio { get; set; }
-    
+
+        [JsonIgnore]
         public virtual Hotel Hotel { get; set; }
+        [JsonIgnore]
         public virtual TipoServicio TipoServicio { get; set; }
     }
 }

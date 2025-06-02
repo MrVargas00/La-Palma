@@ -9,6 +9,7 @@
 
 namespace LaPalma.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -24,11 +25,14 @@ namespace LaPalma.Models
         public int id_ciudad { get; set; }
         public string nombre { get; set; }
         public int id_pais { get; set; }
-    
+
+        [JsonIgnore]
         public virtual Pai Pai { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<Cliente> Clientes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<Hotel> Hotels { get; set; }
     }
 }

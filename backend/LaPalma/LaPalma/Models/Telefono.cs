@@ -9,6 +9,7 @@
 
 namespace LaPalma.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -20,7 +21,8 @@ namespace LaPalma.Models
         public string tipo_duenio { get; set; }
         public string id_duenio { get; set; }
         public bool activo { get; set; }
-    
+
+        [JsonIgnore]
         public virtual Tipo_Telefono Tipo_Telefono { get; set; }
     }
 }

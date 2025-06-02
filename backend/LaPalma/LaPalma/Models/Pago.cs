@@ -9,6 +9,7 @@
 
 namespace LaPalma.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -21,8 +22,10 @@ namespace LaPalma.Models
         public string referencia { get; set; }
         public int id_metodo_pago { get; set; }
         public int id_reserva { get; set; }
-    
+
+        [JsonIgnore]
         public virtual Metodo_Pago Metodo_Pago { get; set; }
+        [JsonIgnore]
         public virtual Reserva Reserva { get; set; }
     }
 }

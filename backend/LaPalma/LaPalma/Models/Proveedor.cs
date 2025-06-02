@@ -9,6 +9,7 @@
 
 namespace LaPalma.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -28,7 +29,9 @@ namespace LaPalma.Models
         public int tipo_proveedor { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<Proveedor_Producto> Proveedor_Producto { get; set; }
+        [JsonIgnore]
         public virtual Tipo_Proveedor Tipo_Proveedor1 { get; set; }
     }
 }
