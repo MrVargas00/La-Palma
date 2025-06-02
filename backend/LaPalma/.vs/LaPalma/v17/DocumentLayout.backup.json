@@ -3,19 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\backend\\LaPalma\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|c:\\users\\sebastian\\desktop\\proyectolapalma\\backend\\lapalma\\lapalma\\controllers\\hotelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|c:\\users\\sebastian\\desktop\\proyectolapalma\\backend\\lapalma\\lapalma\\controllers\\serviciocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|solutionrelative:lapalma\\controllers\\serviciocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\backend\\LaPalma\\lapalma\\controllers\\hotelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|solutionrelative:lapalma\\controllers\\hotelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|c:\\users\\sebastian\\desktop\\proyectolapalma\\backend\\lapalma\\lapalma\\clases\\clshotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\backend\\LaPalma\\lapalma\\clases\\clshotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|solutionrelative:lapalma\\clases\\clshotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|c:\\users\\sebastian\\desktop\\proyectolapalma\\backend\\lapalma\\lapalma\\clases\\clstiposervicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\backend\\LaPalma\\lapalma\\clases\\clstiposervicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|solutionrelative:lapalma\\clases\\clstiposervicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|c:\\users\\sebastian\\desktop\\proyectolapalma\\backend\\lapalma\\lapalma\\controllers\\tiposervicioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\backend\\LaPalma\\lapalma\\controllers\\tiposervicioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|solutionrelative:lapalma\\controllers\\tiposervicioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -39,6 +43,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ServicioController.cs",
+              "DocumentMoniker": "C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\backend\\LaPalma\\LaPalma\\Controllers\\ServicioController.cs",
+              "RelativeDocumentMoniker": "LaPalma\\Controllers\\ServicioController.cs",
+              "ToolTip": "C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\backend\\LaPalma\\LaPalma\\Controllers\\ServicioController.cs",
+              "RelativeToolTip": "LaPalma\\Controllers\\ServicioController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T20:48:25.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "HotelController.cs",
               "DocumentMoniker": "C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\backend\\LaPalma\\LaPalma\\Controllers\\HotelController.cs",
               "RelativeDocumentMoniker": "LaPalma\\Controllers\\HotelController.cs",
@@ -46,12 +63,11 @@
               "RelativeToolTip": "LaPalma\\Controllers\\HotelController.cs",
               "ViewState": "AgIAAFUAAADA/////78kwGMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T20:38:34.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T20:38:34.96Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "clsHotel.cs",
               "DocumentMoniker": "C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\backend\\LaPalma\\LaPalma\\Clases\\clsHotel.cs",
               "RelativeDocumentMoniker": "LaPalma\\Clases\\clsHotel.cs",
@@ -59,12 +75,11 @@
               "RelativeToolTip": "LaPalma\\Clases\\clsHotel.cs",
               "ViewState": "AgIAADcAAAAAmZmZmVkmwHIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T20:37:29.723Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T20:37:29.723Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "TipoServiciosController.cs",
               "DocumentMoniker": "C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\backend\\LaPalma\\LaPalma\\Controllers\\TipoServiciosController.cs",
               "RelativeDocumentMoniker": "LaPalma\\Controllers\\TipoServiciosController.cs",
@@ -72,12 +87,11 @@
               "RelativeToolTip": "LaPalma\\Controllers\\TipoServiciosController.cs",
               "ViewState": "AgIAAAQAAAAAbWZmZmb0vxAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T20:27:36.719Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T20:27:36.719Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "clsTipoServicio.cs",
               "DocumentMoniker": "C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\backend\\LaPalma\\LaPalma\\Clases\\clsTipoServicio.cs",
               "RelativeDocumentMoniker": "LaPalma\\Clases\\clsTipoServicio.cs",
@@ -85,8 +99,7 @@
               "RelativeToolTip": "LaPalma\\Clases\\clsTipoServicio.cs",
               "ViewState": "AgIAAA0AAAAAy8zMzEwewCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T20:21:24.472Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T20:21:24.472Z"
             }
           ]
         }

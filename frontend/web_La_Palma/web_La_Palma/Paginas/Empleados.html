@@ -1,9 +1,9 @@
-﻿
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PAQUETES</title>
+    <title>EMPLEADOS</title>
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link href="Estilos/css/all.min.css" rel="stylesheet" />
@@ -19,13 +19,13 @@
                 <div class="col-md-12">
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">PAQUETES</h3>
+                            <h3 class="card-title">EMPLEADOS</h3>
                         </div>
 
-                        <form id="frmPaquetes">
+                        <form id="frmServicios">
                             <div class="card-body">
                                 <p style="font-size: 1.1rem; color: #495057; margin-bottom: 25px;">
-                                    Bienvenido a la sección de paquetes. Aquí puedes administrar y consultar nuestras ofertas y promociones especiales..
+                                    Bienvenido al módulo de empleados. Aquí puedes registrar, consultar y administrar la información del personal.
                                 </p>
                                 <div id="datos_entrada" class="card card-gray-dark">
                                     <!--  Bloque a esconder-->
@@ -34,88 +34,120 @@
                                     </div>
                                     <div class="card-body">
                                         <div class="row">
-                                            <div class="col-md-1">
+
+                                            <div class="col-md-2">
                                                 <div class="form-group">
-                                                    <label for="txtID">ID</label>
-                                                    <input type="text" class="form-control" id="txtID" placeholder="Id" disabled>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label for="txtNombrePaquete">Nombre</label>
-                                                    <input type="text" class="form-control" id="txtNombrePaquete" placeholder="Nombre del paquete">
+                                                    <label for="cboTipoDocumentoEmpleado">Tipo de Documento</label>
+                                                    <select id="cboTipoDocumentoEmpleado" class="form-control">
+                                                        <option value="1">VALOR 1</option>
+                                                        <option value="2">VALOR 2</option>
+                                                        <option value="3">VALOR 3</option>
+                                                        <option value="4">VALOR 4</option>
+                                                    </select>
                                                 </div>
                                             </div>
 
                                             <div class="col-md-2">
                                                 <div class="form-group">
-                                                    <label for="txtPrecioPaquete">Precio del Paquete</label>
-                                                    <input type="number" class="form-control" id="txtPrecioPaquete" name="precio" step="any" min="0">
+                                                    <label for="txtDocumentoEmpleado">Documento</label>
+                                                    <input type="text" class="form-control" id="txtDocumentoEmpleado" placeholder="Numero de documento">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtNombreEmpleado">Nombre</label>
+                                                    <input type="text" class="form-control" id="txtNombreEmpleado" placeholder="Ingrese el nombre">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtApellidosEmpleado">Apellidos</label>
+                                                    <input type="text" class="form-control" id="txtApellidosEmpleado" placeholder="Ingrese el apellido">
                                                 </div>
                                             </div>
 
                                             <div class="col-md-2">
                                                 <div class="form-group">
-                                                    <label for="txtDias">Dias</label>
-                                                    <input type="text" class="form-control" id="txtDias" placeholder="Dias de estancia">
+                                                    <label for="txtFechaNacimiento">Fecha de Nacimiento</label>
+                                                    <input type="date" class="form-control" id="txtFechaNacimiento" placeholder="CALENDARIO">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtDireccionEmpleado">Dirección</label>
+                                                    <input type="text" class="form-control" id="txtDireccionEmpleado" placeholder="Ingrese la dirección">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtEmailEmpleado">Email</label>
+                                                    <input type="email" class="form-control" id="txtEmailEmpleado" placeholder="Ingrese el email">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="txtFechaContratacion">Fecha de Contratación</label>
+                                                    <input type="date" class="form-control" id="txtFechaContratacion" placeholder="CALENDARIO">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="txtCiudadOrigen">Ciudad de Origen</label>
+                                                    <input type="text" class="form-control" id="txtCiudadOrigen" placeholder="Ciudad">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="cboCargoEmpleado"> ID Cargo</label>
+                                                    <select id="cboCargoEmpleado" class="form-control">
+                                                        <option value="1">VALOR 1</option>
+                                                        <option value="2">VALOR 2</option>
+                                                        <option value="3">VALOR 3</option>
+                                                        <option value="4">VALOR 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="cboGeneroEmpleado"> ID Genero</label>
+                                                    <select id="cboGeneroEmpleado" class="form-control">
+                                                        <option value="1">VALOR 1</option>
+                                                        <option value="2">VALOR 2</option>
+                                                        <option value="3">VALOR 3</option>
+                                                        <option value="4">VALOR 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="cboHotelEmpleado">ID Hotel</label>
+                                                    <select id="cboCargoHotelEmpleado" class="form-control">
+                                                        <option value="1">VALOR 1</option>
+                                                        <option value="2">VALOR 2</option>
+                                                        <option value="3">VALOR 3</option>
+                                                        <option value="4">VALOR 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-1">
+                                                <div class="form-group">
+                                                    <label for="chkActivoEmpleado">Activo</label>
+                                                    <input type="checkbox" class="form-control" id="chkActivoEmpleado" placeholder="CHECKBOX">
                                                 </div>
                                             </div>
 
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="txtDescripcionPaquete">Descripción</label>
-                                                    <input type="text" class="form-control" id="txtDescripcionPaquete" placeholder="Una breve descripción del paquete">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-1">
-                                                <div class="form-group">
-                                                    <label for="chkAereo">Transporte Via Aerea</label>
-                                                    <input type="checkbox" class="form-control" id="chkAereo" placeholder="CHECKBOX">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-1">
-                                                <div class="form-group">
-                                                    <label for="chkTerrestre">Transporte Via Terrestre</label>
-                                                    <input type="checkbox" class="form-control" id="chkTerrestre" placeholder="CHECKBOX">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-1">
-                                                <div class="form-group">
-                                                    <label for="chkSpa">Spa</label>
-                                                    <input type="checkbox" class="form-control" id="chkSpa" placeholder="CHECKBOX">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-1">
-                                                <div class="form-group">
-                                                    <label for="chkComida">Comida</label>
-                                                    <input type="checkbox" class="form-control" id="chkComida" placeholder="CHECKBOX">
-                                                </div>
-                                            </div>
-
-
-
-                                            <div class="col-md-1">
-                                                <div class="form-group">
-                                                    <label for="chkTour">Tours</label>
-                                                    <input type="checkbox" class="form-control" id="chkSpa" placeholder="CHECKBOX">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-1">
-                                                <div class="form-group">
-                                                    <label for="chkActivoPaquete">Activo</label>
-                                                    <input type="checkbox" class="form-control" id="chkActivoPaquete" placeholder="CHECKBOX">
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                       
+                                        
 
                                     </div>
                                     <div class="card-body">
