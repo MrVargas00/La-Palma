@@ -125,7 +125,13 @@
     <Content Include="Imagenes\logo-hotel-sinfondo.png" />
     <Content Include="Imagenes\Splash - La Palma - definida.png" />
     <Content Include="Imagenes\Splash - La Palma.jpg" />
+    <Content Include="Paginas\Cargo.html" />
     <Content Include="Paginas\CheckIn.html" />
+    <Content Include="Paginas\CheckOut.html" />
+    <Content Include="Paginas\Ciudades.html" />
+    <Content Include="Paginas\Clientes.html" />
+    <Content Include="Paginas\Compra.html" />
+    <Content Include="Paginas\Empleados.html" />
     <Content Include="Paginas\Estilos\adminlte.css" />
     <Content Include="Paginas\Estilos\adminlte.min.css" />
     <Content Include="Paginas\Estilos\all.min.css" />
@@ -161,6 +167,7 @@
     <Content Include="Paginas\Estilos\webfonts\fa-brands-400.svg" />
     <Content Include="Paginas\Estilos\webfonts\fa-regular-400.svg" />
     <Content Include="Paginas\Estilos\webfonts\fa-solid-900.svg" />
+    <Content Include="Paginas\Genero.html" />
     <Content Include="Paginas\Habitaciones.html" />
     <Content Include="Paginas\Login.html" />
     <Content Include="Paginas\Menu.html" />
@@ -168,7 +175,11 @@
     <Content Include="Paginas\Pagina1.html" />
     <Content Include="Paginas\Pagina2.html" />
     <Content Include="Paginas\PaginaBase.html" />
+    <Content Include="Paginas\Pagos.html" />
+    <Content Include="Paginas\Paises.html" />
     <Content Include="Paginas\Paquetes.html" />
+    <Content Include="Paginas\Productos.html" />
+    <Content Include="Paginas\Proveedor.html" />
     <Content Include="Paginas\Reservas.html" />
     <Content Include="Paginas\Scripts\Comunes\Comunes.js" />
     <Content Include="Paginas\Scripts\Comunes\CRUD.js" />
@@ -179,6 +190,8 @@
     <Content Include="Paginas\Scripts\Pagina2.js" />
     <Content Include="Paginas\Servicios.html" />
     <Content Include="Paginas\Splash.html" />
+    <Content Include="Paginas\TipoProveedor.html" />
+    <Content Include="Paginas\TipoVista.html" />
     <Content Include="Scripts\adminlte.js" />
     <Content Include="Scripts\adminlte.min.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />

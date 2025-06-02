@@ -46,16 +46,10 @@
                                                     <input type="text" class="form-control" id="txtNombreServicio" placeholder="Nombre del Servicio">
                                                 </div>
                                             </div>
-                                            <div class="col-md-2">
-                                                <div class="form-group">
-                                                    <label for="txtPrecioServicio">Precio</label>
-                                                    <input type="text" class="form-control" id="txtPrecioServicio" placeholder="Precio del servicio">
-                                                </div>
-                                            </div>
 
                                             <div class="col-md-3">
                                                 <div class="form-group">
-                                                    <label for="cboTipoServicio">Tipo Servicio</label>
+                                                    <label for="cboTipoServicio">ID Tipo Servicio</label>
                                                     <select id="cboTipoServicio" class="form-control">
                                                         <option value="1">VALOR 1</option>
                                                         <option value="2">VALOR 2</option>
@@ -64,6 +58,14 @@
                                                     </select>
                                                 </div>
                                             </div>
+
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="txtPrecioServicio">Precio del Servicio</label>
+                                                    <input type="number" class="form-control" id="txtPrecioServicio" name="precio" step="any" min="0">
+                                                </div>
+                                            </div>
+
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
@@ -74,7 +76,7 @@
                                             </div>
                                             <div class="col-md-3">
                                                 <div class="form-group">
-                                                    <label for="cboHotelServicio">Hotel</label>
+                                                    <label for="cboHotelServicio">ID Hotel</label>
                                                     <select id="cboHotelServicio" class="form-control">
                                                         <option value="1">VALOR 1</option>
                                                         <option value="2">VALOR 2</option>

@@ -25,7 +25,7 @@
                         <form id="frmServicios">
                             <div class="card-body">
                                 <p style="font-size: 1.1rem; color: #495057; margin-bottom: 25px;">
-                                    Check-Out.
+                                    Bienvenido al módulo de check-out. Aquí puedes gestionar la salida de los huéspedes y cerrar su estadía correctamente.
                                 </p>
                                 <div id="datos_entrada" class="card card-gray-dark">
                                     <!--  Bloque a esconder-->
@@ -56,8 +56,13 @@
 
                                             <div class="col-md-2">
                                                 <div class="form-group">
-                                                    <label for="txtReserva">Reserva</label>
-                                                    <input type="text" class="form-control" id="txtReserva" placeholder="Id de la Reserva">
+                                                    <label for="cboReservaCheckOut">ID Reserva</label>
+                                                    <select id="cboReservaCheickOut" class="form-control">
+                                                        <option value="1">VALOR 1</option>
+                                                        <option value="2">VALOR 2</option>
+                                                        <option value="3">VALOR 3</option>
+                                                        <option value="4">VALOR 4</option>
+                                                    </select>
                                                 </div>
                                             </div>
 
@@ -65,7 +70,6 @@
                                                 <div class="form-group">
                                                     <label for="txtCargosAdicionales">Cargos Adicionales</label>
                                                     <input type="number" class="form-control" id="txtCargosAdicionales" name="precio" step="any" min="0">
-
                                                 </div>
                                             </div>
                                         </div>
