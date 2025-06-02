@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SERVICIOS</title>
+    <title>RESERVAS</title>
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link href="Estilos/css/all.min.css" rel="stylesheet" />
@@ -19,7 +19,7 @@
                 <div class="col-md-12">
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">SERVICIOS</h3>
+                            <h3 class="card-title">RESERVAS</h3>
                         </div>
 
                         <form id="frmServicios">
@@ -36,27 +36,58 @@
                                         <div class="row">
                                             <div class="col-md-1">
                                                 <div class="form-group">
-                                                    <label for="txtIDServicio">ID</label>
-                                                    <input type="text" class="form-control" id="txtIDServicio" placeholder="Id" disabled>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label for="txtNombreServicio">Nombre</label>
-                                                    <input type="text" class="form-control" id="txtNombreServicio" placeholder="Nombre del Servicio">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="form-group">
-                                                    <label for="txtPrecioServicio">Precio</label>
-                                                    <input type="text" class="form-control" id="txtPrecioServicio" placeholder="Precio del servicio">
+                                                    <label for="txtIDReserva">ID</label>
+                                                    <input type="text" class="form-control" id="txtIDReserva" placeholder="Id" disabled>
                                                 </div>
                                             </div>
 
                                             <div class="col-md-3">
                                                 <div class="form-group">
-                                                    <label for="cboTipoServicio">Tipo Servicio</label>
-                                                    <select id="cboTipoServicio" class="form-control">
+                                                    <label for="txtDocumentoCliente">Documento</label>
+                                                    <input type="text" class="form-control" id="txtDocumentoCliente" placeholder="Documento del Cliente">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="txtFechaReserva">Fecha de Reserva</label>
+                                                    <input type="date" class="form-control" id="txtFechaReserva" placeholder="CALENDARIO">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="txtFechaEntrada">Fecha de Entrada</label>
+                                                    <input type="date" class="form-control" id="txtFechaEntrada" placeholder="CALENDARIO">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="txtFechaSalida">Fecha de Salida</label>
+                                                    <input type="date" class="form-control" id="txtFechaSalida" placeholder="CALENDARIO">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="txtHuespedes">Huespedes</label>
+                                                    <input type="text" class="form-control" id="txtHuespedes" placeholder="Numero de Huespedes">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="txtHabitacionReserva">Habitación</label>
+                                                    <input type="text" class="form-control" id="txtHabitacionReserva" placeholder="Numero de la Habitacion">
+                                                </div>
+                                            </div>
+
+                        
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="cboPaqueteReserva">Paquete</label>
+                                                    <select id="cboPaqueteReserva" class="form-control">
                                                         <option value="1">VALOR 1</option>
                                                         <option value="2">VALOR 2</option>
                                                         <option value="3">VALOR 3</option>
@@ -64,29 +95,20 @@
                                                     </select>
                                                 </div>
                                             </div>
+
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="txtDescripcionServicio">Descripción</label>
-                                                    <input type="text" class="form-control" id="txtDescripcionServicio" placeholder="Una breve descripción del servicio">
+                                                    <label for="txtObservacionesReserva">Observaciones</label>
+                                                    <input type="text" class="form-control" id="txtObservacionesReserva" placeholder="Observaciones de la reserva">
                                                 </div>
                                             </div>
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label for="cboHotelServicio">Hotel</label>
-                                                    <select id="cboHotelServicio" class="form-control">
-                                                        <option value="1">VALOR 1</option>
-                                                        <option value="2">VALOR 2</option>
-                                                        <option value="3">VALOR 3</option>
-                                                        <option value="4">VALOR 4</option>
-                                                    </select>
-                                                </div>
-                                            </div>
+                                            
                                             <div class="col-md-1">
                                                 <div class="form-group">
-                                                    <label for="chkActivoServicio">Activo</label>
-                                                    <input type="checkbox" class="form-control" id="chkActivoServicio" placeholder="CHECKBOX">
+                                                    <label for="chkActivoReserva">Activo</label>
+                                                    <input type="checkbox" class="form-control" id="chkActivoReserva" placeholder="CHECKBOX">
                                                 </div>
                                             </div>
                                         </div>

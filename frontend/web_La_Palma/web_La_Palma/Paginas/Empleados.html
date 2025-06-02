@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SERVICIOS</title>
+    <title>EMPLEADOS</title>
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link href="Estilos/css/all.min.css" rel="stylesheet" />
@@ -19,13 +19,13 @@
                 <div class="col-md-12">
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">SERVICIOS</h3>
+                            <h3 class="card-title">EMPLEADOS</h3>
                         </div>
 
                         <form id="frmServicios">
                             <div class="card-body">
                                 <p style="font-size: 1.1rem; color: #495057; margin-bottom: 25px;">
-                                    Bienvenido a la página de servicios. Aquí puedes gestionar los registros fácilmente.
+                                    Bienvenido a la página de empleados. Aquí puedes gestionar los registros fácilmente.
                                 </p>
                                 <div id="datos_entrada" class="card card-gray-dark">
                                     <!--  Bloque a esconder-->
@@ -34,48 +34,79 @@
                                     </div>
                                     <div class="card-body">
                                         <div class="row">
-                                            <div class="col-md-1">
-                                                <div class="form-group">
-                                                    <label for="txtIDServicio">ID</label>
-                                                    <input type="text" class="form-control" id="txtIDServicio" placeholder="Id" disabled>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label for="txtNombreServicio">Nombre</label>
-                                                    <input type="text" class="form-control" id="txtNombreServicio" placeholder="Nombre del Servicio">
-                                                </div>
-                                            </div>
+
                                             <div class="col-md-2">
                                                 <div class="form-group">
-                                                    <label for="txtPrecioServicio">Precio</label>
-                                                    <input type="text" class="form-control" id="txtPrecioServicio" placeholder="Precio del servicio">
+                                                    <label for="cboTipoDocumentoEmpleado">Tipo de Documento</label>
+                                                    <select id="cboTipoDocumentoEmpleado" class="form-control">
+                                                        <option value="1">VALOR 1</option>
+                                                        <option value="2">VALOR 2</option>
+                                                        <option value="3">VALOR 3</option>
+                                                        <option value="4">VALOR 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="txtDocumentoEmpleado">Documento</label>
+                                                    <input type="text" class="form-control" id="txtDocumentoEmpleado" placeholder="Numero de documento">
                                                 </div>
                                             </div>
 
                                             <div class="col-md-3">
                                                 <div class="form-group">
-                                                    <label for="cboTipoServicio">Tipo Servicio</label>
-                                                    <select id="cboTipoServicio" class="form-control">
-                                                        <option value="1">VALOR 1</option>
-                                                        <option value="2">VALOR 2</option>
-                                                        <option value="3">VALOR 3</option>
-                                                        <option value="4">VALOR 4</option>
-                                                    </select>
+                                                    <label for="txtNombreEmpleado">Nombre</label>
+                                                    <input type="text" class="form-control" id="txtNombreEmpleado" placeholder="Ingrese el nombre">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="txtDescripcionServicio">Descripción</label>
-                                                    <input type="text" class="form-control" id="txtDescripcionServicio" placeholder="Una breve descripción del servicio">
-                                                </div>
-                                            </div>
+
                                             <div class="col-md-3">
                                                 <div class="form-group">
-                                                    <label for="cboHotelServicio">Hotel</label>
-                                                    <select id="cboHotelServicio" class="form-control">
+                                                    <label for="txtApellidosEmpleado">Apellidos</label>
+                                                    <input type="text" class="form-control" id="txtApellidosEmpleado" placeholder="Ingrese el apellido">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="txtFechaNacimiento">Fecha de Nacimiento</label>
+                                                    <input type="date" class="form-control" id="txtFechaNacimiento" placeholder="CALENDARIO">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtDireccionEmpleado">Dirección</label>
+                                                    <input type="text" class="form-control" id="txtDireccionEmpleado" placeholder="Ingrese la dirección">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtEmailEmpleado">Email</label>
+                                                    <input type="email" class="form-control" id="txtEmailEmpleado" placeholder="Ingrese el email">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="txtFechaContratacion">Fecha de Contratación</label>
+                                                    <input type="date" class="form-control" id="txtFechaContratacion" placeholder="CALENDARIO">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="txtCiudadOrigen">Ciudad de Origen</label>
+                                                    <input type="text" class="form-control" id="txtCiudadOrigen" placeholder="Ciudad">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="cboCargoEmpleado">Cargo</label>
+                                                    <select id="cboCargoEmpleado" class="form-control">
                                                         <option value="1">VALOR 1</option>
                                                         <option value="2">VALOR 2</option>
                                                         <option value="3">VALOR 3</option>
@@ -83,13 +114,40 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="col-md-1">
+
+                                            <div class="col-md-2">
                                                 <div class="form-group">
-                                                    <label for="chkActivoServicio">Activo</label>
-                                                    <input type="checkbox" class="form-control" id="chkActivoServicio" placeholder="CHECKBOX">
+                                                    <label for="cboGeneroEmpleado">Genero</label>
+                                                    <select id="cboGeneroEmpleado" class="form-control">
+                                                        <option value="1">VALOR 1</option>
+                                                        <option value="2">VALOR 2</option>
+                                                        <option value="3">VALOR 3</option>
+                                                        <option value="4">VALOR 4</option>
+                                                    </select>
                                                 </div>
                                             </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="cboHotelEmpleado">Hotel</label>
+                                                    <select id="cboCargoHotelEmpleado" class="form-control">
+                                                        <option value="1">VALOR 1</option>
+                                                        <option value="2">VALOR 2</option>
+                                                        <option value="3">VALOR 3</option>
+                                                        <option value="4">VALOR 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-1">
+                                                <div class="form-group">
+                                                    <label for="chkActivoEmpleado">Activo</label>
+                                                    <input type="checkbox" class="form-control" id="chkActivoEmpleado" placeholder="CHECKBOX">
+                                                </div>
+                                            </div>
+
                                         </div>
+                                        
 
                                     </div>
                                     <div class="card-body">
