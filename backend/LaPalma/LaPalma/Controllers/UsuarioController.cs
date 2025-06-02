@@ -10,7 +10,7 @@ using System.Web.Http.Cors;
 
 namespace LaPalma.Controllers
 {
-    [EnableCors(origins: "*", headers: "*", methods: "*")]
+    [EnableCors(origins: "http://localhost:57735", headers: "*", methods: "*")]
     [RoutePrefix("api/Usuario")]
     public class UsuarioController : ApiController
     {

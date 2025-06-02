@@ -31,7 +31,7 @@
         <EntityTypeShape EntityType="DBLAPALMAModel.Tipo_Proveedor" Width="1.5" PointX="4.5" PointY="28" IsExpanded="true" />
         <EntityTypeShape EntityType="DBLAPALMAModel.Tipo_Telefono" Width="1.5" PointX="11.75" PointY="11.375" IsExpanded="true" />
         <EntityTypeShape EntityType="DBLAPALMAModel.Tipo_Vista" Width="1.5" PointX="3.75" PointY="19.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBLAPALMAModel.TipoServicio" Width="1.5" PointX="6.75" PointY="31.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBLAPALMAModel.TipoServicio" Width="1.5" PointX="9" PointY="21.375" IsExpanded="true" />
         <EntityTypeShape EntityType="DBLAPALMAModel.Usuario" Width="1.5" PointX="8.25" PointY="7.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DBLAPALMAModel.Usuario_Perfil" Width="1.5" PointX="10.5" PointY="7.5" IsExpanded="true" />
         <AssociationConnector Association="DBLAPALMAModel.FK__Empleado__id_car__02FC7413" ManuallyRouted="false" />

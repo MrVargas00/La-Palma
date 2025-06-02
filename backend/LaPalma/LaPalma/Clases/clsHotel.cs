@@ -94,5 +94,24 @@ namespace LaPalma.Clases
                 return "Error al eliminar el hotel";
             }
         }
+
+        public IQueryable<Hotel> llenarcombo()
+        {
+            try
+            {
+                return bdLaPalma.Hotels;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error en llenarcombo: {ex.Message}");
+                throw;
+            }
+        }
+
+        // Implementar IDisposable para liberar recursos
+        public void Dispose()
+        {
+            bdLaPalma?.Dispose();
+        }
     }
 }
