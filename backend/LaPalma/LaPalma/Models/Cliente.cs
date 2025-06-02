@@ -9,6 +9,7 @@
 
 namespace LaPalma.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -31,12 +32,17 @@ namespace LaPalma.Models
         public int idioma_preferido { get; set; }
         public int id_genero { get; set; }
         public int tipo_documento { get; set; }
-    
+
+        [JsonIgnore]
         public virtual Ciudad Ciudad { get; set; }
+        [JsonIgnore]
         public virtual Genero Genero { get; set; }
+        [JsonIgnore]
         public virtual Idioma Idioma { get; set; }
+        [JsonIgnore]
         public virtual Tipo_Documento Tipo_Documento1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<Reserva> Reservas { get; set; }
     }
 }

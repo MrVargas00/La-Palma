@@ -9,6 +9,7 @@
 
 namespace LaPalma.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -27,11 +28,15 @@ namespace LaPalma.Models
         public int tipo_vista { get; set; }
         public int id_hotel { get; set; }
         public int id_tipo_habitacion { get; set; }
-    
+
+        [JsonIgnore]
         public virtual Hotel Hotel { get; set; }
+        [JsonIgnore]
         public virtual Tipo_Habitacion Tipo_Habitacion { get; set; }
+        [JsonIgnore]
         public virtual Tipo_Vista Tipo_Vista1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<Reserva> Reservas { get; set; }
     }
 }

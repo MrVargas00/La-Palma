@@ -9,6 +9,7 @@
 
 namespace LaPalma.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -18,8 +19,10 @@ namespace LaPalma.Models
         public System.DateTime fecha_hora { get; set; }
         public string documento_empleado { get; set; }
         public int id_reserva { get; set; }
-    
+
+        [JsonIgnore]
         public virtual Empleado Empleado { get; set; }
+        [JsonIgnore]
         public virtual Reserva Reserva { get; set; }
     }
 }
