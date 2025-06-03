@@ -131,6 +131,7 @@
     <Content Include="Paginas\CheckOut.html" />
     <Content Include="Paginas\Ciudades.html" />
     <Content Include="Paginas\Clientes.html" />
+    <Content Include="Paginas\Clientes - Profesor.html" />
     <Content Include="Paginas\Compra.html" />
     <Content Include="Paginas\Empleados.html" />
     <Content Include="Paginas\Estilos\adminlte.css" />
@@ -185,6 +186,7 @@
     <Content Include="Paginas\Productos.html" />
     <Content Include="Paginas\Proveedor.html" />
     <Content Include="Paginas\Reservas.html" />
+    <Content Include="Paginas\Scripts\Clientes.js" />
     <Content Include="Paginas\Scripts\Comunes\Comunes.js" />
     <Content Include="Paginas\Scripts\Comunes\CRUD.js" />
     <Content Include="Paginas\Scripts\Empleado.js" />

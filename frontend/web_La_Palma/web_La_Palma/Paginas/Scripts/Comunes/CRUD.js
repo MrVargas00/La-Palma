@@ -236,16 +236,35 @@ async function LlenarTablaXServiciosAuth(URLServicio, TablaLlenar) {
                 }
             });
         const Rpta = await Respuesta.json();
+
         //Se recorre en un ciclo para llenar la tabla, con encabezados y los campos
         //Llena el encabezado
         var Columnas = [];
         NombreColumnas = Object.keys(Rpta[0]);
+
         for (var i in NombreColumnas) {
-            Columnas.push({
+            let columna = {
                 data: NombreColumnas[i],
                 title: NombreColumnas[i]
-            });
+            };
+
+            // Si la columna contiene fechas, aplicar formato personalizado
+            if (NombreColumnas[i] === 'fecha_nacimiento' ||
+                NombreColumnas[i] === 'fecha_contratacion') {
+                columna.render = function (data, type, row) {
+                    if (type === 'display' && data) {
+                        // Si viene en formato ISO, extraer solo la fecha
+                        if (typeof data === 'string' && data.includes('T')) {
+                            return data.split('T')[0];
+                        }
+                    }
+                    return data;
+                };
+            }
+
+            Columnas.push(columna);
         }
+
         //Llena los datos
         $(TablaLlenar).DataTable({
             data: Rpta,

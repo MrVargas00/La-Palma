@@ -146,11 +146,11 @@ async function Consultar() {
         $("#txtDocumentoEmpleado").val(empleado.documento);
         $("#txtNombreEmpleado").val(empleado.nombre);
         $("#txtApellidosEmpleado").val(empleado.apellidos);
-        $("#txtFechaNacimiento").val(empleado.fecha_nacimiento);
+        $("#txtFechaNacimiento").val(empleado.fecha_nacimiento ? empleado.fecha_nacimiento.split('T')[0] : '');
         $("#chkActivoEmpleado").prop('checked', empleado.activo); // activo
         $("#txtDireccionEmpleado").val(empleado.direccion);
         $("#txtEmailEmpleado").val(empleado.email);
-        $("#txtFechaContratacion").val(empleado.fecha_contratacion);
+        $("#txtFechaContratacion").val(empleado.fecha_contratacion ? empleado.fecha_contratacion.split('T')[0] : '');
         $("#cboCargoEmpleado").val(empleado.id_cargo);
         $("#cboGeneroEmpleado").val(empleado.id_genero);
         $("#cboHotelEmpleado").val(empleado.id_hotel);
@@ -163,7 +163,6 @@ async function EjecutarComando() {
         console.error("No hay método definido");
         return;
     }
-
     if (metodoActual.funcion == 'Consultar') {
         return Consultar();
     }
@@ -171,20 +170,28 @@ async function EjecutarComando() {
     // Creamos la direccion URL
     let URL = BaseUrl + "api/Empleado/" + metodoActual.funcion;
 
-    // Creamos el servicio
+    // Obtener las fechas y asegurar que estén en formato YYYY-MM-DD
+    let fechaNacimiento = $("#txtFechaNacimiento").val();
+    let fechaContratacion = $("#txtFechaContratacion").val();
+
+    if (fechaNacimiento) {fechaNacimiento = fechaNacimiento.split('T')[0];}
+    if (fechaContratacion) {fechaContratacion = fechaContratacion.split('T')[0];}
+
+    // Creamos el empleado
     const empleado = new Empleado(
         $("#txtDocumentoEmpleado").val(),
         $("#txtNombreEmpleado").val(),
         $("#txtApellidosEmpleado").val(),
         $("#txtEmailEmpleado").val(),
         $("#txtDireccionEmpleado").val(),
-        $("#txtFechaNacimiento").val(),
-        $("#txtFechaContratacion").val(),
+        fechaNacimiento,
+        fechaContratacion,
         $("#chkActivoEmpleado").prop('checked'),
         $("#cboCargoEmpleado").val(),
         $("#cboGeneroEmpleado").val(),
         $("#cboTipoDocumentoEmpleado").val(),
-        $("#cboHotelEmpleado").val());
+        $("#cboHotelEmpleado").val()
+    );
 
     const Rpta = await EjecutarComandoServicioAuth(metodoActual.metodo, URL, empleado);
     $("#dvMensaje").show();
