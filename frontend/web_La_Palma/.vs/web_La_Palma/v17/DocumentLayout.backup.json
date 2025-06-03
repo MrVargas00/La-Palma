@@ -1,7 +1,56 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\frontend\\web_La_Palma\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|c:\\users\\laura\\onedrive\\documentos\\proyectolapalma\\la-palma\\frontend\\web_la_palma\\web_la_palma\\paginas\\perfiles.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|solutionrelative:web_la_palma\\paginas\\perfiles.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|c:\\users\\laura\\onedrive\\documentos\\proyectolapalma\\la-palma\\frontend\\web_la_palma\\web_la_palma\\paginas\\paquetes.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|solutionrelative:web_la_palma\\paginas\\paquetes.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|c:\\users\\laura\\onedrive\\documentos\\proyectolapalma\\la-palma\\frontend\\web_la_palma\\web_la_palma\\paginas\\empleados.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|solutionrelative:web_la_palma\\paginas\\empleados.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|c:\\users\\laura\\onedrive\\documentos\\proyectolapalma\\la-palma\\frontend\\web_la_palma\\web_la_palma\\paginas\\habitaciones.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|solutionrelative:web_la_palma\\paginas\\habitaciones.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|c:\\users\\laura\\onedrive\\documentos\\proyectolapalma\\la-palma\\frontend\\web_la_palma\\web_la_palma\\paginas\\paises.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|solutionrelative:web_la_palma\\paginas\\paises.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|c:\\users\\laura\\onedrive\\documentos\\proyectolapalma\\la-palma\\frontend\\web_la_palma\\web_la_palma\\paginas\\cargo.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|solutionrelative:web_la_palma\\paginas\\cargo.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|c:\\users\\laura\\onedrive\\documentos\\proyectolapalma\\la-palma\\frontend\\web_la_palma\\web_la_palma\\paginas\\compra.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|solutionrelative:web_la_palma\\paginas\\compra.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|c:\\users\\laura\\onedrive\\documentos\\proyectolapalma\\la-palma\\frontend\\web_la_palma\\web_la_palma\\paginas\\clientes.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|solutionrelative:web_la_palma\\paginas\\clientes.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|c:\\users\\laura\\onedrive\\documentos\\proyectolapalma\\la-palma\\frontend\\web_la_palma\\web_la_palma\\paginas\\ciudades.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|solutionrelative:web_la_palma\\paginas\\ciudades.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|c:\\users\\laura\\onedrive\\documentos\\proyectolapalma\\la-palma\\frontend\\web_la_palma\\web_la_palma\\paginas\\checkout.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|solutionrelative:web_la_palma\\paginas\\checkout.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|c:\\users\\laura\\onedrive\\documentos\\proyectolapalma\\la-palma\\frontend\\web_la_palma\\web_la_palma\\paginas\\servicios.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|solutionrelative:web_la_palma\\paginas\\servicios.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|c:\\users\\laura\\onedrive\\documentos\\proyectolapalma\\la-palma\\frontend\\web_la_palma\\web_la_palma\\paginas\\checkin.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|solutionrelative:web_la_palma\\paginas\\checkin.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,15 +58,167 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Perfiles.html",
+              "DocumentMoniker": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Perfiles.html",
+              "RelativeDocumentMoniker": "web_La_Palma\\Paginas\\Perfiles.html",
+              "ToolTip": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Perfiles.html",
+              "RelativeToolTip": "web_La_Palma\\Paginas\\Perfiles.html",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAqwIQAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-03T01:53:15.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Paquetes.html",
+              "DocumentMoniker": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Paquetes.html",
+              "RelativeDocumentMoniker": "web_La_Palma\\Paginas\\Paquetes.html",
+              "ToolTip": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Paquetes.html",
+              "RelativeToolTip": "web_La_Palma\\Paginas\\Paquetes.html",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAAAJ0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-03T01:46:19.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Paises.html",
+              "DocumentMoniker": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Paises.html",
+              "RelativeDocumentMoniker": "web_La_Palma\\Paginas\\Paises.html",
+              "ToolTip": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Paises.html",
+              "RelativeToolTip": "web_La_Palma\\Paginas\\Paises.html",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAmwHkAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-03T01:43:15.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Habitaciones.html",
+              "DocumentMoniker": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Habitaciones.html",
+              "RelativeDocumentMoniker": "web_La_Palma\\Paginas\\Habitaciones.html",
+              "ToolTip": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Habitaciones.html",
+              "RelativeToolTip": "web_La_Palma\\Paginas\\Habitaciones.html",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAqwJQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-03T01:30:55.584Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Empleados.html",
+              "DocumentMoniker": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Empleados.html",
+              "RelativeDocumentMoniker": "web_La_Palma\\Paginas\\Empleados.html",
+              "ToolTip": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Empleados.html",
+              "RelativeToolTip": "web_La_Palma\\Paginas\\Empleados.html",
+              "ViewState": "AgIAALYAAAAAAAAAAAAAANIAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-03T01:23:54.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Compra.html",
+              "DocumentMoniker": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Compra.html",
+              "RelativeDocumentMoniker": "web_La_Palma\\Paginas\\Compra.html",
+              "ToolTip": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Compra.html",
+              "RelativeToolTip": "web_La_Palma\\Paginas\\Compra.html",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAqwJUAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-03T01:21:18.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Cargo.html",
+              "DocumentMoniker": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Cargo.html",
+              "RelativeDocumentMoniker": "web_La_Palma\\Paginas\\Cargo.html",
+              "ToolTip": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Cargo.html",
+              "RelativeToolTip": "web_La_Palma\\Paginas\\Cargo.html",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAwwHcAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-03T00:31:16.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Clientes.html",
+              "DocumentMoniker": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Clientes.html",
+              "RelativeDocumentMoniker": "web_La_Palma\\Paginas\\Clientes.html",
+              "ToolTip": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Clientes.html",
+              "RelativeToolTip": "web_La_Palma\\Paginas\\Clientes.html",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAqwL0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-03T01:16:52.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Ciudades.html",
+              "DocumentMoniker": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Ciudades.html",
+              "RelativeDocumentMoniker": "web_La_Palma\\Paginas\\Ciudades.html",
+              "ToolTip": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Ciudades.html",
+              "RelativeToolTip": "web_La_Palma\\Paginas\\Ciudades.html",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAqwHYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-03T00:56:39.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CheckOut.html",
+              "DocumentMoniker": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\CheckOut.html",
+              "RelativeDocumentMoniker": "web_La_Palma\\Paginas\\CheckOut.html",
+              "ToolTip": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\CheckOut.html",
+              "RelativeToolTip": "web_La_Palma\\Paginas\\CheckOut.html",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAAAIEAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-03T00:52:42.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CheckIn.html",
+              "DocumentMoniker": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\CheckIn.html",
+              "RelativeDocumentMoniker": "web_La_Palma\\Paginas\\CheckIn.html",
+              "ToolTip": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\CheckIn.html",
+              "RelativeToolTip": "web_La_Palma\\Paginas\\CheckIn.html",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAHsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-03T00:46:05.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Servicios.html",
+              "DocumentMoniker": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Servicios.html",
+              "RelativeDocumentMoniker": "web_La_Palma\\Paginas\\Servicios.html",
+              "ToolTip": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Servicios.html",
+              "RelativeToolTip": "web_La_Palma\\Paginas\\Servicios.html",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAAAJEAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-03T00:09:13.412Z",
+              "EditorCaption": ""
             }
           ]
         }

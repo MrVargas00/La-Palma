@@ -1,7 +1,48 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\backend\\LaPalma\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\backend\\LaPalma\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|c:\\users\\laura\\onedrive\\documentos\\proyectolapalma\\la-palma\\backend\\lapalma\\lapalma\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|solutionrelative:lapalma\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|c:\\users\\laura\\onedrive\\documentos\\proyectolapalma\\la-palma\\backend\\lapalma\\lapalma\\models\\usuario_perfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|solutionrelative:lapalma\\models\\usuario_perfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|c:\\users\\laura\\onedrive\\documentos\\proyectolapalma\\la-palma\\backend\\lapalma\\lapalma\\models\\tipo_vista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|solutionrelative:lapalma\\models\\tipo_vista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|c:\\users\\laura\\onedrive\\documentos\\proyectolapalma\\la-palma\\backend\\lapalma\\lapalma\\models\\tiposervicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|solutionrelative:lapalma\\models\\tiposervicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|c:\\users\\laura\\onedrive\\documentos\\proyectolapalma\\la-palma\\backend\\lapalma\\lapalma\\models\\tipo_proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|solutionrelative:lapalma\\models\\tipo_proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|c:\\users\\laura\\onedrive\\documentos\\proyectolapalma\\la-palma\\backend\\lapalma\\lapalma\\models\\tipo_habitacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|solutionrelative:lapalma\\models\\tipo_habitacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|c:\\users\\laura\\onedrive\\documentos\\proyectolapalma\\la-palma\\backend\\lapalma\\lapalma\\models\\tipo_documento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|solutionrelative:lapalma\\models\\tipo_documento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|c:\\users\\laura\\onedrive\\documentos\\proyectolapalma\\la-palma\\backend\\lapalma\\lapalma\\models\\reserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|solutionrelative:lapalma\\models\\reserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|c:\\users\\laura\\onedrive\\documentos\\proyectolapalma\\la-palma\\backend\\lapalma\\lapalma\\models\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|solutionrelative:lapalma\\models\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|c:\\users\\laura\\onedrive\\documentos\\proyectolapalma\\la-palma\\backend\\lapalma\\lapalma\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68A2CF99-B767-4E58-BD4D-416151BB0778}|LaPalma\\LaPalma.csproj|solutionrelative:lapalma\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +50,137 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\backend\\LaPalma\\LaPalma\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "LaPalma\\Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\backend\\LaPalma\\LaPalma\\Models\\Usuario.cs",
+              "RelativeToolTip": "LaPalma\\Models\\Usuario.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T02:12:46.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Usuario_Perfil.cs",
+              "DocumentMoniker": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\backend\\LaPalma\\LaPalma\\Models\\Usuario_Perfil.cs",
+              "RelativeDocumentMoniker": "LaPalma\\Models\\Usuario_Perfil.cs",
+              "ToolTip": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\backend\\LaPalma\\LaPalma\\Models\\Usuario_Perfil.cs",
+              "RelativeToolTip": "LaPalma\\Models\\Usuario_Perfil.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T02:11:15.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Tipo_Vista.cs",
+              "DocumentMoniker": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\backend\\LaPalma\\LaPalma\\Models\\Tipo_Vista.cs",
+              "RelativeDocumentMoniker": "LaPalma\\Models\\Tipo_Vista.cs",
+              "ToolTip": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\backend\\LaPalma\\LaPalma\\Models\\Tipo_Vista.cs",
+              "RelativeToolTip": "LaPalma\\Models\\Tipo_Vista.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T02:09:32.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TipoServicio.cs",
+              "DocumentMoniker": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\backend\\LaPalma\\LaPalma\\Models\\TipoServicio.cs",
+              "RelativeDocumentMoniker": "LaPalma\\Models\\TipoServicio.cs",
+              "ToolTip": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\backend\\LaPalma\\LaPalma\\Models\\TipoServicio.cs",
+              "RelativeToolTip": "LaPalma\\Models\\TipoServicio.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T02:08:38.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Tipo_Proveedor.cs",
+              "DocumentMoniker": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\backend\\LaPalma\\LaPalma\\Models\\Tipo_Proveedor.cs",
+              "RelativeDocumentMoniker": "LaPalma\\Models\\Tipo_Proveedor.cs",
+              "ToolTip": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\backend\\LaPalma\\LaPalma\\Models\\Tipo_Proveedor.cs",
+              "RelativeToolTip": "LaPalma\\Models\\Tipo_Proveedor.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T02:07:31.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Tipo_Habitacion.cs",
+              "DocumentMoniker": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\backend\\LaPalma\\LaPalma\\Models\\Tipo_Habitacion.cs",
+              "RelativeDocumentMoniker": "LaPalma\\Models\\Tipo_Habitacion.cs",
+              "ToolTip": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\backend\\LaPalma\\LaPalma\\Models\\Tipo_Habitacion.cs",
+              "RelativeToolTip": "LaPalma\\Models\\Tipo_Habitacion.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T02:05:40.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Tipo_Documento.cs",
+              "DocumentMoniker": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\backend\\LaPalma\\LaPalma\\Models\\Tipo_Documento.cs",
+              "RelativeDocumentMoniker": "LaPalma\\Models\\Tipo_Documento.cs",
+              "ToolTip": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\backend\\LaPalma\\LaPalma\\Models\\Tipo_Documento.cs",
+              "RelativeToolTip": "LaPalma\\Models\\Tipo_Documento.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T02:03:55.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Reserva.cs",
+              "DocumentMoniker": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\backend\\LaPalma\\LaPalma\\Models\\Reserva.cs",
+              "RelativeDocumentMoniker": "LaPalma\\Models\\Reserva.cs",
+              "ToolTip": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\backend\\LaPalma\\LaPalma\\Models\\Reserva.cs",
+              "RelativeToolTip": "LaPalma\\Models\\Reserva.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwBEAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T02:01:28.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Proveedor.cs",
+              "DocumentMoniker": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\backend\\LaPalma\\LaPalma\\Models\\Proveedor.cs",
+              "RelativeDocumentMoniker": "LaPalma\\Models\\Proveedor.cs",
+              "ToolTip": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\backend\\LaPalma\\LaPalma\\Models\\Proveedor.cs",
+              "RelativeToolTip": "LaPalma\\Models\\Proveedor.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwBAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T01:59:43.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\backend\\LaPalma\\LaPalma\\Models\\Producto.cs",
+              "RelativeDocumentMoniker": "LaPalma\\Models\\Producto.cs",
+              "ToolTip": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\backend\\LaPalma\\LaPalma\\Models\\Producto.cs",
+              "RelativeToolTip": "LaPalma\\Models\\Producto.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T01:58:12.842Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
