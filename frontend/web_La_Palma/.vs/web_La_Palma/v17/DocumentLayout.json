@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\frontend\\web_La_Palma\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|c:\\users\\sebastian\\desktop\\proyectolapalma\\frontend\\web_la_palma\\web_la_palma\\paginas\\servicios.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|solutionrelative:web_la_palma\\paginas\\servicios.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|c:\\users\\sebastian\\desktop\\proyectolapalma\\frontend\\web_la_palma\\web_la_palma\\paginas\\scripts\\empleado.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|solutionrelative:web_la_palma\\paginas\\scripts\\empleado.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\frontend\\web_La_Palma\\web_la_palma\\paginas\\empleados.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|solutionrelative:web_la_palma\\paginas\\empleados.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\frontend\\web_La_Palma\\web_la_palma\\paginas\\habitaciones.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|solutionrelative:web_la_palma\\paginas\\habitaciones.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\frontend\\web_La_Palma\\web_la_palma\\paginas\\scripts\\habitaciones.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|solutionrelative:web_la_palma\\paginas\\scripts\\habitaciones.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,15 +39,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Servicios.html",
-              "DocumentMoniker": "C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Servicios.html",
-              "RelativeDocumentMoniker": "web_La_Palma\\Paginas\\Servicios.html",
-              "ToolTip": "C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Servicios.html",
-              "RelativeToolTip": "web_La_Palma\\Paginas\\Servicios.html",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-06-03T00:09:13.412Z",
+              "Title": "Empleado.js",
+              "DocumentMoniker": "C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Scripts\\Empleado.js",
+              "RelativeDocumentMoniker": "web_La_Palma\\Paginas\\Scripts\\Empleado.js",
+              "ToolTip": "C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Scripts\\Empleado.js",
+              "RelativeToolTip": "web_La_Palma\\Paginas\\Scripts\\Empleado.js",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAQwGkAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-03T05:54:37.325Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Empleados.html",
+              "DocumentMoniker": "C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Empleados.html",
+              "RelativeDocumentMoniker": "web_La_Palma\\Paginas\\Empleados.html",
+              "ToolTip": "C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Empleados.html",
+              "RelativeToolTip": "web_La_Palma\\Paginas\\Empleados.html",
+              "ViewState": "AgIAAFQAAAAAHGZmZmb0v2AAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-03T05:35:15.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Habitaciones.js",
+              "DocumentMoniker": "C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Scripts\\Habitaciones.js",
+              "RelativeDocumentMoniker": "web_La_Palma\\Paginas\\Scripts\\Habitaciones.js",
+              "ToolTip": "C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Scripts\\Habitaciones.js",
+              "RelativeToolTip": "web_La_Palma\\Paginas\\Scripts\\Habitaciones.js",
+              "ViewState": "AgIAAIIAAAAAmpmZmZklwI0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-03T04:49:12.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Habitaciones.html",
+              "DocumentMoniker": "C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Habitaciones.html",
+              "RelativeDocumentMoniker": "web_La_Palma\\Paginas\\Habitaciones.html",
+              "ToolTip": "C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Habitaciones.html",
+              "RelativeToolTip": "web_La_Palma\\Paginas\\Habitaciones.html",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAAAKEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-03T04:47:06.425Z"
             }
           ]
         }

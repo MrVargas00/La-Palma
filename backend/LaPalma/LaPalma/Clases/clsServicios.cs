@@ -23,18 +23,11 @@ namespace LaPalma.Clases
                     .ToList();
         }
 
-        // CONSULTAR SERVICIOS ORDENADOS POR PRECIO
-        public List<Servicio> ListarServiciosxPrecio()
-        {
-            return bdLaPalma.Servicios
-                    .OrderBy(p => p.precio)
-                    .ToList();
-        }
-
         // CONSULTAR SERVICIO POR ID
-        public Servicio ConsultarxID(int id)
+        public Servicio Consultar(int id)
         {
-            return bdLaPalma.Servicios.FirstOrDefault(p => p.id_servicio == id);
+           Servicio serv = bdLaPalma.Servicios.FirstOrDefault(e => e.id_servicio == id);
+            return serv;
         }
 
         // CONSULTAMOS POR EL NOMBRE (POSIBLES REPETIDOS)
@@ -66,38 +59,38 @@ namespace LaPalma.Clases
         {
             try
             {
-                Servicio serv = ConsultarxID(servicio.id_servicio);
+                Servicio serv = Consultar(servicio.id_servicio);
                 if (serv == null)
                 {
                     return "El servicio no existe";
                 }
                 bdLaPalma.Servicios.AddOrUpdate(servicio);
                 bdLaPalma.SaveChanges();
-                return "Se agrego exitosamente el servicio con nombre: " + servicio.id_servicio;
+                return "Se actualizó exitosamente el servicio con id: " + servicio.id_servicio;
             }
             catch (Exception)
             {
-                return "Se agrego exitosamente el servicio con nombre: " + servicio.id_servicio;
+                return "Algo falló al actualizar el servicio con id: " + servicio.id_servicio;
             }
         }
 
         //  ELIMINAMOS SERVICIOS
-        public string Eliminar(int id)
+        public string Eliminar()
         {
             try
             {
-                Servicio serv = ConsultarxID(id);
+                Servicio serv = Consultar(servicio.id_servicio);
                 if (serv == null)
                 {
                     return "El Servicio no existe";
                 }
                 bdLaPalma.Servicios.Remove(serv);
                 bdLaPalma.SaveChanges();
-                return "Se agrego exitosamente el servicio con nombre: " + servicio.id_servicio;
+                return "Se eliminó exitosamente el servicio";
             }
             catch (Exception)
             {
-                return "Error al eliminar el evento";
+                return "Error al eliminar el servicio";
             }
         }
     }

@@ -39,21 +39,84 @@ function ConfigurarModoInsertar() { // Función para configurar el modo insertar
     $("#txtID").prop('disabled', true); // Deshabilitar campo ID
     // Limpiar otros campos
     $("#txtNombre").val('');
+    $("#txtNombre").prop('disabled', false);
     $("#txtDescripcion").val('');
+    $("#txtDescripcion").prop('disabled', false);
     $("#txtPrecio").val('');
+    $("#txtPrecio").prop('disabled', false);
     $("#chkActivo").prop('checked', false);
+    $("#chkActivo").prop('disabled', false);
     $("#cboHotel").val('1');
+    $("#cboHotel").prop('disabled', false);
     $("#cboTipoServicio").val('1');
+    $("#cboTipoServicio").prop('disabled', false)
+    $("#dvMensaje").html("");
+    $("#dvMensaje").hide();
 }
 
 function ConfigurarModoEdicion() {
-    $("#txtID").prop('disabled', false); // Habilitar campo ID para poder ingresar valor
+    $("#txtID").val(''); // Limpiar el ID
+    $("#txtID").prop('disabled', false); // Deshabilitar campo ID
+    // Limpiar otros campos
+    $("#txtNombre").val('');
+    $("#txtNombre").prop('disabled', false);
+    $("#txtDescripcion").val('');
+    $("#txtDescripcion").prop('disabled', false);
+    $("#txtPrecio").val('');
+    $("#txtPrecio").prop('disabled', false);
+    $("#chkActivo").prop('checked', false);
+    $("#chkActivo").prop('disabled', false);
+    $("#cboHotel").val('1');
+    $("#cboHotel").prop('disabled', false);
+    $("#cboTipoServicio").val('1');
+    $("#cboTipoServicio").prop('disabled', false)
+    $("#dvMensaje").html("");
+    $("#dvMensaje").hide();
+}
+
+function ConfigurarModoEliminar() {
+    $("#txtID").prop('disabled', false);
+
+    // Deshabilitar todos los demás campos
+    $("#txtNombre").prop('disabled', true);
+    $("#txtDescripcion").prop('disabled', true);
+    $("#txtPrecio").prop('disabled', true);
+    $("#chkActivo").prop('disabled', true);
+    $("#cboHotel").prop('disabled', true);
+    $("#cboTipoServicio").prop('disabled', true);
+    $("#dvMensaje").html("");
+    $("#dvMensaje").hide();
+}
+
+async function Consultar() {
+    let ID = $("#txtID").val();
+    let URL = BaseUrl + "api/Servicio/Consultar?ID=" + ID;
+    const servicio = await ConsultarServicioAuth(URL);
+    if (servicio == null) {
+        // No existe, se borran los datos
+        OcultarDatosEntrada();
+        $("#dvMensaje").html("El servicio no existe");
+        $("#dvMensaje").show();
+
+    } else {
+        $("#txtID").val(servicio.id_servicio);
+        $("#txtNombre").val(servicio.nombre);
+        $("#txtDescripcion").val(servicio.descripcion);
+        $("#txtPrecio").val(servicio.precio);
+        $("#chkActivo").prop('checked', servicio.activo); 
+        $("#cboHotel").val(servicio.id_hotel);
+        $("#cboTipoServicio").val(servicio.id_tipoServicio);
+    }
 }
 
 async function EjecutarComando() {
     if (!metodoActual) {
         console.error("No hay método definido");
         return;
+    }
+
+    if (metodoActual.funcion == 'Consultar') {
+        return Consultar();
     }
 
     // Creamos la direccion URL
@@ -72,13 +135,13 @@ async function EjecutarComando() {
         $("#cboTipoServicio").val());
 
     const Rpta = await EjecutarComandoServicioAuth(metodoActual.metodo, URL, servicio);
-
+    $("#dvMensaje").show();
     LlenarTablaServicios();
 }
 
 class Servicio {
-    constructor(id, nombre, descripcion, precio, activo, id_hotel, id_tipoServicio) {
-        this.id = id;
+    constructor(id_servicio, nombre, descripcion, precio, activo, id_hotel, id_tipoServicio) {
+        this.id_servicio = id_servicio;
         this.nombre = nombre;
         this.descripcion = descripcion
         this.precio = precio;
@@ -142,12 +205,31 @@ jQuery(function () {
         };
 
         // Configurar para modo edición
-        ConfigurarModoEdicion();
+        ConfigurarModoEliminar();
+    });
+
+    $("#btnConsultar").click(function () {
+        console.log("Botón Consultar clickeado");
+        MostrarDatosEntrada();
+
+        // Guardar el método y función
+        metodoActual = {
+            metodo: 'GET',
+            funcion: 'Consultar'
+        };
+
+        // Configurar para modo edición
+        ConfigurarModoEliminar();
     });
 
     $("#btnConfirmar").click(function () {
-        EjecutarComando(); // Usa la variable global metodoActual
-        OcultarDatosEntrada();
+        EjecutarComando();
+
+        // Solo ocultar los datos si NO es una consulta
+        if (metodoActual && metodoActual.funcion !== 'Consultar') {
+            OcultarDatosEntrada();
+        }
+        // Si es consultar, mantener los datos visibles para mostrar el resultado
     });
 
     $("#btnCancelar").click(function () {

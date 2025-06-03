@@ -1,26 +1,25 @@
-﻿using System;
+﻿using LaPalma.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-using LaPalma.Models;
-
 namespace LaPalma.Clases
 {
-    public class clsTipoServicio: IDisposable
+    public class clsCargo : IDisposable
     {
         private DBLAPALMAEntities bdLaPalma;
-        public TipoServicio tipo_serv { get; set; }
-
-        public clsTipoServicio()
+        public Cargo cargo { get; set; }
+        public clsCargo()
         {
             bdLaPalma = new DBLAPALMAEntities();
         }
-        public IQueryable<TipoServicio> llenarcombo()
+
+        public IQueryable<Cargo> llenarcombo()
         {
             try
             {
-                return bdLaPalma.TipoServicios;
+                return bdLaPalma.Cargoes;
             }
             catch (Exception ex)
             {

@@ -22,7 +22,7 @@
                             <h3 class="card-title">HABITACIONES</h3>
                         </div>
 
-                        <form id="frmServicios">
+                        <form id="frmHabitaciones">
                             <div class="card-body">
                                 <p style="font-size: 1.1rem; color: #495057; margin-bottom: 25px;">
                                     Bienvenido a la página de Habitaciones. Aquí puedes explorar y gestionar la disponibilidad y características de nuestras habitaciones.
@@ -34,21 +34,21 @@
                                     </div>
                                     <div class="card-body">
                                         <div class="row">
-                                            <div class="col-md-1">
+                                            <div class="col-md-2">
                                                 <div class="form-group">
                                                     <label for="txtIDHabitacion">ID</label>
                                                     <input type="text" class="form-control" id="txtIDHabitacion" placeholder="Id" disabled>
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-4">
+                                            <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label for="txtHabitacion">Habitación</label>
                                                     <input type="text" class="form-control" id="txtHabitacion" placeholder="Numero de habitación">
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-2">
+                                            <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label for="txtPrecioHabitacion">Precio</label>
                                                     <input type="number" class="form-control" id="txtPrecioHabitacion" name="precio" step="any" min="0">
@@ -56,51 +56,33 @@
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-3">
+                                            <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label for="cboHotelHabitacion">ID Hotel</label>
                                                     <select id="cboHotelHabitacion" class="form-control">
-                                                        <option value="1">VALOR 1</option>
-                                                        <option value="2">VALOR 2</option>
-                                                        <option value="3">VALOR 3</option>
-                                                        <option value="4">VALOR 4</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label for="cboTipoHabitacion">ID Tipo Habitación</label>
-                                                    <select id="cboTipoHabitacion" class="form-control">
-                                                        <option value="1">VALOR 1</option>
-                                                        <option value="2">VALOR 2</option>
-                                                        <option value="3">VALOR 3</option>
-                                                        <option value="4">VALOR 4</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label for="cboTipoVista">Tipo Vista</label>
-                                                    <select id="cboTipoVista" class="form-control">
-                                                        <option value="1">VALOR 1</option>
-                                                        <option value="2">VALOR 2</option>
-                                                        <option value="3">VALOR 3</option>
-                                                        <option value="4">VALOR 4</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-6">
+                                            <div class="col-md-4">
                                                 <div class="form-group">
-                                                    <label for="txtDescripcionHabitacion">Descripción</label>
-                                                    <input type="text" class="form-control" id="txtDescripcionHabitacion" placeholder="Una breve descripción del servicio">
+                                                    <label for="cboTipoHabitacion">ID Tipo Habitación</label>
+                                                    <select id="cboTipoHabitacion" class="form-control">
+                                                    </select>
                                                 </div>
                                             </div>
-                                           
-                                            <div class="col-md-1">
+
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="cboTipoVista">Tipo Vista</label>
+                                                    <select id="cboTipoVista" class="form-control">
+                                                    </select>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-md-2">
                                                 <div class="form-group">
                                                     <label for="chkActivoHabitacion">Activo</label>
                                                     <input type="checkbox" class="form-control" id="chkActivoHabitacion" placeholder="CHECKBOX">
@@ -126,7 +108,7 @@
                                     <div class="card-header">
                                         <h3 class="card-title">PROCESO</h3>
                                     </div>
-                                    <div class="card-body">
+                                    <div id="id_botones" class="card-body">
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <br />
@@ -146,6 +128,23 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <table id="tblHabitaciones" class="table table-bordered table-striped" style="width:100%;">
+                                                <thead>
+                                                    <tr>
+                                                        <th>id_habitacion</th>
+                                                        <th>numero_habitacion</th>
+                                                        <th>activo</th>
+                                                        <th>precio</th>
+                                                        <th>tipo_vista</th>
+                                                        <th>id_hotel</th>
+                                                        <th>id_tipo_habitacion</th>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="card-footer">
@@ -159,6 +158,11 @@
     </section>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script src="../Scripts/bootstrap.bundle.min.js"></script>
-    <script src="Scripts/Pagina1.js"></script>
+    <!-- Tables -->
+    <script src="../Scripts/jquery.dataTables.min.js"></script>
+    <script src="../Scripts/dataTables.bootstrap4.min.js"></script>
+    <script src="Scripts/Comunes/Comunes.js"></script>
+    <script src="Scripts/Comunes/CRUD.js"></script>
+    <script src="Scripts/Habitaciones.js"></script>
 </body>
 </html>

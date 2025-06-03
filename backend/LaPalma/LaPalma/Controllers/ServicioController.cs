@@ -10,7 +10,7 @@ using LaPalma.Models;
 
 namespace LaPalma.Controllers
 {
-    [EnableCors(origins: "*", headers: "*", methods: "*")]
+    [EnableCors(origins: "http://localhost:57735", headers: "*", methods: "*")]
     [RoutePrefix("api/Servicio")]
     public class ServicioController : ApiController
     {
@@ -23,19 +23,11 @@ namespace LaPalma.Controllers
         }
 
         [HttpGet]
-        [Route("ListarServiciosxPrecio")]
-        public List<Servicio> ListarServiciosxPrecio()
+        [Route("Consultar")]
+        public Servicio Consultar(int ID)
         {
             clsServicios serv = new clsServicios();
-            return serv.ListarServiciosxPrecio();
-        }
-
-        [HttpGet]
-        [Route("ConsultarServicio")]
-        public Servicio ConsultarServicio(int ID)
-        {
-            clsServicios serv = new clsServicios();
-            return serv.ConsultarxID(ID);
+            return serv.Consultar(ID);
         }
 
         [HttpGet]
@@ -66,10 +58,11 @@ namespace LaPalma.Controllers
 
         [HttpDelete]
         [Route("Eliminar")]
-        public string Eliminar(int ID)
+        public string Eliminar([FromBody] Servicio servicio)
         {
             clsServicios serv = new clsServicios();
-            return serv.Eliminar(ID);
+            serv.servicio = servicio;
+            return serv.Eliminar();
         }
     }
 }
