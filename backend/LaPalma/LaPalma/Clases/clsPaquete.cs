@@ -7,11 +7,16 @@ using System.Web;
 
 namespace LaPalma.Clases
 {
-    public class clsPaquete
+    public class clsPaquete: IDisposable
     {
         private DBLAPALMAEntities bdLaPalma = new DBLAPALMAEntities();
 
         public Paquete paquete { get; set; }
+
+        public clsPaquete()
+        {
+            bdLaPalma = new DBLAPALMAEntities();
+        }
 
         public List<Paquete> ListarPaquetes()
         {
@@ -68,14 +73,36 @@ namespace LaPalma.Clases
                 {
                     return "El paquete no existe";
                 }
-                bdLaPalma.Paquetes.AddOrUpdate(paquete);
+                bdLaPalma.Paquetes.Remove(paq);
                 bdLaPalma.SaveChanges();
-                return "Se elimino exitosamente el paquete con id: " + paquete.id_paquete;
+                return "Se eliminó exitosamente el paquete";
             }
             catch (Exception)
             {
                 return "Error al eliminar el paquete";
             }
         }
+
+        public IQueryable<Paquete> llenarcombo()
+        {
+            try
+            {
+                return bdLaPalma.Paquetes
+                    .Where(p => p.activo)
+                    .OrderBy(p => p.nombre);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error en llenarcombo: {ex.Message}");
+                throw;
+            }
+        }
+
+        // Implementar IDisposable para liberar recursos
+        public void Dispose()
+        {
+            bdLaPalma?.Dispose();
+        }
+
     }
 }

@@ -77,5 +77,26 @@ namespace LaPalma.Clases
                 return "Error al eliminar la habitación";
             }
         }
+
+        public IQueryable<Habitacion> llenarcombo()
+        {
+            try
+            {
+                return bdLaPalma.Habitacions
+                    .Where(p => p.activo)
+                    .OrderBy(p => p.numero_habitacion);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error en llenarcombo: {ex.Message}");
+                throw;
+            }
+        }
+
+        // Implementar IDisposable para liberar recursos
+        public void Dispose()
+        {
+            bdLaPalma?.Dispose();
+        }
     }
 }

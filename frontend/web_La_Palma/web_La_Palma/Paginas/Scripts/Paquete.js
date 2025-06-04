@@ -160,7 +160,7 @@ async function EjecutarComando() {
         $("#chkSpa").prop('checked'),
         $("#chkComida").prop('checked'),
         $("#chkTour").prop('checked'),
-        $("#chkActivoPaquete").prop('checked'),
+        $("#chkActivoPaquete").prop('checked'));
 
     const Rpta = await EjecutarComandoServicioAuth(metodoActual.metodo, URL, paquete);
     $("#dvMensaje").show();
@@ -259,6 +259,8 @@ jQuery(function () {
         if (metodoActual && metodoActual.funcion !== 'Consultar') {
             OcultarDatosEntrada();
         }
+
+        LlenarTablaPaquetes();
         // Si es consultar, mantener los datos visibles para mostrar el resultado
     });
 

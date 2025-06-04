@@ -56,5 +56,46 @@ namespace LaPalma.Controllers
             empl.empleado = empleado;
             return empl.Eliminar();
         }
+
+        [HttpGet]
+        [Route("LlenarCombo")]
+        public IHttpActionResult LlenarCombo()
+        {
+            clsEmpleado emp = null;
+            try
+            {
+                emp = new clsEmpleado();
+
+                // MATERIALIZAR LA CONSULTA INMEDIATAMENTE
+                var datos = emp.llenarcombo().ToList();
+
+                var result = datos.Select(t => new
+                {
+                    Codigo = t.documento,
+                    Nombre = t.nombre
+                }).ToList();
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error en LlenarCombo: {ex.Message}");
+                System.Diagnostics.Debug.WriteLine($"StackTrace: {ex.StackTrace}");
+
+                return InternalServerError(new Exception($"Error al obtener los empleados: {ex.Message}"));
+            }
+            finally
+            {
+                // Liberar recursos
+                emp?.Dispose();
+            }
+        }
+
+        [HttpOptions]
+        [Route("LlenarCombo")]
+        public IHttpActionResult Options()
+        {
+            return Ok();
+        }
     }
 }

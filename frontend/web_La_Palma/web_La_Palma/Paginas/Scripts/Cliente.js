@@ -40,7 +40,7 @@ function LlenarComboCiudad() {
 }
 
 function LlenarComboIdioma() {
-    let URL = BaseUrl + "api/Idioma/LlenarCombo"; // URL actualizada
+    let URL = BaseUrl + "api/Idiomas/LlenarCombo"; // URL actualizada
     LlenarComboXServiciosAuth(URL, '#cboIdiomaPreferencia');
 }
 
@@ -61,7 +61,7 @@ function ConfigurarModoInsertar() { // Función para configurar el modo insertar
     $("#cboCiudad").val('1');
     $("#cboCiudad").prop('disabled', false);
     $("#cboIdiomaPreferencia").val('1');
-    $("#cboIdiomaPreferencia").prop('disabled', true);
+    $("#cboIdiomaPreferencia").prop('disabled', false);
     $("#cboTipoGenero").val('1');
     $("#cboTipoGenero").prop('disabled', false);
     $("#cboTipoDocumento").val('1');
@@ -167,11 +167,9 @@ async function EjecutarComando() {
     // Creamos la direccion URL
     let URL = BaseUrl + "api/Cliente/" + metodoActual.funcion;
 
-    let esInsertar = (metodoActual.funcion === 'Insertar');
-
     // Creamos el servicio
     const cliente = new Cliente(
-        esInsertar ? null : $("#txtDocumentoCliente").val(), // Si es insertar, ID va null
+        $("#txtDocumentoCliente").val(),
         $("#txtNombreCliente").val(),
         $("#txtApellidosCliente").val(),
         $("#txtFechaNacimiento").val(),
@@ -181,9 +179,7 @@ async function EjecutarComando() {
         $("#cboCiudad").val(),
         $("#cboIdiomaPreferencia").val(),
         $("#cboTipoGenero").val(),
-        $("#cboTipoDocumento").val());
-      
-
+        $("#cboTipoDocumento").val())
 
     const Rpta = await EjecutarComandoServicioAuth(metodoActual.metodo, URL, cliente);
     $("#dvMensaje").show();
@@ -227,7 +223,7 @@ jQuery(function () {
     console.log("jQuery cargado correctamente");
 
     $("#btnInsertar").click(function () {
-        console.log("Botón clickeado");
+        console.log("Botón Insertar clickeado");
         MostrarDatosEntrada();
 
         // Guardar el método y función en la variable global

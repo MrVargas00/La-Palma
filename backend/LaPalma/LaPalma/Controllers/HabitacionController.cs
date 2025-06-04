@@ -56,5 +56,46 @@ namespace LaPalma.Controllers
             hab.habitacion = habitacion;
             return hab.Eliminar();
         }
+
+        [HttpGet]
+        [Route("LlenarCombo")]
+        public IHttpActionResult LlenarCombo()
+        {
+            clsHabitacion hab = null;
+            try
+            {
+                hab = new clsHabitacion();
+
+                // MATERIALIZAR LA CONSULTA INMEDIATAMENTE
+                var datos = hab.llenarcombo().ToList();
+
+                var result = datos.Select(t => new
+                {
+                    Codigo = t.id_habitacion,
+                    Nombre = t.numero_habitacion
+                }).ToList();
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error en LlenarCombo: {ex.Message}");
+                System.Diagnostics.Debug.WriteLine($"StackTrace: {ex.StackTrace}");
+
+                return InternalServerError(new Exception($"Error al obtener las habitaciones: {ex.Message}"));
+            }
+            finally
+            {
+                // Liberar recursos
+                hab?.Dispose();
+            }
+        }
+
+        [HttpOptions]
+        [Route("LlenarCombo")]
+        public IHttpActionResult Options()
+        {
+            return Ok();
+        }
     }
 }

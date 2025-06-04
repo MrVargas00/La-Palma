@@ -56,5 +56,46 @@ namespace LaPalma.Controllers
             paq.paquete = paquete;
             return paq.Eliminar();
         }
+
+        [HttpGet]
+        [Route("LlenarCombo")]
+        public IHttpActionResult LlenarCombo()
+        {
+            clsPaquete paq = null;
+            try
+            {
+                paq = new clsPaquete();
+
+                // MATERIALIZAR LA CONSULTA INMEDIATAMENTE
+                var datos = paq.llenarcombo().ToList();
+
+                var result = datos.Select(t => new
+                {
+                    Codigo = t.id_paquete,
+                    Nombre = t.nombre
+                }).ToList();
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error en LlenarCombo: {ex.Message}");
+                System.Diagnostics.Debug.WriteLine($"StackTrace: {ex.StackTrace}");
+
+                return InternalServerError(new Exception($"Error al obtener los paquetes: {ex.Message}"));
+            }
+            finally
+            {
+                // Liberar recursos
+                paq?.Dispose();
+            }
+        }
+
+        [HttpOptions]
+        [Route("LlenarCombo")]
+        public IHttpActionResult Options()
+        {
+            return Ok();
+        }
     }
 }

@@ -197,6 +197,7 @@
     <Content Include="Paginas\Scripts\Pagina1.js" />
     <Content Include="Paginas\Scripts\Pagina2.js" />
     <Content Include="Paginas\Scripts\Paquete.js" />
+    <Content Include="Paginas\Scripts\Reserva.js" />
     <Content Include="Paginas\Scripts\Servicios.js" />
     <Content Include="Paginas\Servicios.html" />
     <Content Include="Paginas\Splash.html" />

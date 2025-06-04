@@ -32,7 +32,7 @@ namespace LaPalma.Clases
             {
                 bdLaPalma.Clientes.Add(cliente);
                 bdLaPalma.SaveChanges();
-                return "Se agrego exitosamente el cliente: " + cliente.nombre+ " y documento: " + cliente.documento;
+                return "Se agrego exitosamente el cliente: " + cliente.nombre + " y documento: " + cliente.documento;
             }
             catch (Exception)
             {
@@ -76,6 +76,27 @@ namespace LaPalma.Clases
             {
                 return "Error al eliminar el cliente";
             }
+        }
+
+        public IQueryable<Cliente> llenarcombo()
+        {
+            try
+            {
+                return bdLaPalma.Clientes
+                    .Where(p => p.activo)
+                    .OrderBy(p => p.documento);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error en llenarcombo: {ex.Message}");
+                throw;
+            }
+        }
+
+        // Implementar IDisposable para liberar recursos
+        public void Dispose()
+        {
+            bdLaPalma?.Dispose();
         }
     }
 }

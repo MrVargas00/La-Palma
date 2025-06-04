@@ -237,7 +237,7 @@ jQuery(function () {
     console.log("jQuery cargado correctamente");
 
     $("#btnInsertar").click(function () {
-        console.log("Botón clickeado");
+        console.log("Botón Insertar clickeado");
         MostrarDatosEntrada();
 
         // Guardar el método y función en la variable global

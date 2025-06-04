@@ -22,7 +22,7 @@
                             <h3 class="card-title">RESERVAS</h3>
                         </div>
 
-                        <form id="frmServicios">
+                        <form id="frmReserva">
                             <div class="card-body">
                                 <p style="font-size: 1.1rem; color: #495057; margin-bottom: 25px;">
                                     Bienvenido a la página de reservas. Aquí puedes crear, consultar y gestionar las reservas de forma eficiente..
@@ -43,8 +43,9 @@
 
                                             <div class="col-md-3">
                                                 <div class="form-group">
-                                                    <label for="txtDocumentoCliente">Documento</label>
-                                                    <input type="text" class="form-control" id="txtDocumentoCliente" placeholder="Documento del Cliente">
+                                                    <label for="cboDocumento">Documento del Cliente</label>
+                                                    <select id="cboDocumento" class="form-control">
+                                                    </select>
                                                 </div>
                                             </div>
 
@@ -82,10 +83,6 @@
                                                 <div class="form-group">
                                                     <label for="cboPaqueteReserva">ID Paquete</label>
                                                     <select id="cboPaqueteReserva" class="form-control">
-                                                        <option value="1">VALOR 1</option>
-                                                        <option value="2">VALOR 2</option>
-                                                        <option value="3">VALOR 3</option>
-                                                        <option value="4">VALOR 4</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -94,10 +91,6 @@
                                                 <div class="form-group">
                                                     <label for="cboHabitacion">ID Habitación</label>
                                                     <select id="cboHabitacion" class="form-control">
-                                                        <option value="1">VALOR 1</option>
-                                                        <option value="2">VALOR 2</option>
-                                                        <option value="3">VALOR 3</option>
-                                                        <option value="4">VALOR 4</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -110,7 +103,7 @@
                                                     <input type="text" class="form-control" id="txtObservacionesReserva" placeholder="Observaciones de la reserva">
                                                 </div>
                                             </div>
-                                            
+
                                             <div class="col-md-1">
                                                 <div class="form-group">
                                                     <label for="chkActivoReserva">Activo</label>
@@ -129,6 +122,65 @@
                                             <div class="col-md-3">
                                                 <br />
                                                 <button type="button" id="btnCancelar" class="btn-block btn-lg btn-primary">CANCELAR</button>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <br />
+                                                <button type="button" id="btnCheck-in" class="btn-block btn-lg btn-primary" data-toggle="modal" data-target="#modChekIn">CHECK-IN</button>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="modChekIn" tabindex="-1" role="dialog" aria-labelledby="modTelefonosLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="modTelefonosLabel">COMPLETAR CHECK-IN</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="LlenarTablaReservas()">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label for="txtIDChekIn">ID - RESERVA</label>
+                                                                            <input type="text" class="form-control" id="txtIDChek-in" placeholder="Id de la reserva" disabled="true">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label for="txtDocCheckIn">DOCUMENTO</label>
+                                                                            <input type="text" class="form-control" id="txtDocCheckIn" placeholder="Documento del Empleado" disabled="true">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label for="txtFechahoraEntrada">Fecha y Hora de Entrada - dd/mm/aa   00:00 am/pm</label>
+                                                                            <input type="datetime" class="form-control" id="txtFechahoraEntrada" placeholder="dd/mm/aa   00:00 am/pm">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <button id="bntConfirmarCheckIN" class="btn-block btn-lg btn-secondary" onclick="EjecutarComando('POST', 'Insertar')">CONFIRMAR</button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <button id="bntCancelarCheckIN" class="btn-block btn-lg btn-secondary" data-dismiss="modal" onclick="LlenarTablaClientes()">CANCELAR</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <div id="dvMensajeTel" class=""></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-3">
+                                                <br />
+                                                <button type="button" id="btnCheck-out" class="btn-block btn-lg btn-primary">CHECK-OUT</button>
                                             </div>
                                         </div>
                                     </div>
@@ -159,7 +211,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <table id="tblServicios" class="table table-bordered table-striped" style="width:100%;">
+                                            <table id="tblReservas" class="table table-bordered table-striped" style="width:100%;">
                                                 <thead>
                                                     <tr>
                                                         <th>id_reserva</th>
@@ -190,7 +242,12 @@
     </section>
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script src="../Scripts/bootstrap.bundle.min.js"></script>
+
+    <!-- Tables -->
+    <script src="../Scripts/jquery.dataTables.min.js"></script>
+    <script src="../Scripts/dataTables.bootstrap4.min.js"></script>
     <script src="Scripts/Comunes/Comunes.js"></script>
     <script src="Scripts/Comunes/CRUD.js"></script>
+    <script src="Scripts/Reserva.js"></script>
 </body>
 </html>

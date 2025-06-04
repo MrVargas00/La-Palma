@@ -222,6 +222,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Clases\clsCargo.cs" />
+    <Compile Include="Clases\clsCiudad.cs" />
     <Compile Include="Clases\clsCliente.cs" />
     <Compile Include="Clases\clsCypher.cs" />
     <Compile Include="Clases\clsEmpleado.cs" />
@@ -229,6 +230,7 @@
     <Compile Include="Clases\clsHotel.cs" />
     <Compile Include="Clases\clsLogin.cs" />
     <Compile Include="Clases\clsPaquete.cs" />
+    <Compile Include="Clases\clsReserva.cs" />
     <Compile Include="Clases\clsServicios.cs" />
     <Compile Include="Clases\clsTipoServicio.cs" />
     <Compile Include="Clases\clsTipos.cs" />
@@ -236,6 +238,7 @@
     <Compile Include="Clases\TokenGenerator.cs" />
     <Compile Include="Clases\TokenValidationHandler.cs" />
     <Compile Include="Controllers\CargoController.cs" />
+    <Compile Include="Controllers\CiudadController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\EmpleadoController.cs" />
     <Compile Include="Controllers\GeneroController.cs" />
@@ -246,6 +249,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PaisController.cs" />
     <Compile Include="Controllers\PaqueteController.cs" />
+    <Compile Include="Controllers\ReservaController.cs" />
     <Compile Include="Controllers\ServicioController.cs" />
     <Compile Include="Controllers\TipoDocumentoController.cs" />
     <Compile Include="Controllers\TipoHabitacionController.cs" />

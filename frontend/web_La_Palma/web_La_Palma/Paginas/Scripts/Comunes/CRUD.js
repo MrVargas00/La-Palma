@@ -176,9 +176,16 @@ async function LlenarComboXServiciosAuth(URLServicio, ComboLlenar) {
         const Rpta = await Respuesta.json();
         //Se debe limpiar el combo
         $(ComboLlenar).empty();
-        //Se recorre en un ciclo para llenar el select con la información
-        for (i = 0; i < Rpta.length; i++) {
-            $(ComboLlenar).append('<option value=' + Rpta[i].Codigo + '>' + Rpta[i].Nombre + '</option>');
+        if (ComboLlenar == "#cboDocumento") {
+            //Se recorre en un ciclo para llenar el select con la información
+            for (i = 0; i < Rpta.length; i++) {
+                $(ComboLlenar).append('<option value=' + Rpta[i].Codigo + '>' + Rpta[i].Codigo + " - " + Rpta[i].Nombre + '</option>');
+            }
+        } else {
+            //Se recorre en un ciclo para llenar el select con la información
+            for (i = 0; i < Rpta.length; i++) {
+                $(ComboLlenar).append('<option value=' + Rpta[i].Codigo + '>' + Rpta[i].Nombre + '</option>');
+            }
         }
     }
     catch (error) {
@@ -236,35 +243,16 @@ async function LlenarTablaXServiciosAuth(URLServicio, TablaLlenar) {
                 }
             });
         const Rpta = await Respuesta.json();
-
         //Se recorre en un ciclo para llenar la tabla, con encabezados y los campos
         //Llena el encabezado
         var Columnas = [];
         NombreColumnas = Object.keys(Rpta[0]);
-
         for (var i in NombreColumnas) {
-            let columna = {
+            Columnas.push({
                 data: NombreColumnas[i],
                 title: NombreColumnas[i]
-            };
-
-            // Si la columna contiene fechas, aplicar formato personalizado
-            if (NombreColumnas[i] === 'fecha_nacimiento' ||
-                NombreColumnas[i] === 'fecha_contratacion') {
-                columna.render = function (data, type, row) {
-                    if (type === 'display' && data) {
-                        // Si viene en formato ISO, extraer solo la fecha
-                        if (typeof data === 'string' && data.includes('T')) {
-                            return data.split('T')[0];
-                        }
-                    }
-                    return data;
-                };
-            }
-
-            Columnas.push(columna);
+            });
         }
-
         //Llena los datos
         $(TablaLlenar).DataTable({
             data: Rpta,
