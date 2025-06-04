@@ -54,5 +54,7 @@ namespace LaPalma.Models
         public virtual DbSet<TipoServicio> TipoServicios { get; set; }
         public virtual DbSet<Usuario> Usuarios { get; set; }
         public virtual DbSet<Usuario_Perfil> Usuario_Perfil { get; set; }
+        public virtual DbSet<Estado_Habitacion> Estado_Habitacion { get; set; }
+        public virtual DbSet<Estado_Reserva> Estado_Reserva { get; set; }
     }
 }

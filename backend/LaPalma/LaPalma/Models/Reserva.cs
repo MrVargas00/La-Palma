@@ -33,6 +33,7 @@ namespace LaPalma.Models
         public string documento_cliente { get; set; }
         public int id_habitacion { get; set; }
         public Nullable<int> id_paquete { get; set; }
+        public int Estado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         [JsonIgnore]
@@ -49,5 +50,7 @@ namespace LaPalma.Models
         public virtual ICollection<Pago> Pagoes { get; set; }
         [JsonIgnore]
         public virtual Paquete Paquete { get; set; }
+        [JsonIgnore]
+        public virtual Estado_Reserva Estado_Reserva { get; set; }
     }
 }

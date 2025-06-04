@@ -88,6 +88,7 @@
     <EntitySetMapping Name="Habitacions">
       <EntityTypeMapping TypeName="DBLAPALMAModel.Habitacion">
         <MappingFragment StoreEntitySet="Habitacion">
+          <ScalarProperty Name="estado_habitacion" ColumnName="estado_habitacion" />
           <ScalarProperty Name="id_habitacion" ColumnName="id_habitacion" />
           <ScalarProperty Name="numero_habitacion" ColumnName="numero_habitacion" />
           <ScalarProperty Name="activo" ColumnName="activo" />
@@ -215,6 +216,7 @@
     <EntitySetMapping Name="Reservas">
       <EntityTypeMapping TypeName="DBLAPALMAModel.Reserva">
         <MappingFragment StoreEntitySet="Reserva">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
           <ScalarProperty Name="id_reserva" ColumnName="id_reserva" />
           <ScalarProperty Name="fecha_reserva" ColumnName="fecha_reserva" />
           <ScalarProperty Name="fecha_llegada" ColumnName="fecha_llegada" />
@@ -322,6 +324,22 @@
           <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
           <ScalarProperty Name="id_perfil" ColumnName="id_perfil" />
           <ScalarProperty Name="activo" ColumnName="activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estado_Habitacion">
+      <EntityTypeMapping TypeName="DBLAPALMAModel.Estado_Habitacion">
+        <MappingFragment StoreEntitySet="Estado_Habitacion">
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="id_estadoH" ColumnName="id_estadoH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estado_Reserva">
+      <EntityTypeMapping TypeName="DBLAPALMAModel.Estado_Reserva">
+        <MappingFragment StoreEntitySet="Estado_Reserva">
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="id_estadoR" ColumnName="id_estadoR" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

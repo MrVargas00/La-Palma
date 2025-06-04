@@ -222,6 +222,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Clases\clsCargo.cs" />
+    <Compile Include="Clases\clsCheckIn.cs" />
     <Compile Include="Clases\clsCiudad.cs" />
     <Compile Include="Clases\clsCliente.cs" />
     <Compile Include="Clases\clsCypher.cs" />
@@ -232,15 +233,19 @@
     <Compile Include="Clases\clsPaquete.cs" />
     <Compile Include="Clases\clsReserva.cs" />
     <Compile Include="Clases\clsServicios.cs" />
+    <Compile Include="Clases\clsTelefonos.cs" />
     <Compile Include="Clases\clsTipoServicio.cs" />
     <Compile Include="Clases\clsTipos.cs" />
     <Compile Include="Clases\clsUsuario.cs" />
     <Compile Include="Clases\TokenGenerator.cs" />
     <Compile Include="Clases\TokenValidationHandler.cs" />
     <Compile Include="Controllers\CargoController.cs" />
+    <Compile Include="Controllers\CheckInController.cs" />
     <Compile Include="Controllers\CiudadController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\EmpleadoController.cs" />
+    <Compile Include="Controllers\EstadoHabitacionController.cs" />
+    <Compile Include="Controllers\EstadoReservaController.cs" />
     <Compile Include="Controllers\GeneroController.cs" />
     <Compile Include="Controllers\HabitacionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -251,10 +256,12 @@
     <Compile Include="Controllers\PaqueteController.cs" />
     <Compile Include="Controllers\ReservaController.cs" />
     <Compile Include="Controllers\ServicioController.cs" />
+    <Compile Include="Controllers\TelefonoController.cs" />
     <Compile Include="Controllers\TipoDocumentoController.cs" />
     <Compile Include="Controllers\TipoHabitacionController.cs" />
     <Compile Include="Controllers\TipoProveedorController.cs" />
     <Compile Include="Controllers\TipoServiciosController.cs" />
+    <Compile Include="Controllers\TipoTelefonoController.cs" />
     <Compile Include="Controllers\TipoVistaController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
@@ -292,6 +299,12 @@
       <DependentUpon>DBlapalma.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Empleado.cs">
+      <DependentUpon>DBlapalma.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Estado_Habitacion.cs">
+      <DependentUpon>DBlapalma.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Estado_Reserva.cs">
       <DependentUpon>DBlapalma.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Genero.cs">
@@ -431,6 +444,7 @@
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <None Include="Properties\PublishProfiles\site26546-WebDeploy.pubxml" />
     <None Include="Properties\PublishProfiles\site26558-WebDeploy.pubxml" />
+    <None Include="Properties\PublishProfiles\site27912-WebDeploy.pubxml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />

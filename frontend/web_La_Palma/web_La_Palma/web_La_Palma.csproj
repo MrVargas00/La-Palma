@@ -176,7 +176,7 @@
     <Content Include="Paginas\Menu.html" />
     <Content Include="Paginas\MenuLateral.html" />
     <Content Include="Paginas\MetodosPago.html" />
-    <Content Include="Paginas\Pagina1.html" />
+    <Content Include="Paginas\PaginaInicio.html" />
     <Content Include="Paginas\Pagina2.html" />
     <Content Include="Paginas\PaginaBase.html" />
     <Content Include="Paginas\Pagos.html" />
@@ -196,6 +196,7 @@
     <Content Include="Paginas\Scripts\MenuLateral.js" />
     <Content Include="Paginas\Scripts\Pagina1.js" />
     <Content Include="Paginas\Scripts\Pagina2.js" />
+    <Content Include="Paginas\Scripts\PaginaInicio.js" />
     <Content Include="Paginas\Scripts\Paquete.js" />
     <Content Include="Paginas\Scripts\Reserva.js" />
     <Content Include="Paginas\Scripts\Servicios.js" />
@@ -255,6 +256,7 @@
     <Content Include="Scripts\adminlte.js.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <None Include="Properties\PublishProfiles\site27914-WebDeploy.pubxml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\dataTables.bootstrap4.js" />
     <Content Include="Scripts\dataTables.bootstrap4.min.js" />

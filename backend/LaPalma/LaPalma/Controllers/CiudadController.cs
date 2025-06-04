@@ -9,13 +9,13 @@ using System.Web.Http.Cors;
 
 namespace LaPalma.Controllers
 {
-    [EnableCors(origins: "http://localhost:57735", headers: "*", methods: "*")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/Ciudad")]
     public class CiudadController : ApiController
     {
         [HttpGet]
         [Route("LlenarCombo")]
-        public IHttpActionResult LlenarCombo()
+        public IHttpActionResult LlenarCombo(int? idPais = null)
         {
             clsCiudad ciudad = null;
             try
@@ -23,7 +23,8 @@ namespace LaPalma.Controllers
                 ciudad = new clsCiudad();
 
                 // MATERIALIZAR LA CONSULTA INMEDIATAMENTE
-                var datos = ciudad.llenarcombo().ToList();
+                // Pasar el parámetro idPais a la clase
+                var datos = ciudad.llenarcombo(idPais).ToList();
 
                 var result = datos.Select(t => new
                 {
@@ -50,6 +51,54 @@ namespace LaPalma.Controllers
         [HttpOptions]
         [Route("LlenarCombo")]
         public IHttpActionResult Options()
+        {
+            return Ok();
+        }
+
+        // Agregar este método al CiudadController existente
+
+        [HttpGet]
+        [Route("ObtenerPaisPorCiudad")]
+        public IHttpActionResult ObtenerPaisPorCiudad(int idCiudad)
+        {
+            clsCiudad ciudad = null;
+            try
+            {
+                ciudad = new clsCiudad();
+
+                var ciudadInfo = ciudad.ObtenerPaisPorCiudad(idCiudad);
+
+                if (ciudadInfo != null)
+                {
+                    var result = new
+                    {
+                        id_ciudad = ciudadInfo.id_ciudad,
+                        nombre_ciudad = ciudadInfo.nombre,
+                        id_pais = ciudadInfo.id_pais
+                        // Removemos nombre_pais ya que no lo necesitas en el frontend
+                    };
+
+                    return Ok(result);
+                }
+                else
+                {
+                    return NotFound();
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error en ObtenerPaisPorCiudad: {ex.Message}");
+                return InternalServerError(new Exception($"Error al obtener el país de la ciudad: {ex.Message}"));
+            }
+            finally
+            {
+                ciudad?.Dispose();
+            }
+        }
+
+        [HttpOptions]
+        [Route("ObtenerPaisPorCiudad")]
+        public IHttpActionResult OptionsObtenerPaisPorCiudad()
         {
             return Ok();
         }

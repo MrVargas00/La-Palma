@@ -10,7 +10,7 @@ using System.Web.Http.Cors;
 
 namespace LaPalma.Controllers
 {
-    [EnableCors(origins: "http://localhost:57735", headers: "*", methods: "*")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/Cliente")]
     public class ClienteController : ApiController
     {
@@ -59,8 +59,8 @@ namespace LaPalma.Controllers
 
 
         [HttpGet]
-        [Route("LlenarComboDocumento")]
-        public IHttpActionResult LlenarComboDocumento()
+        [Route("LlenarCombo")]
+        public IHttpActionResult LlenarCombo()
         {
             clsCliente cliente = null;
             try
@@ -93,7 +93,7 @@ namespace LaPalma.Controllers
         }
 
         [HttpOptions]
-        [Route("LlenarComboDocumento")]
+        [Route("LlenarCombo")]
         public IHttpActionResult Options()
         {
             return Ok();

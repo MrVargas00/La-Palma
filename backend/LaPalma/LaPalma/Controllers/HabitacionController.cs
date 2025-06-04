@@ -10,7 +10,7 @@ using System.Web.Http.Cors;
 
 namespace LaPalma.Controllers
 {
-    [EnableCors(origins: "http://localhost:57735", headers: "*", methods: "*")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/Habitacion")]
     public class HabitacionController : ApiController
     {
@@ -42,6 +42,15 @@ namespace LaPalma.Controllers
         [HttpPut]
         [Route("Actualizar")]
         public string Actualizar([FromBody] Habitacion habitacion)
+        {
+            clsHabitacion hab = new clsHabitacion();
+            hab.habitacion = habitacion;
+            return hab.Actualizar();
+        }
+
+        [HttpPut]
+        [Route("CambiarEstado")]
+        public string CambiarEstado([FromBody] Habitacion habitacion)
         {
             clsHabitacion hab = new clsHabitacion();
             hab.habitacion = habitacion;

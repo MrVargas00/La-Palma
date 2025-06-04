@@ -59,6 +59,26 @@ namespace LaPalma.Clases
             }
         }
 
+        public string CambiarEstado()
+        {
+            try
+            {
+                Habitacion hab = Consultar(habitacion.id_habitacion);
+                if (hab == null)
+                {
+                    return "La Habitacion no existe";
+                }
+                hab.estado_habitacion = 2;
+                bdLaPalma.Habitacions.AddOrUpdate(hab);
+                bdLaPalma.SaveChanges();
+                return "Se actualizó exitosamente la habitacion con id: " + habitacion.id_habitacion;
+            }
+            catch (Exception)
+            {
+                return "Algo falló al actualizar la habitacion con id: " + habitacion.id_habitacion;
+            }
+        }
+
         public string Eliminar()
         {
             try
@@ -82,9 +102,14 @@ namespace LaPalma.Clases
         {
             try
             {
-                return bdLaPalma.Habitacions
-                    .Where(p => p.activo)
-                    .OrderBy(p => p.numero_habitacion);
+                var resultado = from h in bdLaPalma.Habitacions
+                                join e in bdLaPalma.Estado_Habitacion
+                                    on h.estado_habitacion equals e.id_estadoH
+                                where h.activo && e.nombre == "Disponible"
+                                orderby h.numero_habitacion
+                                select h;
+
+                return resultado;
             }
             catch (Exception ex)
             {

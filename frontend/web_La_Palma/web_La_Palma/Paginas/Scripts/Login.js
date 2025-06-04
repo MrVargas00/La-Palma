@@ -4,7 +4,7 @@
 
 async function Ingresar() {
     console.log("Entró a Ingresar()");
-    let BaseUrl = "http://localhost:63533/";
+    let BaseUrl = "http://lapalma.runasp.net/";
     let URL = BaseUrl + "api/Login/Ingresar";
     const login = new Login($("#txtUsuario").val(), $("#txtClave").val(), "");
 

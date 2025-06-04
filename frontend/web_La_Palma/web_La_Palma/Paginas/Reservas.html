@@ -104,6 +104,14 @@
                                                 </div>
                                             </div>
 
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="cboEstado">Estado Reserva</label>
+                                                    <select id="cboEstado" class="form-control" disabled>
+                                                    </select>
+                                                </div>
+                                            </div>
+
                                             <div class="col-md-1">
                                                 <div class="form-group">
                                                     <label for="chkActivoReserva">Activo</label>
@@ -141,13 +149,14 @@
                                                                     <div class="col-md-6">
                                                                         <div class="form-group">
                                                                             <label for="txtIDChekIn">ID - RESERVA</label>
-                                                                            <input type="text" class="form-control" id="txtIDChek-in" placeholder="Id de la reserva" disabled="true">
+                                                                            <input type="text" class="form-control" id="txtIDChekIn" placeholder="Id de la reserva" disabled="true">
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-md-6">
+                                                                    <div class="col-md-3">
                                                                         <div class="form-group">
-                                                                            <label for="txtDocCheckIn">DOCUMENTO</label>
-                                                                            <input type="text" class="form-control" id="txtDocCheckIn" placeholder="Documento del Empleado" disabled="true">
+                                                                            <label for="cboEmpleado">EMPLEADO</label>
+                                                                            <select id="cboEmpleado" class="form-control">
+                                                                            </select>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-6">
@@ -160,12 +169,12 @@
                                                                 <div class="row">
                                                                     <div class="col-md-6">
                                                                         <div class="form-group">
-                                                                            <button id="bntConfirmarCheckIN" class="btn-block btn-lg btn-secondary" onclick="EjecutarComando('POST', 'Insertar')">CONFIRMAR</button>
+                                                                            <button id="bntConfirmarCheckIN" class="btn-block btn-lg btn-secondary" >CONFIRMAR</button>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-6">
                                                                         <div class="form-group">
-                                                                            <button id="bntCancelarCheckIN" class="btn-block btn-lg btn-secondary" data-dismiss="modal" onclick="LlenarTablaClientes()">CANCELAR</button>
+                                                                            <button id="bntCancelarCheckIN" class="btn-block btn-lg btn-secondary" data-dismiss="modal">CANCELAR</button>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -224,6 +233,7 @@
                                                         <th>documento_cliente</th>
                                                         <th>id_habitacion</th>
                                                         <th>id_paquete</th>
+                                                        <th>Estado_Reserva</th>
                                                     </tr>
                                                 </thead>
                                             </table>

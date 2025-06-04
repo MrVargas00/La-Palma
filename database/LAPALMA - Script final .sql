@@ -75,6 +75,12 @@ CREATE TABLE Tipo_Vista (
 );
 GO
 
+CREATE TABLE Estado_Habitacion (
+	id_estadoH INT IDENTITY(1,1) PRIMARY KEY,
+	nombre VARCHAR(100) NOT NULL UNIQUE
+);
+GO
+
 CREATE TABLE Habitacion (
 	id_habitacion INT IDENTITY(1,1) PRIMARY KEY,
 	numero_habitacion INT NOT NULL CHECK (numero_habitacion > 0),
@@ -83,9 +89,11 @@ CREATE TABLE Habitacion (
 	tipo_vista INT NOT NULL,
  	id_hotel INT NOT NULL,
 	id_tipo_habitacion INT NOT NULL,
+	estado_habitacion INT NOT NULL,
 	FOREIGN KEY (tipo_vista) REFERENCES Tipo_Vista(id_tipo_vista),
 	FOREIGN KEY (id_hotel) REFERENCES Hotel(id_hotel),
 	FOREIGN KEY (id_tipo_habitacion) REFERENCES Tipo_Habitacion(id_tipo_habitacion),
+	FOREIGN KEY (estado_habitacion) REFERENCES Estado_Habitacion(id_estadoH),
 	UNIQUE(numero_habitacion, id_hotel) -- Número único por hotel
 );
 GO
@@ -153,6 +161,12 @@ GO
 
 CREATE TABLE Idioma (
 	id_idioma INT IDENTITY(1,1) PRIMARY KEY,
+	nombre VARCHAR(100) NOT NULL UNIQUE
+);
+GO
+
+CREATE TABLE Estado_Reserva (
+	id_estadoR INT IDENTITY(1,1) PRIMARY KEY,
 	nombre VARCHAR(100) NOT NULL UNIQUE
 );
 GO
@@ -242,9 +256,11 @@ CREATE TABLE Reserva (
 	documento_cliente VARCHAR(50) NOT NULL,
 	id_habitacion INT NOT NULL,
 	id_paquete INT,
+	Estado INT NOT NULL,
 	FOREIGN KEY (documento_cliente) REFERENCES Cliente(documento),
 	FOREIGN KEY (id_habitacion) REFERENCES Habitacion(id_habitacion),
 	FOREIGN KEY (id_paquete) REFERENCES Paquete(id_paquete),
+	FOREIGN KEY (Estado) REFERENCES Estado_Reserva(id_estadoR),
 	CHECK (fecha_salida > fecha_llegada)
 );
 GO
@@ -447,12 +463,12 @@ VALUES
     ('Familiar', 4, 6, 'Habitación amplia para familias');
 GO
 
-INSERT INTO Perfil (nombre)
+INSERT INTO Perfil (nombre, paginanavegar)
 VALUES
-    ('Administrador'),
-    ('Gerente'),
-    ('Recepcionista'),
-    ('Contador');
+    ('Administrador', 'PaginaInicio.html'),
+    ('Gerente', 'PaginaInicio.html'),
+    ('Recepcionista', 'PaginaInicio.html'),
+    ('Contador', 'PaginaInicio.html');
 GO
 
 INSERT INTO Cargo (nombre, salario, descripcion)
@@ -481,3 +497,19 @@ VALUES
     ('1122334455', 'Luis Fernando', 'Jiménez Castro', 'luis.jimenez@lapalmbeach.com', 'Carrera 12 # 8-25, Bastidas', '1988-01-30', '2020-08-05', 1, 6, 1, 1, 1),
     ('9988776655', 'Patricia', 'Vargas Moreno', 'patricia.vargas@lapalmbeach.com', 'Calle 24 # 4-12, Mamatoco', '1995-05-14', '2022-02-28', 1, 1, 2, 1, 1);
 GO
+
+-- Inserts para Estado_Reserva
+INSERT INTO Estado_Reserva (nombre) VALUES 
+('Pendiente'),
+('Confirmada'),
+('Cancelada'),
+('Check-In'),
+('Check-Out');
+
+-- Inserts para Estado_Habitacion
+INSERT INTO Estado_Habitacion (nombre) VALUES 
+('Disponible'),
+('Ocupada'),
+('Limpieza'),
+('Mantenimiento'),
+('Reservada');

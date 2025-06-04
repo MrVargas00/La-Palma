@@ -1,4 +1,4 @@
-﻿var BaseUrl = "http://localhost:63533/";
+﻿var BaseUrl = "http://lapalma.runasp.net/";
 
 var metodoActual = null;
 
@@ -39,6 +39,11 @@ function LlenarComboTipoVista() {
     LlenarComboXServiciosAuth(URL, '#cboTipoVista');
 }
 
+function LlenarComboEstados() {
+    let URL = BaseUrl + "api/EstadoHabitacion/LlenarCombo"; // URL actualizada
+    LlenarComboXServiciosAuth(URL, '#cboEstado');
+}
+
 function ConfigurarModoInsertar() { // Función para configurar el modo insertar
     $("#txtIDHabitacion").val(''); // Limpiar el ID
     $("#txtIDHabitacion").prop('disabled', true); // Deshabilitar campo ID
@@ -55,6 +60,8 @@ function ConfigurarModoInsertar() { // Función para configurar el modo insertar
     $("#cboHotelHabitacion").prop('disabled', false);
     $("#cboTipoHabitacion").val('1');
     $("#cboTipoHabitacion").prop('disabled', false)
+    $("#cboEstado").val('1');
+    $("#cboEstado").prop('disabled', false);
     $("#dvMensaje").html("");
     $("#dvMensaje").hide();
 }
@@ -74,7 +81,9 @@ function ConfigurarModoEdicion() {
     $("#cboHotelHabitacion").val('1');
     $("#cboHotelHabitacion").prop('disabled', false);
     $("#cboTipoHabitacion").val('1');
-    $("#cboTipoHabitacion").prop('disabled', false)
+    $("#cboTipoHabitacion").prop('disabled', false);
+    $("#cboEstado").val('1');
+    $("#cboEstado").prop('disabled', false);
     $("#dvMensaje").html("");
     $("#dvMensaje").hide();
 }
@@ -94,7 +103,9 @@ function ConfigurarModoEliminar() {
     $("#cboHotelHabitacion").val('1');
     $("#cboHotelHabitacion").prop('disabled', true);
     $("#cboTipoHabitacion").val('1');
-    $("#cboTipoHabitacion").prop('disabled', true)
+    $("#cboTipoHabitacion").prop('disabled', true);
+    $("#cboEstado").val('1');
+    $("#cboEstado").prop('disabled', true);
     $("#dvMensaje").html("");
     $("#dvMensaje").hide();
 }
@@ -117,6 +128,7 @@ async function Consultar() {
         $("#chkActivoHabitacion").prop('checked', habitacion.activo);
         $("#cboTipoHabitacion").val(habitacion.id_tipo_habitacion);
         $("#cboTipoVista").val(habitacion.tipo_vista);
+        $("#cboEstado").val(habitacion.estado_habitacion);
     }
 }
 
@@ -143,7 +155,8 @@ async function EjecutarComando() {
         $("#txtPrecioHabitacion").val(),
         $("#cboTipoVista").val(),
         $("#cboHotelHabitacion").val(),
-        $("#cboTipoHabitacion").val());
+        $("#cboTipoHabitacion").val(),
+        $("#cboEstado").val());
 
     const Rpta = await EjecutarComandoServicioAuth(metodoActual.metodo, URL, habitacion);
     $("#dvMensaje").show();
@@ -151,14 +164,15 @@ async function EjecutarComando() {
 }
 
 class Habitacion {
-    constructor(id_habitacion, numero_habitacion, activo, precio, tipo_vista, id_hotel, id_tipo_habitacion) {
+    constructor(id_habitacion, numero_habitacion, activo, precio, tipo_vista, id_hotel, id_tipo_habitacion, estado_habitacion) {
         this.id_habitacion = id_habitacion;
         this.numero_habitacion = numero_habitacion;
         this.activo = activo
         this.precio = precio;
         this.tipo_vista = tipo_vista;
         this.id_hotel = id_hotel;
-        this.id_tipo_habitacion = id_tipo_habitacion;
+        this.id_tipo_habitacion = id_tipo_habitacion,
+        this.estado_habitacion = estado_habitacion;
     }
 }
 
@@ -176,6 +190,8 @@ jQuery(function () {
     LlenarComboHotel();
 
     LlenarComboTipoVista();
+
+    LlenarComboEstados();
 
     console.log("jQuery cargado correctamente");
 

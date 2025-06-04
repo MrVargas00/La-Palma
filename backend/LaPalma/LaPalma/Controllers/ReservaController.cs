@@ -10,7 +10,7 @@ using System.Web.Http.Cors;
 
 namespace LaPalma.Controllers
 {
-    [EnableCors(origins: "http://localhost:57735", headers: "*", methods: "*")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/Reserva")]
     public class ReservaController : ApiController
     {
@@ -28,6 +28,14 @@ namespace LaPalma.Controllers
         {
             clsReserva res = new clsReserva();
             return res.Consultar(ID);
+        }
+
+        [HttpGet]
+        [Route("ConsultarEstado")]
+        public string ConsultarEstado(int ID)
+        {
+            clsReserva res = new clsReserva();
+            return res.ConsultarEstado(ID);
         }
 
         [HttpPost]

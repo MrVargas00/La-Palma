@@ -114,6 +114,8 @@
     <NavigationProperty Name="Tipo_Habitacion" Relationship="Self.FK__Habitacio__id_ti__5AEE82B9" FromRole="Habitacion" ToRole="Tipo_Habitacion" />
     <NavigationProperty Name="Tipo_Vista1" Relationship="Self.FK__Habitacio__tipo___59063A47" FromRole="Habitacion" ToRole="Tipo_Vista" />
     <NavigationProperty Name="Reservas" Relationship="Self.FK__Reserva__id_habi__236943A5" FromRole="Habitacion" ToRole="Reserva" />
+    <Property Name="estado_habitacion" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Estado_Habitacion1" Relationship="DBLAPALMAModel.FK__Habitacio__estad__5EBF139D" FromRole="Habitacion" ToRole="Estado_Habitacion" />
   </EntityType>
   <EntityType Name="Hotel">
     <Key>
@@ -257,6 +259,8 @@
     <NavigationProperty Name="Habitacion" Relationship="Self.FK__Reserva__id_habi__236943A5" FromRole="Reserva" ToRole="Habitacion" />
     <NavigationProperty Name="Pagoes" Relationship="Self.FK__Pago__id_reserva__3E1D39E1" FromRole="Reserva" ToRole="Pago" />
     <NavigationProperty Name="Paquete" Relationship="Self.FK__Reserva__id_paqu__245D67DE" FromRole="Reserva" ToRole="Paquete" />
+    <Property Name="Estado" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Estado_Reserva" Relationship="DBLAPALMAModel.FK__Reserva__Estado__2BFE89A6" FromRole="Reserva" ToRole="Estado_Reserva" />
   </EntityType>
   <EntityType Name="Servicio">
     <Key>
@@ -901,5 +905,55 @@
       <End Role="Usuario" EntitySet="Usuarios" />
       <End Role="Usuario_Perfil" EntitySet="Usuario_Perfil" />
     </AssociationSet>
+    <EntitySet Name="Estado_Habitacion" EntityType="DBLAPALMAModel.Estado_Habitacion" />
+    <EntitySet Name="Estado_Reserva" EntityType="DBLAPALMAModel.Estado_Reserva" />
+    <AssociationSet Name="FK__Habitacio__estad__5EBF139D" Association="DBLAPALMAModel.FK__Habitacio__estad__5EBF139D">
+      <End Role="Estado_Habitacion" EntitySet="Estado_Habitacion" />
+      <End Role="Habitacion" EntitySet="Habitacions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Reserva__Estado__2BFE89A6" Association="DBLAPALMAModel.FK__Reserva__Estado__2BFE89A6">
+      <End Role="Estado_Reserva" EntitySet="Estado_Reserva" />
+      <End Role="Reserva" EntitySet="Reservas" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="Estado_Habitacion">
+    <Key>
+      <PropertyRef Name="id_estadoH" />
+    </Key>
+    <Property Name="id_estadoH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Habitacions" Relationship="DBLAPALMAModel.FK__Habitacio__estad__5EBF139D" FromRole="Estado_Habitacion" ToRole="Habitacion" />
+  </EntityType>
+  <EntityType Name="Estado_Reserva">
+    <Key>
+      <PropertyRef Name="id_estadoR" />
+    </Key>
+    <Property Name="id_estadoR" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Reservas" Relationship="DBLAPALMAModel.FK__Reserva__Estado__2BFE89A6" FromRole="Estado_Reserva" ToRole="Reserva" />
+  </EntityType>
+  <Association Name="FK__Habitacio__estad__5EBF139D">
+    <End Type="DBLAPALMAModel.Estado_Habitacion" Role="Estado_Habitacion" Multiplicity="1" />
+    <End Type="DBLAPALMAModel.Habitacion" Role="Habitacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Habitacion">
+        <PropertyRef Name="id_estadoH" />
+      </Principal>
+      <Dependent Role="Habitacion">
+        <PropertyRef Name="estado_habitacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Reserva__Estado__2BFE89A6">
+    <End Type="DBLAPALMAModel.Estado_Reserva" Role="Estado_Reserva" Multiplicity="1" />
+    <End Type="DBLAPALMAModel.Reserva" Role="Reserva" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_Reserva">
+        <PropertyRef Name="id_estadoR" />
+      </Principal>
+      <Dependent Role="Reserva">
+        <PropertyRef Name="Estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

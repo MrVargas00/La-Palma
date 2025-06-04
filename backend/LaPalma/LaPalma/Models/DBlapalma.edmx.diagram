@@ -66,6 +66,10 @@
         <AssociationConnector Association="DBLAPALMAModel.FK__Servicio__id_tip__49C3F6B7" ManuallyRouted="false" />
         <AssociationConnector Association="DBLAPALMAModel.FK__Telefono__id_tip__0A9D95DB" ManuallyRouted="false" />
         <AssociationConnector Association="DBLAPALMAModel.FK__Usuario_P__id_us__489AC854" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DBLAPALMAModel.Estado_Habitacion" Width="1.5" PointX="3.75" PointY="22.5" />
+        <EntityTypeShape EntityType="DBLAPALMAModel.Estado_Reserva" Width="1.5" PointX="4.375" PointY="0.875" />
+        <AssociationConnector Association="DBLAPALMAModel.FK__Habitacio__estad__5EBF139D" />
+        <AssociationConnector Association="DBLAPALMAModel.FK__Reserva__Estado__2BFE89A6" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

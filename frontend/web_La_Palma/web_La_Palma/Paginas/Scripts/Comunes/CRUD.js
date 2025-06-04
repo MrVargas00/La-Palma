@@ -99,8 +99,6 @@ async function ConsultarServicio(URLServicio) {
             });
         //Se traduce la respuesta a un objeto
         const Resultado = await Respuesta.json();
-
-        return Resultado;
     }
     catch (error) {
         //Se presenta el error en un div de Mensaje
@@ -176,7 +174,7 @@ async function LlenarComboXServiciosAuth(URLServicio, ComboLlenar) {
         const Rpta = await Respuesta.json();
         //Se debe limpiar el combo
         $(ComboLlenar).empty();
-        if (ComboLlenar == "#cboDocumento") {
+        if (ComboLlenar == "#cboDocumento" || ComboLlenar == "#cboClienteTelefono" || ComboLlenar == "#cboEmpleadoTelefono") {
             //Se recorre en un ciclo para llenar el select con la información
             for (i = 0; i < Rpta.length; i++) {
                 $(ComboLlenar).append('<option value=' + Rpta[i].Codigo + '>' + Rpta[i].Codigo + " - " + Rpta[i].Nombre + '</option>');
@@ -243,16 +241,36 @@ async function LlenarTablaXServiciosAuth(URLServicio, TablaLlenar) {
                 }
             });
         const Rpta = await Respuesta.json();
+
         //Se recorre en un ciclo para llenar la tabla, con encabezados y los campos
         //Llena el encabezado
         var Columnas = [];
         NombreColumnas = Object.keys(Rpta[0]);
+
         for (var i in NombreColumnas) {
-            Columnas.push({
+            let columna = {
                 data: NombreColumnas[i],
                 title: NombreColumnas[i]
-            });
+            };
+
+            // Si la columna contiene fechas, aplicar formato personalizado
+            if (NombreColumnas[i] === 'fecha_nacimiento' ||
+                NombreColumnas[i] === 'fecha_contratacion' ||
+                NombreColumnas[i].toLowerCase().includes('fecha')) {
+                columna.render = function (data, type, row) {
+                    if (type === 'display' && data) {
+                        // Si viene en formato ISO, extraer solo la fecha
+                        if (typeof data === 'string' && data.includes('T')) {
+                            return data.split('T')[0];
+                        }
+                    }
+                    return data;
+                };
+            }
+
+            Columnas.push(columna);
         }
+
         //Llena los datos
         $(TablaLlenar).DataTable({
             data: Rpta,

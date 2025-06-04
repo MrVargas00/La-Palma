@@ -10,7 +10,7 @@ using LaPalma.Models;
 
 namespace LaPalma.Controllers
 {
-    [EnableCors(origins: "http://localhost:57735", headers: "*", methods: "*")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/Servicio")]
     public class ServicioController : ApiController
     {

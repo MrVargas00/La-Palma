@@ -1,10 +1,20 @@
-﻿var BaseUrl = "http://localhost:63533/";
+﻿var BaseUrl = "http://lapalma.runasp.net/";
 
 var metodoActual = null;
+var metodoTelefonoActual = null;
 
 function MostrarDatosEntrada() {
     $("#datos_entrada").show();
     $("#id_botones").hide();
+}
+
+function MostrarDatosEntradaTel() {
+    $("#datos_entrada_telefono").show();
+    $("#botones_telefono").hide();
+}
+
+function MostrarBotonesTel() {
+    $("#botones_telefono").show()
 }
 
 function OcultarDatosEntrada() {
@@ -12,6 +22,11 @@ function OcultarDatosEntrada() {
     $("#id_botones").show();
     // Limpiar los campos del formulario
     $("#frmCliente")[0].reset();
+}
+
+function OcultarDatosEntradaTel() {
+    $("#datos_entrada_telefono").hide();
+    $("#botones_telefono").show();
 }
 
 function InicializarPagina() {
@@ -24,6 +39,11 @@ function LlenarTablaCliente() {
     LlenarTablaXServiciosAuth(URL, '#tblClientes');
 }
 
+function LlenarTablaTelefonos() {
+    let URL = BaseUrl + "api/Telefono/ListarTelefonos?tipo_duenio="+"Cliente"
+    LlenarTablaXServiciosAuth(URL, '#tblTelefonos');
+}
+
 function LlenarComboTipoDocumento() {
     let URL = BaseUrl + "api/TipoDocumento/LlenarCombo"; // URL actualizada
     LlenarComboXServiciosAuth(URL, '#cboTipoDocumento');
@@ -34,14 +54,33 @@ function LlenarComboGenero() {
     LlenarComboXServiciosAuth(URL, '#cboTipoGenero');
 }
 
-function LlenarComboCiudad() {
-    let URL = BaseUrl + "api/Ciudad/LlenarCombo"; // URL actualizada
+function LlenarComboPais() {
+    let URL = BaseUrl + "api/Pais/LlenarCombo";
+    LlenarComboXServiciosAuth(URL, '#cboPais');
+}
+
+function LlenarComboCiudad(idPais = null) {
+    let URL = BaseUrl + "api/Ciudad/LlenarCombo";
+
+    // Si se proporciona un ID de país, agregarlo como parámetro
+    if (idPais) { URL += "?idPais=" + idPais;
+    }
     LlenarComboXServiciosAuth(URL, '#cboCiudad');
 }
 
 function LlenarComboIdioma() {
     let URL = BaseUrl + "api/Idiomas/LlenarCombo"; // URL actualizada
     LlenarComboXServiciosAuth(URL, '#cboIdiomaPreferencia');
+}
+
+function LlenarComboTipoTelefono() {
+    let URL = BaseUrl + "api/TipoTelefono/LlenarCombo";
+    LlenarComboXServiciosAuth(URL, '#cboTipoTelefono');
+}
+
+function LlenarComboClienteTelefono() {
+    let URL = BaseUrl + "api/Cliente/LlenarCombo";
+    LlenarComboXServiciosAuth(URL, '#cboClienteTelefono');
 }
 
 function ConfigurarModoInsertar() { // Función para configurar el modo insertar
@@ -58,8 +97,16 @@ function ConfigurarModoInsertar() { // Función para configurar el modo insertar
     $("#txtDireccionCliente").prop('disabled', false);
     $("#txtEmailCliente").val('');
     $("#txtEmailCliente").prop('disabled', false);
-    $("#cboCiudad").val('1');
-    $("#cboCiudad").prop('disabled', false);
+
+    // Configurar combo país
+    $("#cboPais").val('1');
+    $("#cboPais").prop('disabled', false);
+
+    // Limpiar y deshabilitar combo ciudad hasta que se seleccione un país
+    $("#cboCiudad").empty();
+    $("#cboCiudad").append('<option value="">Seleccione primero un país</option>');
+    $("#cboCiudad").prop('disabled', true);
+
     $("#cboIdiomaPreferencia").val('1');
     $("#cboIdiomaPreferencia").prop('disabled', false);
     $("#cboTipoGenero").val('1');
@@ -86,8 +133,16 @@ function ConfigurarModoEdicion() {
     $("#txtDireccionCliente").prop('disabled', false);
     $("#txtEmailCliente").val('');
     $("#txtEmailCliente").prop('disabled', false);
-    $("#cboCiudad").val('1');
-    $("#cboCiudad").prop('disabled', false);
+
+    // Configurar combo país
+    $("#cboPais").val('1');
+    $("#cboPais").prop('disabled', false);
+
+    // Limpiar combo ciudad
+    $("#cboCiudad").empty();
+    $("#cboCiudad").append('<option value="">Seleccione primero un país</option>');
+    $("#cboCiudad").prop('disabled', true);
+
     $("#cboIdiomaPreferencia").val('1');
     $("#cboIdiomaPreferencia").prop('disabled', true);
     $("#cboTipoGenero").val('1');
@@ -114,6 +169,8 @@ function ConfigurarModoEliminar() {
     $("#txtDireccionCliente").prop('disabled', true);
     $("#txtEmailCliente").val('');
     $("#txtEmailCliente").prop('disabled', true);
+    $("#cboPais").val('1');
+    $("#cboPais").prop('disabled', true);
     $("#cboCiudad").val('1');
     $("#cboCiudad").prop('disabled', true);
     $("#cboIdiomaPreferencia").val('1');
@@ -128,29 +185,108 @@ function ConfigurarModoEliminar() {
     $("#dvMensaje").hide();
 }
 
+// Funciones para configurar modos de teléfonos
+function ConfigurarModoInsertarTelefono() {
+    $("#txtIDtelefono").val(''); // Limpiar el ID
+    $("#txtIDtelefono").prop('disabled', true); // Habilitar
+    $("#txtNumero").val('');
+    $("#txtNumero").prop('disabled', false);
+    $("#cboTipoTelefono").val('1');
+    $("#cboTipoTelefono").prop('disabled', false);
+    $("#cboClienteTelefono").val('');
+    $("#cboClienteTelefono").prop('disabled', false);
+    $("#chkActivoTelefono").prop('checked', false);
+    $("#chkActivoTelefono").prop('disabled', false);
+}
+
+function ConfigurarModoActualizarTelefono() {
+    $("#txtIDtelefono").val(''); // Limpiar el ID
+    $("#txtIDtelefono").prop('disabled', false); // Habilitar
+    $("#txtNumero").val('');
+    $("#txtNumero").prop('disabled', false);
+    $("#cboTipoTelefono").val('1');
+    $("#cboTipoTelefono").prop('disabled', false);
+    $("#cboClienteTelefono").val('');
+    $("#cboClienteTelefono").prop('disabled', false);
+    $("#chkActivoTelefono").prop('checked', false);
+    $("#chkActivoTelefono").prop('disabled', false);
+}
+
+function ConfigurarModoEliminarTelefono() {
+    $("#txtIDtelefono").val(''); // Limpiar el ID
+    $("#txtIDtelefono").prop('disabled', false); // Habilitar
+    $("#txtNumero").val('');
+    $("#txtNumero").prop('disabled', true);
+    $("#cboTipoTelefono").val('1');
+    $("#cboTipoTelefono").prop('disabled', true);
+    $("#cboClienteTelefono").val('');
+    $("#cboClienteTelefono").prop('disabled', true);
+    $("#chkActivoTelefono").prop('checked', true);
+    $("#chkActivoTelefono").prop('disabled', true);
+}
+
+function LimpiarFormularioTelefono() {
+    $("#txtCodigo").val('');
+    $("#cboTipoTelefono").val('0');
+    $("#txtNumero").val('');
+    $("#cboClienteTelefono").val('');
+}
+
+async function ObtenerYSeleccionarPaisPorCiudad(idCiudad) {
+    try {
+        // Llamar al servicio para obtener el país de la ciudad
+        let URL = BaseUrl + "api/Ciudad/ObtenerPaisPorCiudad?idCiudad=" + idCiudad;
+        const paisInfo = await ConsultarServicioAuth(URL);
+
+        if (paisInfo && paisInfo.id_pais) {
+            // Seleccionar el país
+            $("#cboPais").val(paisInfo.id_pais);
+
+            // Habilitar el combo de ciudad
+            $("#cboCiudad").prop('disabled', false);
+
+            // Llenar las ciudades de ese país usando tu función existente
+            let URLCiudades = BaseUrl + "api/Ciudad/LlenarCombo?idPais=" + paisInfo.id_pais;
+            await LlenarComboXServiciosAuth(URLCiudades, '#cboCiudad');
+
+            // Finalmente seleccionar la ciudad específica
+            $("#cboCiudad").val(idCiudad);
+        }
+    } catch (error) {
+        console.error("Error al obtener país por ciudad:", error);
+        // Si hay error, llenar todos los combos normalmente
+        $("#cboPais").val('1');
+        $("#cboCiudad").prop('disabled', false);
+        LlenarComboCiudad();
+        $("#cboCiudad").val(idCiudad);
+    }
+}
 
 async function Consultar() {
     let documento = $("#txtDocumentoCliente").val();
     let URL = BaseUrl + "api/Cliente/Consultar?documento=" + documento;
     const cliente = await ConsultarServicioAuth(URL);
+
     if (cliente == null) {
         // No existe, se borran los datos
         OcultarDatosEntrada();
         $("#dvMensaje").html("El cliente no existe");
         $("#dvMensaje").show();
-
     } else {
+        // Llenar los datos básicos del cliente
         $("#txtDocumentoCliente").val(cliente.documento);
         $("#txtNombreCliente").val(cliente.nombre);
         $("#txtApellidosCliente").val(cliente.apellido);
         $("#txtFechaNacimiento").val(cliente.fecha_nacimiento);
         $("#txtDireccionCliente").val(cliente.direccion);
         $("#txtEmailCliente").val(cliente.email);
-        $("#cboCiudad").val(cliente.ciudad_origen);
         $("#cboIdiomaPreferencia").val(cliente.idioma_preferido);
         $("#cboTipoGenero").val(cliente.id_genero);
         $("#cboTipoDocumento").val(cliente.tipo_documento);
         $("#chkActivoCliente").prop('checked', cliente.activo);
+
+        // Primero obtener el país de la ciudad seleccionada
+        await ObtenerYSeleccionarPaisPorCiudad(cliente.ciudad_origen);
     }
 }
 
@@ -186,6 +322,33 @@ async function EjecutarComando() {
     LlenarTablaCliente();
 }
 
+async function EjecutarComandoTelefono() {
+    if (!metodoTelefonoActual) {
+        console.error("No hay método definido");
+        return;
+    }
+
+    // Creamos la direccion URL
+    let URL = BaseUrl + "api/Telefono/" + metodoTelefonoActual.funcion;
+
+    let esInsertar = (metodoTelefonoActual.funcion === 'Insertar');
+
+    // Creamos el servicio
+    const telefono = new Telefono(
+        esInsertar ? null : $("#txtIDtelefono").val(), // Si es insertar, ID va null
+        $("#txtNumero").val(),
+        $("#cboTipoTelefono").val(),
+        "Cliente", // tipo_duenio es fijo como "Cliente"
+        $("#cboClienteTelefono").val(), // id_duenio es el cliente seleccionado
+        $("#chkActivoTelefono").prop('checked')
+    );
+
+    const Rpta = await EjecutarComandoServicioAuth(metodoTelefonoActual.metodo, URL, telefono);
+
+    $("#dvMensajeTel").show(); // Mostrar mensaje en el div correcto del modal
+    LlenarTablaTelefonos();
+}
+
 class Cliente {
     constructor(documento, nombre, apellido, fecha_nacimiento, direccion, email, activo,
         ciudad_origen, idioma_preferido, id_genero, tipo_documento) {
@@ -203,6 +366,17 @@ class Cliente {
     }
 }
 
+class Telefono {
+    constructor(id_telefono, numero, id_tipo_telefono, tipo_duenio, id_duenio, activo) {
+        this.id_telefono = id_telefono;
+        this.numero = numero;
+        this.id_tipo_telefono = id_tipo_telefono;
+        this.tipo_duenio = tipo_duenio;
+        this.id_duenio = id_duenio;
+        this.activo = activo;
+    }
+}
+
 jQuery(function () {
     //Registrar los botones para responder al evento click
 
@@ -212,7 +386,7 @@ jQuery(function () {
 
     LlenarTablaCliente();
 
-    LlenarComboCiudad();
+    LlenarComboPais();
 
     LlenarComboTipoDocumento();
 
@@ -221,6 +395,22 @@ jQuery(function () {
     LlenarComboGenero();
 
     console.log("jQuery cargado correctamente");
+
+    // Evento para cuando cambia el país seleccionado
+    $("#cboPais").change(function () {
+        let paisSeleccionado = $(this).val();
+
+        if (paisSeleccionado && paisSeleccionado !== '') {
+            // Habilitar combo ciudad y llenarlo con las ciudades del país seleccionado
+            $("#cboCiudad").prop('disabled', false);
+            LlenarComboCiudad(paisSeleccionado);
+        } else {
+            // Deshabilitar combo ciudad si no hay país seleccionado
+            $("#cboCiudad").empty();
+            $("#cboCiudad").append('<option value="">Seleccione primero un país</option>');
+            $("#cboCiudad").prop('disabled', true);
+        }
+    });
 
     $("#btnInsertar").click(function () {
         console.log("Botón Insertar clickeado");
@@ -291,5 +481,56 @@ jQuery(function () {
     $("#btnCancelar").click(function () {
         metodoActual = null; // Limpiar el método al cancelar
         OcultarDatosEntrada();
+    });
+
+    $("#btnTelefonos").click(function () {
+        console.log("Botón Teléfonos clickeado");
+        LlenarTablaTelefonos();
+        LlenarComboTipoTelefono();
+        LlenarComboClienteTelefono();
+        LimpiarFormularioTelefono();
+        OcultarDatosEntradaTel();
+        MostrarBotonesTel();
+    });
+
+    $("#btnInsertarTel").click(function () {
+        console.log("Botón Insertar Teléfono clickeado");
+        metodoTelefonoActual = { // Usar metodoTelefonoActual en lugar de metodoActual
+            metodo: 'POST',
+            funcion: 'Insertar'
+        };
+        MostrarDatosEntradaTel();
+        ConfigurarModoInsertarTelefono();
+    });
+
+    $("#btnActualizarTel").click(function () {
+        console.log("Botón Actualizar Teléfono clickeado");
+        metodoTelefonoActual = { // Usar metodoTelefonoActual
+            metodo: 'PUT',
+            funcion: 'Actualizar'
+        };
+        MostrarDatosEntradaTel();
+        ConfigurarModoActualizarTelefono();
+    });
+
+    $("#btnEliminarTel").click(function () {
+        console.log("Botón Eliminar Teléfono clickeado");
+        metodoTelefonoActual = { // Usar metodoTelefonoActual
+            metodo: 'DELETE',
+            funcion: 'Eliminar'
+        };
+        MostrarDatosEntradaTel();
+        ConfigurarModoEliminarTelefono();
+    });
+
+    // CORREGIR: eliminar la lógica duplicada
+    $("#btnConfirmarTel").click(function () {
+        EjecutarComandoTelefono();
+    });
+
+    $("#btnCancelarTel").click(function () {
+        metodoTelefonoActual = null; // Usar metodoTelefonoActual
+        LimpiarFormularioTelefono();
+        OcultarDatosEntradaTel();
     });
 });

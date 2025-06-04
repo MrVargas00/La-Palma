@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Página de Inicio</title>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link href="Estilos/css/all.min.css" rel="stylesheet" />
+    <link href="Estilos/adminlte.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background: url('../imagenes/fondo - login .png') no-repeat center center fixed;
+            background-size: cover;
+            background-attachment: fixed;
+            backdrop-filter: blur(4px);
+        }
+
+        .seccion-transparente {
+            background-color: rgba(255, 255, 255,0.6);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px 0;
+            background-color: #f8f9fa;
+            text-align: center;
+            border-top: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+<body class="hold-transition sidebar-mini">
+    <section class="content mt-4">
+        <div class="container-fluid seccion-transparente">
+            <div class="row">
+                <!-- Menú (vacío, se rellena por JS o include) -->
+                <div class="col-md-12" id="dvMenu"></div>
+            </div>
+
+            <!-- Banner de bienvenida -->
+            <div class="row my-4">
+                <div class="col-md-12 text-center">
+                    <h1 class="display-4">Bienvenido al Hotel</h1>
+                    <p class="lead">Tu comodidad es nuestra prioridad. Explora nuestros servicios y disfruta de una experiencia única.</p>
+                </div>
+            </div>
+
+            <!-- Tarjetas destacadas -->
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <i class="fas fa-bed fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">Habitaciones</h5>
+                            <p class="card-text">Conoce nuestras cómodas y modernas habitaciones.</p>
+                            <a href="Habitaciones.html" class="btn btn-outline-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <i class="fas fa-calendar-check fa-3x text-success mb-3"></i>
+                            <h5 class="card-title">Reservas</h5>
+                            <p class="card-text">Reserva fácilmente desde nuestra plataforma.</p>
+                            <a href="Reservas.html" class="btn btn-outline-success">Reservar ahora</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <i class="fas fa-concierge-bell fa-3x text-warning mb-3"></i>
+                            <h5 class="card-title">Servicios</h5>
+                            <p class="card-text">Disfruta de spa, tours, gastronomía y más.</p>
+                            <a href="Servicios.html" class="btn btn-outline-warning">Explorar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de contacto -->
+            <div class="row mt-5">
+                <div class="col-md-12 text-center">
+                    <h4>Contáctanos</h4>
+                    <p>Este proyecto fue realizado por:</p>
+                    <p><strong>Sebastian Vargas Correa</strong> - <strong>Laura Vanesa López</strong> - <strong>Juan David Ochoa</strong></p>
+                    <p>Para el curso de Aplicaciones y Servicios Web - Universidad ITM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Hotel La Palma. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../Scripts/jquery-3.4.1.min.js"></script>
+    <script src="../Scripts/bootstrap.bundle.min.js"></script>
+    <script src="Scripts/PaginaInicio.js"></script>
+</body>
+</html>

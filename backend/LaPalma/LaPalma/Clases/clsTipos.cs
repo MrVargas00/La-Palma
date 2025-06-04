@@ -93,6 +93,35 @@ namespace LaPalma.Clases
         }
     }
 
+    public class clsTipoTelefono
+    {
+        private DBLAPALMAEntities bdLaPalma;
+        public Tipo_Telefono tipo_tel { get; set; }
+
+        public clsTipoTelefono()
+        {
+            bdLaPalma = new DBLAPALMAEntities();
+        }
+        public IQueryable<Tipo_Telefono> llenarcombo()
+        {
+            try
+            {
+                return bdLaPalma.Tipo_Telefono;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error en llenarcombo: {ex.Message}");
+                throw;
+            }
+        }
+
+        // Implementar IDisposable para liberar recursos
+        public void Dispose()
+        {
+            bdLaPalma?.Dispose();
+        }
+    }
+
     public class clsTipoProveedor
     {
         private DBLAPALMAEntities bdLaPalma;
@@ -194,6 +223,64 @@ namespace LaPalma.Clases
             try
             {
                 return bdLaPalma.Pais;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error en llenarcombo: {ex.Message}");
+                throw;
+            }
+        }
+
+        // Implementar IDisposable para liberar recursos
+        public void Dispose()
+        {
+            bdLaPalma?.Dispose();
+        }
+    }
+
+    public class clsEstadoHabitacion
+    {
+        private DBLAPALMAEntities bdLaPalma;
+        public Estado_Habitacion estado_hab { get; set; }
+
+        public clsEstadoHabitacion()
+        {
+            bdLaPalma = new DBLAPALMAEntities();
+        }
+        public IQueryable<Estado_Habitacion> llenarcombo()
+        {
+            try
+            {
+                return bdLaPalma.Estado_Habitacion;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error en llenarcombo: {ex.Message}");
+                throw;
+            }
+        }
+
+        // Implementar IDisposable para liberar recursos
+        public void Dispose()
+        {
+            bdLaPalma?.Dispose();
+        }
+    }
+
+    public class clsEstadoReserva
+    {
+        private DBLAPALMAEntities bdLaPalma;
+        public Estado_Reserva estado_res { get; set; }
+
+        public clsEstadoReserva()
+        {
+            bdLaPalma = new DBLAPALMAEntities();
+        }
+        public IQueryable<Estado_Reserva> llenarcombo()
+        {
+            try
+            {
+                return bdLaPalma.Estado_Reserva;
             }
             catch (Exception ex)
             {

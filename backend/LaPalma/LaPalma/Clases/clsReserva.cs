@@ -26,6 +26,26 @@ namespace LaPalma.Clases
             return res;
         }
 
+        public string ConsultarEstado(int id)
+        {
+            Reserva res = bdLaPalma.Reservas.FirstOrDefault(e => e.id_reserva == id);
+            if( res.Estado == 1)
+            {
+                return "La reserva no ha sido completada";
+            }
+            else
+            {
+                if(res.Estado == 2)
+                {
+                    return "SI";
+                }
+                else
+                {
+                    return "La reserva ya hizo check-in";
+                }
+            }
+        }
+
         public string Insertar()
         {
             try

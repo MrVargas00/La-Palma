@@ -28,6 +28,7 @@ namespace LaPalma.Models
         public int tipo_vista { get; set; }
         public int id_hotel { get; set; }
         public int id_tipo_habitacion { get; set; }
+        public int estado_habitacion { get; set; }
 
         [JsonIgnore]
         public virtual Hotel Hotel { get; set; }
@@ -38,5 +39,7 @@ namespace LaPalma.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         [JsonIgnore]
         public virtual ICollection<Reserva> Reservas { get; set; }
+        [JsonIgnore]
+        public virtual Estado_Habitacion Estado_Habitacion1 { get; set; }
     }
 }

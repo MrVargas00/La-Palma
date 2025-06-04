@@ -85,6 +85,15 @@
                                                 </div>
                                             </div>
 
+
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="cboPais">Pais de Origen</label>
+                                                    <select id="cboPais" class="form-control">
+                                                    </select>
+                                                </div>
+                                            </div>
+
                                             <div class="col-md-2">
                                                 <div class="form-group">
                                                     <label for="cboCiudad">Ciudad de Origen</label>
@@ -156,54 +165,88 @@
                                             </div>
                                             <div class="col-md-2">
                                                     <br />
-                                                    <button type="button" id="btnTelefonos" class="btn-block btn-lg btn-primary" data-toggle="modal" data-target="#modTelefonos" onclick="LlenarTablaTelefonos()">EDITAR TELEFONOS</button>
+                                                    <button type="button" id="btnTelefonos" class="btn-block btn-lg btn-primary" data-toggle="modal" data-target="#modTelefonos">EDITAR TELEFONOS</button>
                                                     <!-- Modal -->
                                                     <div class="modal fade" id="modTelefonos" tabindex="-1" role="dialog" aria-labelledby="modTelefonosLabel" aria-hidden="true">
                                                         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
                                                                     <h5 class="modal-title" id="modTelefonosLabel">GESTIÓN DE TELÉFONOS</h5>
-                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="LlenarTablaClientes()">
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="LlenarTablaCliente()">
                                                                         <span aria-hidden="true">&times;</span>
                                                                     </button>
                                                                 </div>
                                                                 <div class="modal-body">
-                                                                    <div class="row">
-                                                                        <div class="col-md-6">
-                                                                            <div class="form-group">
-                                                                                <input type="text" class="form-control" id="txtCodigo" placeholder="Código teléfono" hidden>
-                                                                                <label for="cboTipoTelefono">Tipo teléfono</label>
-                                                                                <select id="cboTipoTelefono" class="form-control select2" style="width: 100%;">
-                                                                                    <option selected="selected" value="0">Seleccione el tipo de teléfono</option>
-                                                                                </select>
+                                                                    <div id="datos_entrada_telefono" class="card-body">
+                                                                        <div class="row">
+                                                                            <div class="col-md-2">
+                                                                                <div class="form-group">
+                                                                                    <label for="txtIDtelefono">ID</label>
+                                                                                    <input type="text" class="form-control" id="txtIDtelefono" placeholder="Número de teléfono">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-4">
+                                                                                <div class="form-group">
+                                                                                    <input type="text" class="form-control" id="txtCodigo" placeholder="Código teléfono" hidden>
+                                                                                    <label for="cboTipoTelefono">TIPO TELÉFONO</label>
+                                                                                    <select id="cboTipoTelefono" class="form-control select2" style="width: 100%;">
+                                                                                        <option selected="selected" value="0">Seleccione el tipo de teléfono</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <div class="form-group">
+                                                                                    <label for="txtNumero">NÚMERO</label>
+                                                                                    <input type="text" class="form-control" id="txtNumero" placeholder="Número de teléfono">
+                                                                                </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="col-md-6">
-                                                                            <div class="form-group">
-                                                                                <label for="txtNumero">NÚMERO</label>
-                                                                                <input type="text" class="form-control" id="txtNumero" placeholder="Número de teléfono">
+                                                                        <div class="row">
+                                                                            <div class="col-md-7">
+                                                                                <div class="form-group">
+                                                                                    <label for="cboClienteTelefono">DOCUMENTO DEL CLIENTE</label>
+                                                                                    <select id="cboClienteTelefono" class="form-control">
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-1">
+                                                                                <div class="form-group">
+                                                                                    <label for="chkActivoTelefono">ACTIVO</label>
+                                                                                    <input type="checkbox" class="form-control" id="chkActivoTelefono" placeholder="CHECKBOX">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="card-body">
+                                                                            <div class="row">
+                                                                                <div class="col-md-3">
+                                                                                    <br />
+                                                                                    <button type="button" id="btnConfirmarTel" class="btn-block btn-lg btn-primary">CONFIRMAR</button>
+                                                                                </div>
+                                                                                <div class="col-md-3">
+                                                                                    <br />
+                                                                                    <button type="button" id="btnCancelarTel" class="btn-block btn-lg btn-primary">CANCELAR</button>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="row">
+                                                                    <div id="botones_telefono" class="row">
                                                                         <div class="col-md-3">
                                                                             <div class="form-group">
-                                                                                <button id="bntInsertarTel" class="btn-block btn-lg btn-secondary" onclick="EjecutarComando('POST', 'Insertar')">INSERTAR</button>
+                                                                                <button type="button" id="btnInsertarTel" class="btn-block btn-lg btn-secondary">INSERTAR</button>                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <div class="form-group">
+                                                                                <button type="button" id="btnActualizarTel" class="btn-block btn-lg btn-secondary">ACTUALIZAR</button>
                                                                             </div>
                                                                         </div>
                                                                         <div class="col-md-3">
                                                                             <div class="form-group">
-                                                                                <button id="btnActualizarTel" class="btn-block btn-lg btn-secondary" onclick="EjecutarComando('PUT', 'Actualizar')">ACTUALIZAR</button>
+                                                                                <button type="button" id="btnEliminarTel" class="btn-block btn-lg btn-secondary">ELIMINAR</button>
                                                                             </div>
                                                                         </div>
                                                                         <div class="col-md-3">
                                                                             <div class="form-group">
-                                                                                <button id="btnEliminarTel" class="btn-block btn-lg btn-secondary" onclick="EjecutarComando('DELETE', 'Eliminar')">ELIMINAR</button>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-md-3">
-                                                                            <div class="form-group">
-                                                                                <button id="btnCerrarModal" class="btn-block btn-lg btn-secondary" data-dismiss="modal" onclick="LlenarTablaClientes()">CERRAR</button>
+                                                                                <button type="button" id="btnCerrarModal" class="btn-block btn-lg btn-secondary" data-dismiss="modal" onclick="LlenarTablaCliente()">CERRAR</button>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -212,9 +255,12 @@
                                                                             <table id="tblTelefonos" class="table table-bordered table-striped">
                                                                                 <thead>
                                                                                     <tr>
-                                                                                        <th>Editar</th>
-                                                                                        <th>Tipo Teléfono</th>
-                                                                                        <th>Número</th>
+                                                                                        <th>id_telefono</th>
+                                                                                        <th>numero</th>
+                                                                                        <th>id_tipo_telefono</th>
+                                                                                        <th>tipo_duenio</th>
+                                                                                        <th>id_duenio</th>
+                                                                                        <th>activo</th>
                                                                                     </tr>
                                                                                 </thead>
                                                                             </table>

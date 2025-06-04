@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DBLAPALMAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DBLAPALMAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Cargo">
           <Key>
             <PropertyRef Name="id_cargo" />
@@ -75,6 +75,20 @@
           <Property Name="tipo_documento" Type="int" Nullable="false" />
           <Property Name="id_hotel" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="Estado_Habitacion">
+          <Key>
+            <PropertyRef Name="id_estadoH" />
+          </Key>
+          <Property Name="id_estadoH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Estado_Reserva">
+          <Key>
+            <PropertyRef Name="id_estadoR" />
+          </Key>
+          <Property Name="id_estadoR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
         <EntityType Name="Genero">
           <Key>
             <PropertyRef Name="id_genero" />
@@ -93,6 +107,7 @@
           <Property Name="tipo_vista" Type="int" Nullable="false" />
           <Property Name="id_hotel" Type="int" Nullable="false" />
           <Property Name="id_tipo_habitacion" Type="int" Nullable="false" />
+          <Property Name="estado_habitacion" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Hotel">
           <Key>
@@ -212,6 +227,7 @@
           <Property Name="documento_cliente" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="id_habitacion" Type="int" Nullable="false" />
           <Property Name="id_paquete" Type="int" />
+          <Property Name="Estado" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Servicio">
           <Key>
@@ -300,7 +316,7 @@
           <Property Name="id_perfil" Type="int" Nullable="false" />
           <Property Name="activo" Type="bit" Nullable="false" />
         </EntityType>
-        <Association Name="FK__CheckIn__documen__2B0A656D">
+        <Association Name="FK__CheckIn__documen__32AB8735">
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
           <End Role="CheckIn" Type="Self.CheckIn" Multiplicity="*" />
           <ReferentialConstraint>
@@ -312,7 +328,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CheckIn__id_rese__2A164134">
+        <Association Name="FK__CheckIn__id_rese__31B762FC">
           <End Role="Reserva" Type="Self.Reserva" Multiplicity="1" />
           <End Role="CheckIn" Type="Self.CheckIn" Multiplicity="*" />
           <ReferentialConstraint>
@@ -324,7 +340,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CheckOut__docume__32AB8735">
+        <Association Name="FK__CheckOut__docume__3A4CA8FD">
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
           <End Role="CheckOut" Type="Self.CheckOut" Multiplicity="*" />
           <ReferentialConstraint>
@@ -336,7 +352,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CheckOut__id_res__31B762FC">
+        <Association Name="FK__CheckOut__id_res__395884C4">
           <End Role="Reserva" Type="Self.Reserva" Multiplicity="1" />
           <End Role="CheckOut" Type="Self.CheckOut" Multiplicity="*" />
           <ReferentialConstraint>
@@ -360,7 +376,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Cliente__ciudad___10566F31">
+        <Association Name="FK__Cliente__ciudad___17036CC0">
           <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="1" />
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -372,7 +388,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Cliente__id_gene__123EB7A3">
+        <Association Name="FK__Cliente__id_gene__18EBB532">
           <End Role="Genero" Type="Self.Genero" Multiplicity="1" />
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -384,7 +400,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Cliente__idioma___114A936A">
+        <Association Name="FK__Cliente__idioma___17F790F9">
           <End Role="Idioma" Type="Self.Idioma" Multiplicity="1" />
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -396,7 +412,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Cliente__tipo_do__1332DBDC">
+        <Association Name="FK__Cliente__tipo_do__19DFD96B">
           <End Role="Tipo_Documento" Type="Self.Tipo_Documento" Multiplicity="1" />
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
           <ReferentialConstraint>
@@ -408,7 +424,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Empleado__id_car__02FC7413">
+        <Association Name="FK__Empleado__id_car__09A971A2">
           <End Role="Cargo" Type="Self.Cargo" Multiplicity="1" />
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
           <ReferentialConstraint>
@@ -420,7 +436,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Empleado__id_gen__03F0984C">
+        <Association Name="FK__Empleado__id_gen__0A9D95DB">
           <End Role="Genero" Type="Self.Genero" Multiplicity="1" />
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
           <ReferentialConstraint>
@@ -432,7 +448,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Empleado__id_hot__05D8E0BE">
+        <Association Name="FK__Empleado__id_hot__0C85DE4D">
           <End Role="Hotel" Type="Self.Hotel" Multiplicity="1" />
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
           <ReferentialConstraint>
@@ -444,7 +460,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Empleado__tipo_d__04E4BC85">
+        <Association Name="FK__Empleado__tipo_d__0B91BA14">
           <End Role="Tipo_Documento" Type="Self.Tipo_Documento" Multiplicity="1" />
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
           <ReferentialConstraint>
@@ -456,7 +472,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Habitacio__id_ho__59FA5E80">
+        <Association Name="FK__Habitacio__estad__5EBF139D">
+          <End Role="Estado_Habitacion" Type="Self.Estado_Habitacion" Multiplicity="1" />
+          <End Role="Habitacion" Type="Self.Habitacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Estado_Habitacion">
+              <PropertyRef Name="id_estadoH" />
+            </Principal>
+            <Dependent Role="Habitacion">
+              <PropertyRef Name="estado_habitacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Habitacio__id_ho__5CD6CB2B">
           <End Role="Hotel" Type="Self.Hotel" Multiplicity="1" />
           <End Role="Habitacion" Type="Self.Habitacion" Multiplicity="*" />
           <ReferentialConstraint>
@@ -468,7 +496,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Habitacio__id_ti__5AEE82B9">
+        <Association Name="FK__Habitacio__id_ti__5DCAEF64">
           <End Role="Tipo_Habitacion" Type="Self.Tipo_Habitacion" Multiplicity="1" />
           <End Role="Habitacion" Type="Self.Habitacion" Multiplicity="*" />
           <ReferentialConstraint>
@@ -480,7 +508,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Habitacio__tipo___59063A47">
+        <Association Name="FK__Habitacio__tipo___5BE2A6F2">
           <End Role="Tipo_Vista" Type="Self.Tipo_Vista" Multiplicity="1" />
           <End Role="Habitacion" Type="Self.Habitacion" Multiplicity="*" />
           <ReferentialConstraint>
@@ -504,7 +532,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Pago__id_metodo___3D2915A8">
+        <Association Name="FK__Pago__id_metodo___44CA3770">
           <End Role="Metodo_Pago" Type="Self.Metodo_Pago" Multiplicity="1" />
           <End Role="Pago" Type="Self.Pago" Multiplicity="*" />
           <ReferentialConstraint>
@@ -516,7 +544,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Pago__id_reserva__3E1D39E1">
+        <Association Name="FK__Pago__id_reserva__45BE5BA9">
           <End Role="Reserva" Type="Self.Reserva" Multiplicity="1" />
           <End Role="Pago" Type="Self.Pago" Multiplicity="*" />
           <ReferentialConstraint>
@@ -528,7 +556,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Proveedor__id_ho__6D0D32F4">
+        <Association Name="FK__Proveedor__id_ho__70DDC3D8">
           <End Role="Hotel" Type="Self.Hotel" Multiplicity="1" />
           <End Role="Proveedor_Producto" Type="Self.Proveedor_Producto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -540,7 +568,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Proveedor__id_pr__6B24EA82">
+        <Association Name="FK__Proveedor__id_pr__6EF57B66">
           <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="1" />
           <End Role="Proveedor_Producto" Type="Self.Proveedor_Producto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -552,7 +580,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Proveedor__id_pr__6C190EBB">
+        <Association Name="FK__Proveedor__id_pr__6FE99F9F">
           <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
           <End Role="Proveedor_Producto" Type="Self.Proveedor_Producto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -564,7 +592,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Proveedor__tipo___628FA481">
+        <Association Name="FK__Proveedor__tipo___66603565">
           <End Role="Tipo_Proveedor" Type="Self.Tipo_Proveedor" Multiplicity="1" />
           <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="*" />
           <ReferentialConstraint>
@@ -576,7 +604,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Reserva__documen__22751F6C">
+        <Association Name="FK__Reserva__documen__29221CFB">
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
           <End Role="Reserva" Type="Self.Reserva" Multiplicity="*" />
           <ReferentialConstraint>
@@ -588,7 +616,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Reserva__id_habi__236943A5">
+        <Association Name="FK__Reserva__Estado__2BFE89A6">
+          <End Role="Estado_Reserva" Type="Self.Estado_Reserva" Multiplicity="1" />
+          <End Role="Reserva" Type="Self.Reserva" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Estado_Reserva">
+              <PropertyRef Name="id_estadoR" />
+            </Principal>
+            <Dependent Role="Reserva">
+              <PropertyRef Name="Estado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Reserva__id_habi__2A164134">
           <End Role="Habitacion" Type="Self.Habitacion" Multiplicity="1" />
           <End Role="Reserva" Type="Self.Reserva" Multiplicity="*" />
           <ReferentialConstraint>
@@ -600,7 +640,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Reserva__id_paqu__245D67DE">
+        <Association Name="FK__Reserva__id_paqu__2B0A656D">
           <End Role="Paquete" Type="Self.Paquete" Multiplicity="0..1" />
           <End Role="Reserva" Type="Self.Reserva" Multiplicity="*" />
           <ReferentialConstraint>
@@ -636,7 +676,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Telefono__id_tip__0A9D95DB">
+        <Association Name="FK__Telefono__id_tip__114A936A">
           <End Role="Tipo_Telefono" Type="Self.Tipo_Telefono" Multiplicity="1" />
           <End Role="Telefono" Type="Self.Telefono" Multiplicity="*" />
           <ReferentialConstraint>
@@ -648,7 +688,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Usuario__documen__44CA3770">
+        <Association Name="FK__Usuario__documen__4C6B5938">
           <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
           <ReferentialConstraint>
@@ -660,7 +700,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Usuario_P__id_pe__498EEC8D">
+        <Association Name="FK__Usuario_P__id_pe__51300E55">
           <End Role="Perfil" Type="Self.Perfil" Multiplicity="1" />
           <End Role="Usuario_Perfil" Type="Self.Usuario_Perfil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -672,7 +712,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Usuario_P__id_us__489AC854">
+        <Association Name="FK__Usuario_P__id_us__503BEA1C">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
           <End Role="Usuario_Perfil" Type="Self.Usuario_Perfil" Multiplicity="*" />
           <ReferentialConstraint>
@@ -691,6 +731,8 @@
           <EntitySet Name="Ciudad" EntityType="Self.Ciudad" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Empleado" EntityType="Self.Empleado" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Estado_Habitacion" EntityType="Self.Estado_Habitacion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Estado_Reserva" EntityType="Self.Estado_Reserva" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Genero" EntityType="Self.Genero" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Habitacion" EntityType="Self.Habitacion" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Hotel" EntityType="Self.Hotel" Schema="dbo" store:Type="Tables" />
@@ -714,19 +756,19 @@
           <EntitySet Name="TipoServicio" EntityType="Self.TipoServicio" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario_Perfil" EntityType="Self.Usuario_Perfil" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__CheckIn__documen__2B0A656D" Association="Self.FK__CheckIn__documen__2B0A656D">
+          <AssociationSet Name="FK__CheckIn__documen__32AB8735" Association="Self.FK__CheckIn__documen__32AB8735">
             <End Role="Empleado" EntitySet="Empleado" />
             <End Role="CheckIn" EntitySet="CheckIn" />
           </AssociationSet>
-          <AssociationSet Name="FK__CheckIn__id_rese__2A164134" Association="Self.FK__CheckIn__id_rese__2A164134">
+          <AssociationSet Name="FK__CheckIn__id_rese__31B762FC" Association="Self.FK__CheckIn__id_rese__31B762FC">
             <End Role="Reserva" EntitySet="Reserva" />
             <End Role="CheckIn" EntitySet="CheckIn" />
           </AssociationSet>
-          <AssociationSet Name="FK__CheckOut__docume__32AB8735" Association="Self.FK__CheckOut__docume__32AB8735">
+          <AssociationSet Name="FK__CheckOut__docume__3A4CA8FD" Association="Self.FK__CheckOut__docume__3A4CA8FD">
             <End Role="Empleado" EntitySet="Empleado" />
             <End Role="CheckOut" EntitySet="CheckOut" />
           </AssociationSet>
-          <AssociationSet Name="FK__CheckOut__id_res__31B762FC" Association="Self.FK__CheckOut__id_res__31B762FC">
+          <AssociationSet Name="FK__CheckOut__id_res__395884C4" Association="Self.FK__CheckOut__id_res__395884C4">
             <End Role="Reserva" EntitySet="Reserva" />
             <End Role="CheckOut" EntitySet="CheckOut" />
           </AssociationSet>
@@ -734,47 +776,51 @@
             <End Role="Pais" EntitySet="Pais" />
             <End Role="Ciudad" EntitySet="Ciudad" />
           </AssociationSet>
-          <AssociationSet Name="FK__Cliente__ciudad___10566F31" Association="Self.FK__Cliente__ciudad___10566F31">
+          <AssociationSet Name="FK__Cliente__ciudad___17036CC0" Association="Self.FK__Cliente__ciudad___17036CC0">
             <End Role="Ciudad" EntitySet="Ciudad" />
             <End Role="Cliente" EntitySet="Cliente" />
           </AssociationSet>
-          <AssociationSet Name="FK__Cliente__id_gene__123EB7A3" Association="Self.FK__Cliente__id_gene__123EB7A3">
+          <AssociationSet Name="FK__Cliente__id_gene__18EBB532" Association="Self.FK__Cliente__id_gene__18EBB532">
             <End Role="Genero" EntitySet="Genero" />
             <End Role="Cliente" EntitySet="Cliente" />
           </AssociationSet>
-          <AssociationSet Name="FK__Cliente__idioma___114A936A" Association="Self.FK__Cliente__idioma___114A936A">
+          <AssociationSet Name="FK__Cliente__idioma___17F790F9" Association="Self.FK__Cliente__idioma___17F790F9">
             <End Role="Idioma" EntitySet="Idioma" />
             <End Role="Cliente" EntitySet="Cliente" />
           </AssociationSet>
-          <AssociationSet Name="FK__Cliente__tipo_do__1332DBDC" Association="Self.FK__Cliente__tipo_do__1332DBDC">
+          <AssociationSet Name="FK__Cliente__tipo_do__19DFD96B" Association="Self.FK__Cliente__tipo_do__19DFD96B">
             <End Role="Tipo_Documento" EntitySet="Tipo_Documento" />
             <End Role="Cliente" EntitySet="Cliente" />
           </AssociationSet>
-          <AssociationSet Name="FK__Empleado__id_car__02FC7413" Association="Self.FK__Empleado__id_car__02FC7413">
+          <AssociationSet Name="FK__Empleado__id_car__09A971A2" Association="Self.FK__Empleado__id_car__09A971A2">
             <End Role="Cargo" EntitySet="Cargo" />
             <End Role="Empleado" EntitySet="Empleado" />
           </AssociationSet>
-          <AssociationSet Name="FK__Empleado__id_gen__03F0984C" Association="Self.FK__Empleado__id_gen__03F0984C">
+          <AssociationSet Name="FK__Empleado__id_gen__0A9D95DB" Association="Self.FK__Empleado__id_gen__0A9D95DB">
             <End Role="Genero" EntitySet="Genero" />
             <End Role="Empleado" EntitySet="Empleado" />
           </AssociationSet>
-          <AssociationSet Name="FK__Empleado__id_hot__05D8E0BE" Association="Self.FK__Empleado__id_hot__05D8E0BE">
+          <AssociationSet Name="FK__Empleado__id_hot__0C85DE4D" Association="Self.FK__Empleado__id_hot__0C85DE4D">
             <End Role="Hotel" EntitySet="Hotel" />
             <End Role="Empleado" EntitySet="Empleado" />
           </AssociationSet>
-          <AssociationSet Name="FK__Empleado__tipo_d__04E4BC85" Association="Self.FK__Empleado__tipo_d__04E4BC85">
+          <AssociationSet Name="FK__Empleado__tipo_d__0B91BA14" Association="Self.FK__Empleado__tipo_d__0B91BA14">
             <End Role="Tipo_Documento" EntitySet="Tipo_Documento" />
             <End Role="Empleado" EntitySet="Empleado" />
           </AssociationSet>
-          <AssociationSet Name="FK__Habitacio__id_ho__59FA5E80" Association="Self.FK__Habitacio__id_ho__59FA5E80">
+          <AssociationSet Name="FK__Habitacio__estad__5EBF139D" Association="Self.FK__Habitacio__estad__5EBF139D">
+            <End Role="Estado_Habitacion" EntitySet="Estado_Habitacion" />
+            <End Role="Habitacion" EntitySet="Habitacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Habitacio__id_ho__5CD6CB2B" Association="Self.FK__Habitacio__id_ho__5CD6CB2B">
             <End Role="Hotel" EntitySet="Hotel" />
             <End Role="Habitacion" EntitySet="Habitacion" />
           </AssociationSet>
-          <AssociationSet Name="FK__Habitacio__id_ti__5AEE82B9" Association="Self.FK__Habitacio__id_ti__5AEE82B9">
+          <AssociationSet Name="FK__Habitacio__id_ti__5DCAEF64" Association="Self.FK__Habitacio__id_ti__5DCAEF64">
             <End Role="Tipo_Habitacion" EntitySet="Tipo_Habitacion" />
             <End Role="Habitacion" EntitySet="Habitacion" />
           </AssociationSet>
-          <AssociationSet Name="FK__Habitacio__tipo___59063A47" Association="Self.FK__Habitacio__tipo___59063A47">
+          <AssociationSet Name="FK__Habitacio__tipo___5BE2A6F2" Association="Self.FK__Habitacio__tipo___5BE2A6F2">
             <End Role="Tipo_Vista" EntitySet="Tipo_Vista" />
             <End Role="Habitacion" EntitySet="Habitacion" />
           </AssociationSet>
@@ -782,39 +828,43 @@
             <End Role="Ciudad" EntitySet="Ciudad" />
             <End Role="Hotel" EntitySet="Hotel" />
           </AssociationSet>
-          <AssociationSet Name="FK__Pago__id_metodo___3D2915A8" Association="Self.FK__Pago__id_metodo___3D2915A8">
+          <AssociationSet Name="FK__Pago__id_metodo___44CA3770" Association="Self.FK__Pago__id_metodo___44CA3770">
             <End Role="Metodo_Pago" EntitySet="Metodo_Pago" />
             <End Role="Pago" EntitySet="Pago" />
           </AssociationSet>
-          <AssociationSet Name="FK__Pago__id_reserva__3E1D39E1" Association="Self.FK__Pago__id_reserva__3E1D39E1">
+          <AssociationSet Name="FK__Pago__id_reserva__45BE5BA9" Association="Self.FK__Pago__id_reserva__45BE5BA9">
             <End Role="Reserva" EntitySet="Reserva" />
             <End Role="Pago" EntitySet="Pago" />
           </AssociationSet>
-          <AssociationSet Name="FK__Proveedor__id_ho__6D0D32F4" Association="Self.FK__Proveedor__id_ho__6D0D32F4">
+          <AssociationSet Name="FK__Proveedor__id_ho__70DDC3D8" Association="Self.FK__Proveedor__id_ho__70DDC3D8">
             <End Role="Hotel" EntitySet="Hotel" />
             <End Role="Proveedor_Producto" EntitySet="Proveedor_Producto" />
           </AssociationSet>
-          <AssociationSet Name="FK__Proveedor__id_pr__6B24EA82" Association="Self.FK__Proveedor__id_pr__6B24EA82">
+          <AssociationSet Name="FK__Proveedor__id_pr__6EF57B66" Association="Self.FK__Proveedor__id_pr__6EF57B66">
             <End Role="Proveedor" EntitySet="Proveedor" />
             <End Role="Proveedor_Producto" EntitySet="Proveedor_Producto" />
           </AssociationSet>
-          <AssociationSet Name="FK__Proveedor__id_pr__6C190EBB" Association="Self.FK__Proveedor__id_pr__6C190EBB">
+          <AssociationSet Name="FK__Proveedor__id_pr__6FE99F9F" Association="Self.FK__Proveedor__id_pr__6FE99F9F">
             <End Role="Producto" EntitySet="Producto" />
             <End Role="Proveedor_Producto" EntitySet="Proveedor_Producto" />
           </AssociationSet>
-          <AssociationSet Name="FK__Proveedor__tipo___628FA481" Association="Self.FK__Proveedor__tipo___628FA481">
+          <AssociationSet Name="FK__Proveedor__tipo___66603565" Association="Self.FK__Proveedor__tipo___66603565">
             <End Role="Tipo_Proveedor" EntitySet="Tipo_Proveedor" />
             <End Role="Proveedor" EntitySet="Proveedor" />
           </AssociationSet>
-          <AssociationSet Name="FK__Reserva__documen__22751F6C" Association="Self.FK__Reserva__documen__22751F6C">
+          <AssociationSet Name="FK__Reserva__documen__29221CFB" Association="Self.FK__Reserva__documen__29221CFB">
             <End Role="Cliente" EntitySet="Cliente" />
             <End Role="Reserva" EntitySet="Reserva" />
           </AssociationSet>
-          <AssociationSet Name="FK__Reserva__id_habi__236943A5" Association="Self.FK__Reserva__id_habi__236943A5">
+          <AssociationSet Name="FK__Reserva__Estado__2BFE89A6" Association="Self.FK__Reserva__Estado__2BFE89A6">
+            <End Role="Estado_Reserva" EntitySet="Estado_Reserva" />
+            <End Role="Reserva" EntitySet="Reserva" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Reserva__id_habi__2A164134" Association="Self.FK__Reserva__id_habi__2A164134">
             <End Role="Habitacion" EntitySet="Habitacion" />
             <End Role="Reserva" EntitySet="Reserva" />
           </AssociationSet>
-          <AssociationSet Name="FK__Reserva__id_paqu__245D67DE" Association="Self.FK__Reserva__id_paqu__245D67DE">
+          <AssociationSet Name="FK__Reserva__id_paqu__2B0A656D" Association="Self.FK__Reserva__id_paqu__2B0A656D">
             <End Role="Paquete" EntitySet="Paquete" />
             <End Role="Reserva" EntitySet="Reserva" />
           </AssociationSet>
@@ -826,25 +876,24 @@
             <End Role="TipoServicio" EntitySet="TipoServicio" />
             <End Role="Servicio" EntitySet="Servicio" />
           </AssociationSet>
-          <AssociationSet Name="FK__Telefono__id_tip__0A9D95DB" Association="Self.FK__Telefono__id_tip__0A9D95DB">
+          <AssociationSet Name="FK__Telefono__id_tip__114A936A" Association="Self.FK__Telefono__id_tip__114A936A">
             <End Role="Tipo_Telefono" EntitySet="Tipo_Telefono" />
             <End Role="Telefono" EntitySet="Telefono" />
           </AssociationSet>
-          <AssociationSet Name="FK__Usuario__documen__44CA3770" Association="Self.FK__Usuario__documen__44CA3770">
+          <AssociationSet Name="FK__Usuario__documen__4C6B5938" Association="Self.FK__Usuario__documen__4C6B5938">
             <End Role="Empleado" EntitySet="Empleado" />
             <End Role="Usuario" EntitySet="Usuario" />
           </AssociationSet>
-          <AssociationSet Name="FK__Usuario_P__id_pe__498EEC8D" Association="Self.FK__Usuario_P__id_pe__498EEC8D">
+          <AssociationSet Name="FK__Usuario_P__id_pe__51300E55" Association="Self.FK__Usuario_P__id_pe__51300E55">
             <End Role="Perfil" EntitySet="Perfil" />
             <End Role="Usuario_Perfil" EntitySet="Usuario_Perfil" />
           </AssociationSet>
-          <AssociationSet Name="FK__Usuario_P__id_us__489AC854" Association="Self.FK__Usuario_P__id_us__489AC854">
+          <AssociationSet Name="FK__Usuario_P__id_us__503BEA1C" Association="Self.FK__Usuario_P__id_us__503BEA1C">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Usuario_Perfil" EntitySet="Usuario_Perfil" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DBLAPALMAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -962,6 +1011,8 @@
           <NavigationProperty Name="Tipo_Habitacion" Relationship="Self.FK__Habitacio__id_ti__5AEE82B9" FromRole="Habitacion" ToRole="Tipo_Habitacion" />
           <NavigationProperty Name="Tipo_Vista1" Relationship="Self.FK__Habitacio__tipo___59063A47" FromRole="Habitacion" ToRole="Tipo_Vista" />
           <NavigationProperty Name="Reservas" Relationship="Self.FK__Reserva__id_habi__236943A5" FromRole="Habitacion" ToRole="Reserva" />
+          <Property Name="estado_habitacion" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Estado_Habitacion1" Relationship="DBLAPALMAModel.FK__Habitacio__estad__5EBF139D" FromRole="Habitacion" ToRole="Estado_Habitacion" />
         </EntityType>
         <EntityType Name="Hotel">
           <Key>
@@ -1105,6 +1156,8 @@
           <NavigationProperty Name="Habitacion" Relationship="Self.FK__Reserva__id_habi__236943A5" FromRole="Reserva" ToRole="Habitacion" />
           <NavigationProperty Name="Pagoes" Relationship="Self.FK__Pago__id_reserva__3E1D39E1" FromRole="Reserva" ToRole="Pago" />
           <NavigationProperty Name="Paquete" Relationship="Self.FK__Reserva__id_paqu__245D67DE" FromRole="Reserva" ToRole="Paquete" />
+          <Property Name="Estado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Estado_Reserva" Relationship="DBLAPALMAModel.FK__Reserva__Estado__2BFE89A6" FromRole="Reserva" ToRole="Estado_Reserva" />
         </EntityType>
         <EntityType Name="Servicio">
           <Key>
@@ -1749,7 +1802,57 @@
             <End Role="Usuario" EntitySet="Usuarios" />
             <End Role="Usuario_Perfil" EntitySet="Usuario_Perfil" />
           </AssociationSet>
+          <EntitySet Name="Estado_Habitacion" EntityType="DBLAPALMAModel.Estado_Habitacion" />
+          <EntitySet Name="Estado_Reserva" EntityType="DBLAPALMAModel.Estado_Reserva" />
+          <AssociationSet Name="FK__Habitacio__estad__5EBF139D" Association="DBLAPALMAModel.FK__Habitacio__estad__5EBF139D">
+            <End Role="Estado_Habitacion" EntitySet="Estado_Habitacion" />
+            <End Role="Habitacion" EntitySet="Habitacions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Reserva__Estado__2BFE89A6" Association="DBLAPALMAModel.FK__Reserva__Estado__2BFE89A6">
+            <End Role="Estado_Reserva" EntitySet="Estado_Reserva" />
+            <End Role="Reserva" EntitySet="Reservas" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Estado_Habitacion">
+          <Key>
+            <PropertyRef Name="id_estadoH" />
+          </Key>
+          <Property Name="id_estadoH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Habitacions" Relationship="DBLAPALMAModel.FK__Habitacio__estad__5EBF139D" FromRole="Estado_Habitacion" ToRole="Habitacion" />
+        </EntityType>
+        <EntityType Name="Estado_Reserva">
+          <Key>
+            <PropertyRef Name="id_estadoR" />
+          </Key>
+          <Property Name="id_estadoR" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Reservas" Relationship="DBLAPALMAModel.FK__Reserva__Estado__2BFE89A6" FromRole="Estado_Reserva" ToRole="Reserva" />
+        </EntityType>
+        <Association Name="FK__Habitacio__estad__5EBF139D">
+          <End Type="DBLAPALMAModel.Estado_Habitacion" Role="Estado_Habitacion" Multiplicity="1" />
+          <End Type="DBLAPALMAModel.Habitacion" Role="Habitacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Estado_Habitacion">
+              <PropertyRef Name="id_estadoH" />
+            </Principal>
+            <Dependent Role="Habitacion">
+              <PropertyRef Name="estado_habitacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Reserva__Estado__2BFE89A6">
+          <End Type="DBLAPALMAModel.Estado_Reserva" Role="Estado_Reserva" Multiplicity="1" />
+          <End Type="DBLAPALMAModel.Reserva" Role="Reserva" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Estado_Reserva">
+              <PropertyRef Name="id_estadoR" />
+            </Principal>
+            <Dependent Role="Reserva">
+              <PropertyRef Name="Estado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1843,6 +1946,7 @@
           <EntitySetMapping Name="Habitacions">
             <EntityTypeMapping TypeName="DBLAPALMAModel.Habitacion">
               <MappingFragment StoreEntitySet="Habitacion">
+                <ScalarProperty Name="estado_habitacion" ColumnName="estado_habitacion" />
                 <ScalarProperty Name="id_habitacion" ColumnName="id_habitacion" />
                 <ScalarProperty Name="numero_habitacion" ColumnName="numero_habitacion" />
                 <ScalarProperty Name="activo" ColumnName="activo" />
@@ -1970,6 +2074,7 @@
           <EntitySetMapping Name="Reservas">
             <EntityTypeMapping TypeName="DBLAPALMAModel.Reserva">
               <MappingFragment StoreEntitySet="Reserva">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
                 <ScalarProperty Name="id_reserva" ColumnName="id_reserva" />
                 <ScalarProperty Name="fecha_reserva" ColumnName="fecha_reserva" />
                 <ScalarProperty Name="fecha_llegada" ColumnName="fecha_llegada" />
@@ -2077,6 +2182,22 @@
                 <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
                 <ScalarProperty Name="id_perfil" ColumnName="id_perfil" />
                 <ScalarProperty Name="activo" ColumnName="activo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Estado_Habitacion">
+            <EntityTypeMapping TypeName="DBLAPALMAModel.Estado_Habitacion">
+              <MappingFragment StoreEntitySet="Estado_Habitacion">
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="id_estadoH" ColumnName="id_estadoH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Estado_Reserva">
+            <EntityTypeMapping TypeName="DBLAPALMAModel.Estado_Reserva">
+              <MappingFragment StoreEntitySet="Estado_Reserva">
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="id_estadoR" ColumnName="id_estadoR" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -1,4 +1,4 @@
-﻿var BaseUrl = "http://localhost:63533/";
+﻿var BaseUrl = "http://lapalma.runasp.net/";
 
 var metodoActual = null;
 
