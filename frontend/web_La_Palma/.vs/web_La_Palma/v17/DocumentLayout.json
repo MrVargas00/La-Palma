@@ -1,7 +1,28 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Sebastian\\Desktop\\ProyectoLaPalma\\frontend\\web_La_Palma\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|c:\\users\\laura\\onedrive\\documentos\\proyectolapalma\\la-palma\\frontend\\web_la_palma\\web_la_palma\\paginas\\scripts\\cliente.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|solutionrelative:web_la_palma\\paginas\\scripts\\cliente.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|c:\\users\\laura\\onedrive\\documentos\\proyectolapalma\\la-palma\\frontend\\web_la_palma\\web_la_palma\\paginas\\clientes.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|solutionrelative:web_la_palma\\paginas\\clientes.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|c:\\users\\laura\\onedrive\\documentos\\proyectolapalma\\la-palma\\frontend\\web_la_palma\\web_la_palma\\paginas\\paquetes.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|solutionrelative:web_la_palma\\paginas\\paquetes.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|c:\\users\\laura\\onedrive\\documentos\\proyectolapalma\\la-palma\\frontend\\web_la_palma\\web_la_palma\\paginas\\scripts\\paquete.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|solutionrelative:web_la_palma\\paginas\\scripts\\paquete.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|c:\\users\\laura\\onedrive\\documentos\\proyectolapalma\\la-palma\\frontend\\web_la_palma\\web_la_palma\\paginas\\scripts\\habitaciones.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{078DCAE6-65E4-47DA-A3BB-B23115D7EC34}|web_La_Palma\\web_La_Palma.csproj|solutionrelative:web_la_palma\\paginas\\scripts\\habitaciones.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,15 +30,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Cliente.js",
+              "DocumentMoniker": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Scripts\\Cliente.js",
+              "RelativeDocumentMoniker": "web_La_Palma\\Paginas\\Scripts\\Cliente.js",
+              "ToolTip": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Scripts\\Cliente.js",
+              "RelativeToolTip": "web_La_Palma\\Paginas\\Scripts\\Cliente.js",
+              "ViewState": "AgIAALIAAAAAAAAAAAAmwIsAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-04T00:48:17.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Clientes.html",
+              "DocumentMoniker": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Clientes.html",
+              "RelativeDocumentMoniker": "web_La_Palma\\Paginas\\Clientes.html",
+              "ToolTip": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Clientes.html",
+              "RelativeToolTip": "web_La_Palma\\Paginas\\Clientes.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-04T00:41:02.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Habitaciones.js",
+              "DocumentMoniker": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Scripts\\Habitaciones.js",
+              "RelativeDocumentMoniker": "web_La_Palma\\Paginas\\Scripts\\Habitaciones.js",
+              "ToolTip": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Scripts\\Habitaciones.js",
+              "RelativeToolTip": "web_La_Palma\\Paginas\\Scripts\\Habitaciones.js",
+              "ViewState": "AgIAAKcAAAAAAAAAAAAkwKIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-04T00:37:38.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Paquete.js",
+              "DocumentMoniker": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Scripts\\Paquete.js",
+              "RelativeDocumentMoniker": "web_La_Palma\\Paginas\\Scripts\\Paquete.js",
+              "ToolTip": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Scripts\\Paquete.js",
+              "RelativeToolTip": "web_La_Palma\\Paginas\\Scripts\\Paquete.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-04T00:37:00.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Paquetes.html",
+              "DocumentMoniker": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Paquetes.html",
+              "RelativeDocumentMoniker": "web_La_Palma\\Paginas\\Paquetes.html",
+              "ToolTip": "C:\\Users\\laura\\OneDrive\\Documentos\\ProyectolaPalma\\La-Palma\\frontend\\web_La_Palma\\web_La_Palma\\Paginas\\Paquetes.html",
+              "RelativeToolTip": "web_La_Palma\\Paginas\\Paquetes.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-04T00:36:25.349Z",
+              "EditorCaption": ""
             }
           ]
         }
